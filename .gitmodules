@@ -1,0 +1,6 @@
+[submodule "pvhs_tools"]
+	path = pvhs_tools
+	url = https://github.com/creativesilva/pvhs_tools.git
+[submodule "rocket_book_games"]
+	path = rocket_book_games
+	url = https://github.com/creativesilva/rocket_book_games.git
