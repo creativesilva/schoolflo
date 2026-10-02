@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>SchoolFlo</title>
-<meta name="description" content="SchoolFlo: fast, focused classroom tools and apps built by Chris Silva for Pioneer Valley High School and beyond." />
+<meta name="description" content="SchoolFlo: fast, focused classroom tools and apps built by Chris Silva." />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-title" content="SchoolFlo" />
@@ -39,9 +39,32 @@
   .brand img{width:38px;height:38px;display:block;}
   .brand b{font-family:var(--font);font-weight:700;letter-spacing:.02em;font-size:1.15rem;text-transform:uppercase;}
   .brand b span{color:var(--teal-deep);}
-  .hnav{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;}
-  .hnav a{font-family:var(--font);font-weight:600;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--teal-deep);text-decoration:none;border:1px solid var(--line);padding:8px 13px;background:var(--bg2);transition:border-color .15s,color .15s,background .15s;}
-  .hnav a:hover{border-color:var(--teal);color:#063b3b;background:#f0fbfb;}
+
+  /* Hamburger menu */
+  .menu{margin-left:auto;position:relative;}
+  .menu-btn{display:flex;align-items:center;justify-content:center;width:46px;height:46px;padding:0;background:var(--bg2);border:1px solid var(--line);cursor:pointer;transition:border-color .15s,background .15s;}
+  .menu-btn:hover{border-color:var(--teal);background:#f0fbfb;}
+  .menu-btn:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+  .menu-btn .bars{display:flex;flex-direction:column;gap:5px;width:20px;}
+  .menu-btn .bars i{display:block;height:2px;background:var(--teal-deep);transition:transform .2s ease,opacity .2s ease;}
+  .menu-btn[aria-expanded="true"] .bars i:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .menu-btn[aria-expanded="true"] .bars i:nth-child(2){opacity:0;}
+  .menu-btn[aria-expanded="true"] .bars i:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .menu-panel{
+    position:absolute;top:calc(100% + 10px);right:0;z-index:60;min-width:234px;
+    display:flex;flex-direction:column;
+    background:rgba(255,255,255,.68);
+    -webkit-backdrop-filter:blur(22px) saturate(1.35);
+    backdrop-filter:blur(22px) saturate(1.35);
+    border:1px solid var(--line);border-top:3px solid var(--teal);
+    box-shadow:0 18px 44px rgba(0,80,80,.18);
+    opacity:0;visibility:hidden;transform:translateY(-6px);
+    transition:opacity .16s ease,transform .16s ease,visibility .16s;
+  }
+  .menu-panel.open{opacity:1;visibility:visible;transform:translateY(0);}
+  .menu-panel a{font-family:var(--font);font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-deep);text-decoration:none;padding:14px 18px;border-bottom:1px solid var(--line-soft);transition:background .14s,color .14s;}
+  .menu-panel a:last-child{border-bottom:none;}
+  .menu-panel a:hover{background:rgba(0,184,184,.12);color:#063b3b;}
 
   /* Hero */
   .hero{text-align:center;padding:34px 0 10px;}
@@ -81,7 +104,7 @@
   footer{margin:48px 0 34px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;color:var(--faint);font-size:.86rem;}
   footer b{color:var(--muted);font-weight:600;}
   footer .dot{color:var(--line);}
-  @media (max-width:560px){ .hnav{display:none;} }
+  @media (max-width:420px){ .menu-panel{min-width:200px;} }
 </style>
 </head>
 <body>
@@ -90,19 +113,24 @@
 
   <header>
     <a class="brand" href="./"><img src="assets/schoolflo-logo.png" alt="SchoolFlo" /><b>School<span>Flo</span></b></a>
-    <nav class="hnav">
-      <a href="pvhs_tools/">PVHS Tools</a>
-      <a href="rocket_book_games/">Rocket Book Games</a>
-      <a href="https://www.creativesilva.com" target="_blank" rel="noopener">Creative Silva</a>
-      <a href="https://www.lightwriterz.org" target="_blank" rel="noopener">Light Writerz</a>
-    </nav>
+    <div class="menu">
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel">
+        <span class="bars"><i></i><i></i><i></i></span>
+      </button>
+      <nav class="menu-panel" id="menuPanel" aria-label="Site">
+        <a href="pvhs_tools/">PVHS Tools</a>
+        <a href="rocket_book_games/">Rocket Book Games</a>
+        <a href="https://www.creativesilva.com" target="_blank" rel="noopener">Creative Silva</a>
+        <a href="https://www.lightwriterz.org" target="_blank" rel="noopener">Light Writerz</a>
+      </nav>
+    </div>
   </header>
 
   <section class="hero">
     <img class="hero-logo" src="assets/schoolflo-logo.png" alt="" />
     <h1>School<span>Flo</span></h1>
     <div class="tag">Fast, focused classroom tools</div>
-    <p class="lede">The home for the apps Chris Silva builds for Pioneer Valley High School teachers and students, and a few places to find more of the work.</p>
+    <p class="lede">The home for the classroom apps Chris Silva builds, and a few places to find more of the work.</p>
   </section>
 
   <div class="seclabel"><span>Apps on SchoolFlo</span><div class="rule"></div></div>
@@ -151,9 +179,33 @@
   </div>
 
   <footer>
-    <b>SchoolFlo</b><span class="dot">&middot;</span>built by Chris Silva<span class="dot">&middot;</span>Pioneer Valley High School
+    <b>SchoolFlo</b><span class="dot">&middot;</span>built by Chris Silva
   </footer>
 
 </div>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var panel=document.getElementById('menuPanel');
+  if(!btn||!panel)return;
+  function setOpen(open){
+    panel.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  }
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    setOpen(!panel.classList.contains('open'));
+  });
+  document.addEventListener('click',function(e){
+    if(panel.classList.contains('open')&&!panel.contains(e.target)&&!btn.contains(e.target))setOpen(false);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')setOpen(false);
+  });
+  Array.prototype.forEach.call(panel.querySelectorAll('a'),function(a){
+    a.addEventListener('click',function(){setOpen(false);});
+  });
+})();
+</script>
 </body>
 </html>
