@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>About the Creator</title>
+<meta name="description" content="Chris Silva: photographer, designer, and builder of the classroom tools and apps on SchoolFlo." />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="SchoolFlo" />
+<link rel="icon" type="image/png" href="assets/icon-180.png" />
+<link rel="apple-touch-icon" href="assets/icon-180.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --teal:#00b8b8; --teal-deep:#007474; --teal-ink:#064d4d;
+    --bg:#eef6f6; --bg2:#ffffff; --panel:#ffffff;
+    --ink:#0d2222; --muted:#5a7272; --faint:#8aa0a0;
+    --line:rgba(0,116,116,.18); --line-soft:rgba(0,116,116,.10);
+    --font:'Oswald',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+    --body:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --shadow:0 10px 30px rgba(0,80,80,.08);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{
+    background:var(--bg);
+    background-image:radial-gradient(1100px 520px at 50% -8%, rgba(0,184,184,.14), transparent 60%);
+    color:var(--ink); font-family:var(--body); line-height:1.55; min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  .topstripe{height:4px;background:linear-gradient(90deg,var(--teal-deep),var(--teal) 55%,#38e0e0);}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 clamp(18px,4vw,36px);}
+  a{color:var(--teal-deep);}
+
+  /* Header */
+  header{display:flex;align-items:center;gap:12px;padding:20px 0 6px;}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);}
+  .brand img{width:38px;height:38px;display:block;}
+  .brand b{font-family:var(--font);font-weight:700;letter-spacing:.02em;font-size:1.15rem;text-transform:uppercase;}
+  .brand b span{color:var(--teal-deep);}
+
+  /* Hamburger menu */
+  .menu{margin-left:auto;position:relative;}
+  .menu-btn{display:flex;align-items:center;justify-content:center;width:46px;height:46px;padding:0;background:var(--bg2);border:1px solid var(--line);cursor:pointer;transition:border-color .15s,background .15s;}
+  .menu-btn:hover{border-color:var(--teal);background:#f0fbfb;}
+  .menu-btn:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+  .menu-btn .bars{display:flex;flex-direction:column;gap:5px;width:20px;}
+  .menu-btn .bars i{display:block;height:2px;background:var(--teal-deep);transition:transform .2s ease,opacity .2s ease;}
+  .menu-btn[aria-expanded="true"] .bars i:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .menu-btn[aria-expanded="true"] .bars i:nth-child(2){opacity:0;}
+  .menu-btn[aria-expanded="true"] .bars i:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .menu-panel{
+    position:absolute;top:calc(100% + 10px);right:0;z-index:60;min-width:234px;
+    display:flex;flex-direction:column;
+    background:rgba(255,255,255,.68);
+    -webkit-backdrop-filter:blur(22px) saturate(1.35);
+    backdrop-filter:blur(22px) saturate(1.35);
+    border:1px solid var(--line);border-top:3px solid var(--teal);
+    box-shadow:0 18px 44px rgba(0,80,80,.18);
+    opacity:0;visibility:hidden;transform:translateY(-6px);
+    transition:opacity .16s ease,transform .16s ease,visibility .16s;
+  }
+  .menu-panel.open{opacity:1;visibility:visible;transform:translateY(0);}
+  .menu-panel a{font-family:var(--font);font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-deep);text-decoration:none;padding:14px 18px;border-bottom:1px solid var(--line-soft);transition:background .14s,color .14s;}
+  .menu-panel a:last-child{border-bottom:none;}
+  .menu-panel a.current{background:rgba(0,184,184,.10);}
+  .menu-panel a:hover{background:rgba(0,184,184,.12);color:#063b3b;}
+
+  /* Section label */
+  .seclabel{display:flex;align-items:center;gap:12px;margin:42px 0 16px;}
+  .seclabel span{font-family:var(--font);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;color:var(--teal-deep);}
+  .seclabel .rule{flex:1 1 auto;height:1px;background:var(--line);}
+
+  /* Hero */
+  .ab-hero{display:grid;grid-template-columns:1.5fr .9fr;gap:clamp(20px,4vw,44px);align-items:center;padding:26px 0 6px;}
+  .ab-eyebrow{font-family:var(--font);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;color:var(--teal-deep);}
+  .ab-name{font-family:var(--font);font-weight:700;letter-spacing:.01em;font-size:clamp(2.2rem,5.4vw,3.3rem);line-height:1;margin:10px 0 0;text-transform:uppercase;}
+  .ab-tag{font-family:var(--font);font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:var(--teal-deep);font-size:clamp(.82rem,2vw,1rem);margin:10px 0 0;}
+  .ab-chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px;}
+  .ab-chips span{font-family:var(--font);font-weight:700;font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--teal-deep);background:#dff6f6;border:1px solid var(--line);padding:5px 10px;}
+  .ab-bio{margin-top:16px;}
+  .ab-bio p{color:var(--muted);font-size:1rem;margin:0 0 12px;}
+  .ab-bio p:last-child{margin-bottom:0;}
+  .ab-bio strong{color:var(--ink);font-weight:600;}
+  .ab-portrait{background:linear-gradient(135deg,var(--teal) 0%,rgba(0,184,184,.12) 100%);padding:3px;box-shadow:var(--shadow);align-self:center;}
+  .ab-portrait img{width:100%;height:auto;display:block;}
+
+  /* Cards (shared chrome) */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(262px,1fr));gap:16px;}
+  .card{position:relative;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--teal);padding:22px 22px 20px;box-shadow:var(--shadow);}
+  .card-top{display:flex;align-items:center;gap:12px;margin-bottom:6px;}
+  .card-ic{flex:0 0 auto;width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:#eafafa;border:1px solid var(--line-soft);}
+  .card-ic svg{width:25px;height:25px;stroke:var(--teal-deep);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+  .card h3{font-family:var(--font);font-weight:700;letter-spacing:.015em;text-transform:uppercase;font-size:1.08rem;margin:0;line-height:1.1;}
+  .card .blurb{color:var(--muted);font-size:.9rem;margin:2px 0 14px;}
+  .card ul{list-style:none;margin:0;padding:0;}
+  .card ul li{position:relative;padding:7px 0 7px 18px;font-size:.94rem;color:var(--ink);border-top:1px solid var(--line-soft);}
+  .card ul li:first-child{border-top:none;}
+  .card ul li::before{content:"";position:absolute;left:0;top:14px;width:7px;height:7px;background:var(--teal);}
+
+  /* Credentials */
+  .cred .card{padding:20px 20px 18px;}
+  .cred .deg{font-family:var(--font);font-weight:700;text-transform:uppercase;letter-spacing:.01em;font-size:1rem;color:var(--ink);line-height:1.15;}
+  .cred .org{color:var(--muted);font-size:.9rem;margin-top:5px;}
+  .cred .org.prog{color:var(--teal-deep);font-weight:600;}
+
+  /* Brands light panel */
+  .brands{margin:44px 0 0;background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--teal);padding:24px clamp(16px,3vw,28px) 28px;box-shadow:var(--shadow);}
+  .brands .seclabel{margin:0 0 6px;}
+  .brands .hint{font-size:.78rem;color:var(--muted);margin:0 0 14px;}
+  .brand-scroll{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;padding-bottom:10px;}
+  .brand-scroll::-webkit-scrollbar{height:8px;}
+  .brand-scroll::-webkit-scrollbar-track{background:var(--line-soft);}
+  .brand-scroll::-webkit-scrollbar-thumb{background:var(--teal);}
+  .brand-track{display:inline-flex;align-items:center;gap:30px;width:max-content;padding:4px 2px;}
+  .brand-track img{height:84px;width:auto;display:block;flex:0 0 auto;}
+
+  /* Info two-up */
+  .info-card .ic-title{font-family:var(--font);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;color:var(--teal-deep);margin-bottom:12px;}
+  .kv{padding:10px 0;border-top:1px solid var(--line-soft);}
+  .kv:first-of-type{border-top:none;}
+  .kv .k{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:3px;}
+  .kv .v{font-size:.98rem;color:var(--ink);}
+  .kv .v a{text-decoration:none;font-weight:600;}
+  .kv .v a:hover{text-decoration:underline;}
+  .kv .v.quote{font-style:italic;color:var(--muted);}
+
+  footer{margin:48px 0 34px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;color:var(--faint);font-size:.86rem;}
+  footer a{margin-left:auto;font-family:var(--font);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.72rem;text-decoration:none;color:var(--teal-deep);}
+  footer b{color:var(--muted);font-weight:600;}
+  footer .dot{color:var(--line);}
+
+  @media (max-width:760px){ .ab-hero{grid-template-columns:1fr;} .ab-portrait{max-width:300px;order:-1;} }
+  @media (max-width:420px){ .menu-panel{min-width:200px;} footer a{margin-left:0;} }
+</style>
+</head>
+<body>
+<div class="topstripe"></div>
+<div class="wrap">
+
+  <header>
+    <a class="brand" href="./"><img src="assets/schoolflo-logo.png" alt="SchoolFlo" /><b>School<span>Flo</span></b></a>
+    <div class="menu">
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel">
+        <span class="bars"><i></i><i></i><i></i></span>
+      </button>
+      <nav class="menu-panel" id="menuPanel" aria-label="Site">
+        <a href="pvhs_tools/">PVHS Tools</a>
+        <a href="rocket_book_games/">Rocket Book Games</a>
+        <a href="about.html" class="current">About the Creator</a>
+        <a href="https://www.creativesilva.com" target="_blank" rel="noopener">Creative Silva</a>
+        <a href="https://www.lightwriterz.org" target="_blank" rel="noopener">Light Writerz</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="ab-hero">
+    <div>
+      <div class="ab-eyebrow">About the Creator</div>
+      <h1 class="ab-name">Chris Silva</h1>
+      <div class="ab-tag">Photographer &middot; Designer &middot; Builder</div>
+      <div class="ab-chips"><span>15+ Years</span><span>US &middot; Japan &middot; M&eacute;xico</span><span>Photo &middot; Design &middot; Web</span></div>
+      <div class="ab-bio">
+        <p>I&#39;m Chris Silva, a photographer, designer, and builder with over 15 years of professional experience. I&#39;ve worked across the United States, Japan, and M&eacute;xico, capturing everything from weddings and portraits to commercial campaigns, motorsports, and the music industry. I co-own a photography and media production company with my wife Laura, who is also a photographer and educator.</p>
+        <p>My connection to image-making started with a single camera: a Nikon F3 my uncle gave me before he passed. I still capture with it today. I call it <strong>The Spirit Box</strong>, because it reminds me that the work can honor memory, identity, and purpose.</p>
+        <p>These days I spend as much time designing and building as I do behind the lens: brand and print work, and the websites and classroom apps you&#39;ll find here on <strong>SchoolFlo</strong>. I like making things that are clean, fast, and genuinely useful.</p>
+      </div>
+    </div>
+    <div class="ab-portrait"><img src="https://www.creativesilva.com/assets/PV_Tribal_Rugby.png" alt="Chris Silva" /></div>
+  </section>
+
+  <div class="seclabel"><span>What I Do</span><div class="rule"></div></div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-top">
+        <span class="card-ic"><svg viewBox="0 0 24 24"><path d="M3 8.5h3l1.4-2h7.2L16 8.5h5v11H3z"/><circle cx="12" cy="13.5" r="3.6"/></svg></span>
+        <h3>Photography</h3>
+      </div>
+      <p class="blurb">Over 15 years behind the lens, across three countries.</p>
+      <ul>
+        <li>Weddings &amp; Portraiture</li>
+        <li>Commercial Production</li>
+        <li>Motorsports</li>
+        <li>Music &amp; Entertainment</li>
+        <li>Medical Imaging</li>
+        <li>Brand Development</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <span class="card-ic"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 10-10a2.1 2.1 0 0 0-3-3L5 16z"/><path d="M14 6l3 3"/></svg></span>
+        <h3>Graphic Design</h3>
+      </div>
+      <p class="blurb">Design and production for print, apparel, and the street.</p>
+      <ul>
+        <li>Commercial Graphic Design</li>
+        <li>Sign Design &amp; Fabrication</li>
+        <li>Vehicle Graphics &amp; Wraps</li>
+        <li>Apparel Design</li>
+        <li>Silk Screening &amp; Embroidery</li>
+        <li>Digital Marketing</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <span class="card-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16"/><path d="M3 9h18"/><path d="M9.5 13l-2 2 2 2"/><path d="M14.5 13l2 2-2 2"/></svg></span>
+        <h3>Web &amp; App Design</h3>
+      </div>
+      <p class="blurb">Responsive sites and custom apps, designed and built end to end.</p>
+      <ul>
+        <li>Websites &amp; Landing Pages</li>
+        <li>Custom Classroom Web Apps</li>
+        <li>Interactive Tools &amp; Dashboards</li>
+        <li>Design Systems &amp; UI</li>
+        <li>Mobile-First, Responsive Builds</li>
+        <li>Brand-Driven Front-End</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="seclabel"><span>Education &amp; Credentials</span><div class="rule"></div></div>
+  <div class="grid cred">
+    <div class="card">
+      <div class="deg">B.A. Photography</div>
+      <div class="org">Southern New Hampshire University</div>
+    </div>
+    <div class="card">
+      <div class="deg">CTE Teaching Credential</div>
+      <div class="org">Cal Lutheran University &middot; VCOE</div>
+    </div>
+    <div class="card">
+      <div class="deg">M.A. Education, Design &amp; Technology</div>
+      <div class="org prog">In Progress</div>
+    </div>
+  </div>
+
+  <div class="brands">
+    <div class="seclabel"><span>Brands I&#39;ve Worked With</span><div class="rule"></div></div>
+    <p class="hint">Drag or scroll sideways to see them all.</p>
+    <div class="brand-scroll">
+      <div class="brand-track">
+        <img src="https://www.creativesilva.com/assets/images/about/company-logos/red-bull-v2.png" alt="Red Bull" />
+        <img src="https://www.creativesilva.com/assets/images/about/company-logos/monster-energy-v2.png" alt="Monster Energy" />
+        <img src="https://www.creativesilva.com/assets/images/about/company-logos/central-coast-yamaha-v2.png" alt="Central Coast Yamaha" />
+        <img src="https://www.creativesilva.com/assets/images/about/company-logos/j-carroll-v2.png" alt="J. Carroll Screen Printing and Embroidery" />
+        <img src="https://www.creativesilva.com/assets/images/about/company-logos/arosha-inc-v2.png" alt="Arosha Inc." />
+        <img src="https://www.creativesilva.com/assets/images/about/company-logos/signs-of-success-v2.png" alt="Signs of Success" />
+        <img src="https://www.creativesilva.com/assets/images/about/company-logos/tempt-media-v2.png" alt="Tempt Media" />
+        <img src="https://www.creativesilva.com/assets/images/about/company-logos/shepard-eye-center-v2.png" alt="Shepard Eye Center" />
+        <img src="https://www.creativesilva.com/assets/images/about/company-logos/american-star-tours-v2.png" alt="American Star Tours" />
+        <img src="https://www.creativesilva.com/assets/images/about/company-logos/certified-freight-logistics-v2.png" alt="Certified Freight Logistics" />
+      </div>
+    </div>
+  </div>
+
+  <div class="seclabel"><span>Connect</span><div class="rule"></div></div>
+  <div class="grid">
+
+    <div class="card info-card">
+      <div class="ic-title">Get in Touch</div>
+      <div class="kv"><div class="k">Email</div><div class="v"><a href="mailto:csilva@smjuhsd.org">csilva@smjuhsd.org</a></div></div>
+      <div class="kv"><div class="k">Instagram</div><div class="v"><a href="https://www.instagram.com/silvateaches" target="_blank" rel="noopener">@silvateaches</a></div></div>
+      <div class="kv"><div class="k">Portfolio</div><div class="v"><a href="https://www.creativesilva.com" target="_blank" rel="noopener">creativesilva.com</a></div></div>
+      <div class="kv"><div class="k">Studio</div><div class="v"><a href="https://www.crisandlaura.com" target="_blank" rel="noopener">crisandlaura.com</a></div></div>
+    </div>
+
+    <div class="card info-card">
+      <div class="ic-title">Off the Clock</div>
+      <div class="kv"><div class="k">Fun Fact</div><div class="v">I used to ride with a street bike motorcycle club.</div></div>
+      <div class="kv"><div class="k">Favorite Quote</div><div class="v quote">&ldquo;Leave it better than you found it.&rdquo;</div></div>
+      <div class="kv"><div class="k">Hobbies</div><div class="v">Off-roading in my 4Runner and following the All Blacks, New Zealand&#39;s national rugby team.</div></div>
+      <div class="kv"><div class="k">Favorite Treat</div><div class="v">Protein bars.</div></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <b>SchoolFlo</b><span class="dot">&middot;</span>built by Chris Silva
+    <a href="./">&larr; Back to Home</a>
+  </footer>
+
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var panel=document.getElementById('menuPanel');
+  if(!btn||!panel)return;
+  function setOpen(open){
+    panel.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  }
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    setOpen(!panel.classList.contains('open'));
+  });
+  document.addEventListener('click',function(e){
+    if(panel.classList.contains('open')&&!panel.contains(e.target)&&!btn.contains(e.target))setOpen(false);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')setOpen(false);
+  });
+  Array.prototype.forEach.call(panel.querySelectorAll('a'),function(a){
+    a.addEventListener('click',function(){setOpen(false);});
+  });
+})();
+</script>
+</body>
+</html>
