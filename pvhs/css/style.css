@@ -390,10 +390,8 @@ footer.site .legal { border-top: 1px solid rgba(255,255,255,0.14); margin-top: 5
   footer.site .legal { margin-top: 34px; flex-direction: column; align-items: center; text-align: center; gap: 6px; }
 }
 
-/* Stats: three across; long word values (SkillsUSA) scale down */
-.stats.three { grid-template-columns: repeat(3, 1fr); max-width: 980px; margin: 0 auto; }
-.stats.three .n { white-space: nowrap; }
-.stats.three > div:last-child .n { font-size: clamp(30px, 4.2vw, 56px); line-height: 1.36; }
+/* Stats: word values (a-g "F", SkillsUSA) scale down to sit level with numbers */
+.stats.four .n.word { font-size: clamp(28px, 3.4vw, 46px); line-height: 1.65; white-space: nowrap; }
 
 /* SkillsUSA band */
 section.band.skills { background: radial-gradient(800px 420px at 100% 0%, rgba(245,179,1,0.10), transparent 65%); }
@@ -402,7 +400,19 @@ section.band.skills { background: radial-gradient(800px 420px at 100% 0%, rgba(2
 .callout.skills-callout a { color: var(--gold); }
 
 @media (max-width: 760px) {
-  .stats.three { grid-template-columns: 1fr 1fr; }
-  .stats.three > div:last-child { grid-column: 1 / -1; }
-  .stats.three > div:last-child .n { font-size: clamp(34px, 11vw, 48px); }
+  .stats.four .n.word { font-size: clamp(26px, 8.4vw, 36px); line-height: 1.55; }
 }
+
+/* a-g "F" band */
+section.band.ag { background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(245,179,1,0.06) 100%); border-top: 1px solid var(--line); }
+.ag .split { grid-template-columns: 380px 1fr; }
+.ag-badge { aspect-ratio: 1; max-width: 380px; width: 100%; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  background: radial-gradient(circle at 50% 35%, rgba(245,179,1,0.20), transparent 60%), radial-gradient(circle at 50% 50%, #3a4848, #2f3b3b);
+  box-shadow: 0 0 0 2px rgba(245,179,1,0.65), 0 0 0 14px rgba(245,179,1,0.08), var(--glow); }
+.ag-top, .ag-bot { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.16em; font-size: 15px; color: #e8eded; }
+.ag-letter { font-family: var(--font-head); font-weight: 700; font-size: 170px; line-height: 1; color: var(--gold); margin: 4px 0 6px; }
+.person .exp, .exp-mini { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); }
+.person .exp { font-size: 13.5px; margin: -6px 0 12px; }
+.exp-mini { font-size: 12px; }
+@media (max-width: 1000px) { .ag .split { grid-template-columns: 1fr; } .ag-badge { max-width: 280px; margin: 0 auto; } }
+@media (max-width: 760px) { .ag-badge { max-width: 230px; padding: 0 30px; } .ag-letter { font-size: 104px; } .ag-top, .ag-bot { font-size: 11px; letter-spacing: 0.1em; line-height: 1.35; } }
