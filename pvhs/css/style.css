@@ -52,7 +52,7 @@ a, button { -webkit-tap-highlight-color: rgba(128,224,224,0.15); }
 .masthead { background: linear-gradient(180deg, #374545 0%, #3d4c4c 100%); border-bottom: 1px solid var(--line); }
 .masthead .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 104px; gap: 20px; }
 .brand { display: flex; align-items: center; gap: 16px; text-decoration: none; color: #fff; }
-.brand .mark { width: 72px; height: 72px; flex-shrink: 0; }
+.brand .mark { height: 80px; width: auto; flex-shrink: 0; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35)); }
 .brand-name { font-family: var(--font-head); font-weight: 700; font-size: 34px; line-height: 1; letter-spacing: 0.02em; text-transform: uppercase; }
 .brand-sub { font-size: 13px; color: var(--gray); margin-top: 6px; letter-spacing: 0.03em; }
 .masthead .cta { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.06em; }
@@ -71,7 +71,7 @@ a, button { -webkit-tap-highlight-color: rgba(128,224,224,0.15); }
 .navtoggle { display: none; }
 .dock-logo { position: absolute; left: 24px; top: 50%; display: block; width: 40px; height: 40px; opacity: 0; pointer-events: none;
   transform: translate(-10px, -50%) scale(0.8); transition: opacity 0.25s ease, transform 0.25s ease; }
-.dock-logo svg { width: 40px; height: 40px; display: block; }
+.dock-logo img { height: 40px; width: auto; display: block; margin: 0 auto; }
 .mainnav a.dock-logo, .mainnav a.dock-logo:hover { padding: 0; border: 0; background: none; }
 .mainnav.docked .dock-logo { opacity: 1; pointer-events: auto; transform: translate(0, -50%) scale(1); }
 [id] { scroll-margin-top: 76px; }
@@ -263,7 +263,7 @@ blockquote.pull cite { display: block; font-family: var(--font-body); text-trans
 /* ---------- Footer ---------- */
 footer.site { background: radial-gradient(900px 400px at 80% 0%, rgba(0,116,116,0.16), transparent 70%), #2f3b3b; border-top: 1px solid var(--line); color: #cdd8d8; padding: 70px 0 30px; font-size: 15px; }
 footer.site .cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; }
-footer.site .foot-mark { width: 80px; height: 80px; margin-bottom: 16px; display: block; }
+footer.site .foot-mark { height: 96px; width: auto; margin-bottom: 16px; display: block; }
 footer.site h4 { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.12em; color: #fff; font-size: 15px; margin-bottom: 14px; font-weight: 500; }
 footer.site ul { list-style: none; }
 footer.site li { padding: 4px 0; }
@@ -296,7 +296,7 @@ footer.site .legal { border-top: 1px solid rgba(255,255,255,0.14); margin-top: 5
   .masthead .wrap { position: relative; display: block; min-height: 64px; }
   .masthead .cta { display: none; }
   .brand { display: grid; grid-template-columns: 44px 1fr 44px; align-items: center; min-height: 64px; gap: 0; }
-  .brand .mark { width: 40px; height: 40px; }
+  .brand .mark { height: 44px; width: auto; justify-self: start; }
   .brand > div { text-align: center; }
   .brand-name { font-size: 22px; letter-spacing: 0.04em; }
   .brand-sub { font-size: 11px; margin-top: 3px; }
@@ -386,7 +386,7 @@ footer.site .legal { border-top: 1px solid rgba(255,255,255,0.14); margin-top: 5
   footer.site { padding: 52px 0 calc(24px + env(safe-area-inset-bottom)); }
   footer.site .cols { grid-template-columns: 1fr 1fr; gap: 30px 20px; }
   footer.site .cols > div:first-child, footer.site .cols > div:last-child { grid-column: 1 / -1; }
-  footer.site .foot-mark { width: 64px; height: 64px; }
+  footer.site .foot-mark { height: 72px; width: auto; }
   footer.site .legal { margin-top: 34px; flex-direction: column; align-items: center; text-align: center; gap: 6px; }
 }
 
