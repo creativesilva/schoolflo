@@ -51,14 +51,30 @@
     window.addEventListener("resize", function () { if (window.innerWidth > 760) setMenu(false); });
   }
 
-  // Top right menu (Teacher Login).
-  var sBtn = document.querySelector(".staffmenu-btn");
-  var sList = document.getElementById("staffmenu-list");
-  function setStaff(open) { sList.hidden = !open; sBtn.setAttribute("aria-expanded", open ? "true" : "false"); }
-  if (sBtn && sList) {
-    sBtn.addEventListener("click", function (e) { e.stopPropagation(); setStaff(sList.hidden); });
-    document.addEventListener("click", function (e) { if (!sList.hidden && !sList.contains(e.target)) setStaff(false); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !sList.hidden) { setStaff(false); sBtn.focus(); } });
+  // Full page menus: one in the header, one in the docked bar. Only one open at a time.
+  var menus = Array.prototype.map.call(document.querySelectorAll(".staffmenu"), function (m) {
+    return { btn: m.querySelector(".staffmenu-btn"), list: m.querySelector(".staffmenu-list") };
+  }).filter(function (m) { return m.btn && m.list; });
+  function setStaff(m, open) { m.list.hidden = !open; m.btn.setAttribute("aria-expanded", open ? "true" : "false"); }
+  menus.forEach(function (m) {
+    m.btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = m.list.hidden;
+      menus.forEach(function (o) { setStaff(o, false); });
+      setStaff(m, open);
+    });
+  });
+  document.addEventListener("click", function (e) {
+    menus.forEach(function (m) { if (!m.list.hidden && !m.list.contains(e.target)) setStaff(m, false); });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    menus.forEach(function (m) { if (!m.list.hidden) { setStaff(m, false); m.btn.focus(); } });
+  });
+  // Close the header menu once it scrolls away, and the docked one when the bar undocks.
+  if (nav && "MutationObserver" in window) {
+    new MutationObserver(function () { menus.forEach(function (m) { setStaff(m, false); }); })
+      .observe(nav, { attributes: true, attributeFilter: ["class"] });
   }
 
   var yr = document.getElementById("yr");

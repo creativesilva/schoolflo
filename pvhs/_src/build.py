@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "18"  # cache bust for css/js
+V = "19"  # cache bust for css/js
 
 # Teal bar: top level only. DM_PAGES highlight "Digital Media" too.
 NAV = [
@@ -117,6 +117,15 @@ def head(title, desc, path, preload=None, lang="en", noindex=False):
 {nav_items(path)}
 {menu_items(path, admin_href, "navlist")}
       </ul>
+      <div class="dock-tools">
+{lang_toggle(path, lang)}
+        <div class="staffmenu">
+          <button class="staffmenu-btn" type="button" aria-expanded="false" aria-controls="dockmenu-list" aria-label="More options"><span class="bars" aria-hidden="true"></span></button>
+          <ul class="staffmenu-list" id="dockmenu-list" hidden>
+{menu_items(path, admin_href, "staffmenu-list")}
+          </ul>
+        </div>
+      </div>
     </div>
   </nav>
 

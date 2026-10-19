@@ -74,6 +74,21 @@ a, button { -webkit-tap-highlight-color: rgba(128,224,224,0.15); }
 .dock-logo img { height: 40px; width: auto; display: block; margin: 0 auto; }
 .mainnav a.dock-logo, .mainnav a.dock-logo:hover { padding: 0; border: 0; background: none; }
 .mainnav.docked .dock-logo { opacity: 1; pointer-events: auto; transform: translate(0, -50%) scale(1); }
+.dock-tools { position: absolute; right: 24px; top: 50%; display: flex; align-items: center; gap: 10px; z-index: 2;
+  opacity: 0; visibility: hidden; transform: translate(10px, -50%); transition: opacity 0.25s ease, transform 0.25s ease, visibility 0s 0.25s; }
+.mainnav.docked .dock-tools { opacity: 1; visibility: visible; transform: translate(0, -50%); transition: opacity 0.25s ease, transform 0.25s ease; }
+.dock-tools .langtoggle a { font-size: 13px; padding: 5px 9px; }
+.dock-tools .staffmenu-btn { width: 40px; height: 40px; }
+.mainnav .dock-tools a { border-bottom: 0; }
+.mainnav ul.staffmenu-list { display: block; text-align: left; }
+.mainnav ul.staffmenu-list[hidden] { display: none; }
+.mainnav .staffmenu-list li { display: block; }
+.mainnav .staffmenu-list a { padding: 11px 14px; border-bottom: 0; letter-spacing: 0.08em; font-size: 15px; font-weight: 400; }
+.mainnav.docked .staffmenu-list a:hover { background: var(--teal); }
+.mainnav .staffmenu-list li.lvl2 a { padding: 8px 14px 8px 30px; font-size: 14px; }
+.mainnav .staffmenu-list li.lvl3 a { padding: 6px 14px 6px 46px; font-size: 13px; }
+@media (max-width: 1060px) { .dock-tools { right: 12px; } }
+@media (max-width: 760px) { .dock-tools { display: none; } }
 [id] { scroll-margin-top: 76px; }
 
 @media (min-width: 761px) {
