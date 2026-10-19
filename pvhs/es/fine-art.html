@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css?v=16">
+  <link rel="stylesheet" href="../css/style.css?v=17">
 </head>
 <body>
   <a class="skip" href="#main">Saltar al contenido</a>
@@ -39,7 +39,20 @@
         <div class="staffmenu">
           <button class="staffmenu-btn" type="button" aria-expanded="false" aria-controls="staffmenu-list" aria-label="Más opciones"><span class="bars" aria-hidden="true"></span></button>
           <ul class="staffmenu-list" id="staffmenu-list" hidden>
-            <li><a href="../admin.html" data-keep-href>Acceso docente</a></li>
+            <li class="menu lvl1"><a href="index.html">Artes Visuales</a></li>
+            <li class="menu lvl1"><a href="fine-art.html" aria-current="page">Bellas Artes</a></li>
+            <li class="menu lvl2"><a href="fine-art.html#intro-to-art">Introducción al Arte</a></li>
+            <li class="menu lvl2"><a href="fine-art.html#painting">Pintura</a></li>
+            <li class="menu lvl1"><a href="digital-media.html">Medios Digitales</a></li>
+            <li class="menu lvl2"><a href="digital-photography.html">Fotografía Digital</a></li>
+            <li class="menu lvl3"><a href="digital-photography.html#photography-1">Fotografía 1</a></li>
+            <li class="menu lvl3"><a href="digital-photography.html#photography-2">Fotografía 2</a></li>
+            <li class="menu lvl2"><a href="digital-arts.html">Artes Digitales</a></li>
+            <li class="menu lvl3"><a href="digital-arts.html#digital-arts-1">Artes Digitales 1</a></li>
+            <li class="menu lvl3"><a href="digital-arts.html#digital-arts-2">Artes Digitales 2</a></li>
+            <li class="menu lvl1"><a href="teachers.html">Nuestros Maestros</a></li>
+            <li class="menu lvl1"><a href="signup.html">Inscríbete</a></li>
+            <li class="menu lvl1 staff"><a href="../admin.html" data-keep-href>Acceso docente</a></li>
           </ul>
         </div>
       </div>
@@ -51,14 +64,25 @@
     <div class="wrap">
       <a class="dock-logo" href="index.html" aria-label="Inicio de PVHS Visual Arts" tabindex="-1"><img src="../images/pvhs-logo.png" alt="" width="40" height="43"></a>
       <ul id="navlist">
-        <li><a href="index.html">Artes Visuales</a></li>
-        <li><a href="digital-photography.html">Fotografía Digital</a></li>
-        <li><a href="digital-arts.html">Artes Digitales</a></li>
-        <li><a href="fine-art.html" aria-current="page">Bellas Artes</a></li>
-        <li><a href="teachers.html">Nuestros Maestros</a></li>
-        <li><a href="signup.html">Inscríbete</a></li>
-        <li><a href="https://www.lightwriterz.org" target="_blank" rel="noopener">Light Writerz</a></li>
-        <li class="nav-staff"><a href="../admin.html" data-keep-href>Acceso docente</a></li>
+        <li class="nav-top"><a href="index.html">Artes Visuales</a></li>
+        <li class="nav-top"><a href="fine-art.html" aria-current="page">Bellas Artes</a></li>
+        <li class="nav-top"><a href="digital-media.html">Medios Digitales</a></li>
+        <li class="nav-top"><a href="teachers.html">Nuestros Maestros</a></li>
+        <li class="nav-top"><a href="signup.html">Inscríbete</a></li>
+        <li class="nav-full lvl1"><a href="index.html">Artes Visuales</a></li>
+        <li class="nav-full lvl1"><a href="fine-art.html" aria-current="page">Bellas Artes</a></li>
+        <li class="nav-full lvl2"><a href="fine-art.html#intro-to-art">Introducción al Arte</a></li>
+        <li class="nav-full lvl2"><a href="fine-art.html#painting">Pintura</a></li>
+        <li class="nav-full lvl1"><a href="digital-media.html">Medios Digitales</a></li>
+        <li class="nav-full lvl2"><a href="digital-photography.html">Fotografía Digital</a></li>
+        <li class="nav-full lvl3"><a href="digital-photography.html#photography-1">Fotografía 1</a></li>
+        <li class="nav-full lvl3"><a href="digital-photography.html#photography-2">Fotografía 2</a></li>
+        <li class="nav-full lvl2"><a href="digital-arts.html">Artes Digitales</a></li>
+        <li class="nav-full lvl3"><a href="digital-arts.html#digital-arts-1">Artes Digitales 1</a></li>
+        <li class="nav-full lvl3"><a href="digital-arts.html#digital-arts-2">Artes Digitales 2</a></li>
+        <li class="nav-full lvl1"><a href="teachers.html">Nuestros Maestros</a></li>
+        <li class="nav-full lvl1"><a href="signup.html">Inscríbete</a></li>
+        <li class="nav-full lvl1 staff"><a href="../admin.html" data-keep-href>Acceso docente</a></li>
       </ul>
     </div>
   </nav>
@@ -204,6 +228,7 @@
           <h4>Artes Visuales</h4>
           <ul>
             <li><a href="index.html">Resumen del programa</a></li>
+            <li><a href="digital-media.html">Medios Digitales</a></li>
             <li><a href="digital-photography.html">Fotografía Digital</a></li>
             <li><a href="digital-arts.html">Artes Digitales</a></li>
             <li><a href="fine-art.html">Bellas Artes</a></li>
@@ -239,6 +264,6 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=16" defer></script>
+  <script src="../js/main.js?v=17" defer></script>
 </body>
 </html>

@@ -21,6 +21,8 @@ ES = {
     "index.html::Visual": "Artes",
     "index.html::Arts": "Visuales",
     "fine-art.html::Fine": "Bellas",
+    "digital-media.html::Digital": "Medios",
+    "digital-media.html::Media": "Digitales",
     "fine-art.html::Art": "Artes",
     "digital-photography.html::Digital": "Fotografía",
     "digital-photography.html::Photography": "Digital",
@@ -598,4 +600,8 @@ ES = {
     'To be eligible for the University of California and California State University, students need a year of Visual and Performing Arts. Any Visual Arts course covers that requirement, and Digital Media also builds real career skills on industry tools, so one elective can work toward college and career at the same time.': 'Para poder entrar a la Universidad de California (UC) y a la Universidad Estatal de California (CSU), los estudiantes necesitan un año de Artes Visuales y Escénicas. Cualquier clase de Artes Visuales cumple ese requisito, y Medios Digitales además desarrolla habilidades reales para una carrera con herramientas profesionales. Así, una sola optativa puede prepararte para la universidad y para una carrera al mismo tiempo.',
     'Students who completed Intro to Art.': 'Estudiantes que terminaron Introducción al Arte.',
     'Studio · after Intro to Art': 'Taller · después de Introducción al Arte',
+    'A Career Technical Education program in the Design, Visual, and Media Arts pathway. Two pathways, Digital Photography and Digital Arts, built on real cameras and industry software.': 'Un programa de Educación Técnica Profesional (CTE) en la trayectoria de Diseño, Artes Visuales y Medios. Dos trayectorias, Fotografía Digital y Artes Digitales, con cámaras reales y programas profesionales.',
+    'Digital Media at Pioneer Valley High School: a CTE program with two pathways, Digital Photography and Digital Arts.': 'Medios Digitales en Pioneer Valley High School: un programa CTE con dos trayectorias, Fotografía Digital y Artes Digitales.',
+    'Digital Media | PVHS Visual Arts': 'Medios Digitales | PVHS Visual Arts',
+    'Two Pathways': 'Dos trayectorias',
 }
