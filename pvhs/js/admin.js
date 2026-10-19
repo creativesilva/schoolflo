@@ -1,6 +1,6 @@
 // PVHS Digital Media staff admin: Google sign-in (program owner only), sign up list,
 // filters, print, CSV for Google Sheets, delete. Firestore rules enforce the owner-only access.
-import { firebaseConfig, SDK, OWNER, COLLECTION, COURSES } from "./firebase-config.js?v=3";
+import { firebaseConfig, SDK, OWNER, COLLECTION, COURSES } from "./firebase-config.js?v=4";
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));

@@ -4,12 +4,12 @@
 // protect the data: anyone can submit a validated sign up, and only the program owner can read or delete them.
 // Values come from Firebase console > Project settings > Your apps > Web app > SDK setup and configuration.
 export const firebaseConfig = {
-  apiKey: "PASTE_FROM_FIREBASE",
-  authDomain: "PASTE_FROM_FIREBASE",
-  projectId: "PASTE_FROM_FIREBASE",
-  storageBucket: "PASTE_FROM_FIREBASE",
-  messagingSenderId: "PASTE_FROM_FIREBASE",
-  appId: "PASTE_FROM_FIREBASE"
+  apiKey: "AIzaSyBfoNt_K-r1V_PjnFA1k5zPIrUO__c2CVI",
+  authDomain: "schoolflo-d5322.firebaseapp.com",
+  projectId: "schoolflo-d5322",
+  storageBucket: "schoolflo-d5322.firebasestorage.app",
+  messagingSenderId: "217775245577",
+  appId: "1:217775245577:web:09f82aa124f5cc1880abd8"
 };
 export const SDK = "https://www.gstatic.com/firebasejs/10.12.2/";
 export const OWNER = "creativesilva1@gmail.com";
