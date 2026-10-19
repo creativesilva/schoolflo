@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "26"  # cache bust for css/js
+V = "27"  # cache bust for css/js
 
 # Teal bar: top level only. DM_PAGES highlight "Digital Media" too.
 NAV = [
@@ -461,7 +461,7 @@ HOME = """
           <a class="card" href="teachers.html#chris-silva" style="text-decoration:none;color:inherit"><img class="head" src="images/teachers/chris-silva.jpg" alt="Chris Silva" loading="lazy" width="84" height="84"><div><p class="kicker">Photography &amp; Digital Arts</p><h3>Chris Silva</h3><p>Photography 1 &amp; 2 &middot; Digital Arts 1<br><span class="exp-mini">14 years industry experience</span></p></div></a>
           <a class="card" href="teachers.html#laura-garcia" style="text-decoration:none;color:inherit"><img class="head" src="images/teachers/laura-garcia.jpg" alt="Laura Garcia" loading="lazy" width="84" height="84"><div><p class="kicker">Photography</p><h3>Laura Garcia</h3><p>Photography 1<br><span class="exp-mini">14 years industry experience</span></p></div></a>
           <a class="card" href="teachers.html#rileigh-mankin" style="text-decoration:none;color:inherit"><img class="head" src="images/teachers/rileigh-mankin.jpg" alt="Rileigh Mankin" loading="lazy" width="84" height="84"><div><p class="kicker">Digital Arts</p><h3>Rileigh Mankin</h3><p>Digital Arts 1 &amp; 2<br><span class="exp-mini">7 years industry experience</span></p></div></a>
-          <a class="card" href="teachers.html#stephanie-fikiri" style="text-decoration:none;color:inherit"><span class="head logo-head"><img src="images/pvhs-logo.png" alt="" width="60" height="65"></span><div><p class="kicker">Fine Art</p><h3>Stephanie Fikiri</h3><p>Intro to Art &middot; Painting</p></div></a>
+          <a class="card" href="teachers.html#stephanie-fikri" style="text-decoration:none;color:inherit"><span class="head logo-head"><img src="images/pvhs-logo.png" alt="" width="60" height="65"></span><div><p class="kicker">Fine Art</p><h3>Stephanie Fikri</h3><p>Intro to Art &middot; Painting</p></div></a>
         </div>
       </div>
     </section>
@@ -849,7 +849,7 @@ FINE = """
             <p class="identity">The foundation art course. Students learn the elements and principles of art and build core skills in drawing, color, and design by hand.</p>
             <ul class="facts">
               <li><span class="k">A-G credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
-              <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#stephanie-fikiri">Stephanie Fikiri</a></span></li>
+              <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#stephanie-fikri">Stephanie Fikri</a></span></li>
               <li><span class="k">Who it is for</span><span class="v">Open to all students, no experience required. The starting point for fine art.</span></li>
               <li><span class="k">Materials</span><span class="v">Graphite, charcoal, ink, colored pencil, pastel, and paint, plus a personal sketchbook.</span></li>
             </ul>
@@ -894,7 +894,7 @@ FINE = """
             <p class="identity">The studio painting course. Students explore watercolor and acrylic, color mixing, and composition, and develop a personal style.</p>
             <ul class="facts">
               <li><span class="k">A-G credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
-              <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#stephanie-fikiri">Stephanie Fikiri</a></span></li>
+              <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#stephanie-fikri">Stephanie Fikri</a></span></li>
               <li><span class="k">Who it is for</span><span class="v">Students who completed Intro to Art.</span></li>
               <li><span class="k">Materials</span><span class="v">Watercolor, acrylic, brushes, palette knives, watercolor paper, and canvas.</span></li>
             </ul>
@@ -943,7 +943,7 @@ FINE = """
           <span class="sub">Coming soon</span>
         </div>
         <p class="lead" style="max-width:720px">A gallery of student drawings and paintings is on the way.</p>
-        <p class="cta-row" style="margin-top:24px"><a class="btn" href="signup.html?course=intro-to-art&amp;from=fine-art">Sign up for Intro to Art</a> <a class="btn dark" href="teachers.html#stephanie-fikiri">Meet Stephanie Fikiri</a></p>
+        <p class="cta-row" style="margin-top:24px"><a class="btn" href="signup.html?course=intro-to-art&amp;from=fine-art">Sign up for Intro to Art</a> <a class="btn dark" href="teachers.html#stephanie-fikri">Meet Stephanie Fikri</a></p>
       </div>
     </section>
 """
@@ -996,12 +996,12 @@ TEACH = """
               <p class="person-link"><a href="https://rileighmankin.myportfolio.com/" target="_blank" rel="noopener">See Portfolio</a></p>
             </div>
           </article>
-          <article class="person" id="stephanie-fikiri">
+          <article class="person" id="stephanie-fikri">
             <div class="ph ph-logo"><img src="images/pvhs-logo.png" alt="Photo coming soon" loading="lazy" width="222" height="240"></div>
             <div class="body">
               <p class="role">Intro to Art &middot; Painting</p>
-              <h3>Stephanie Fikiri</h3>
-              <p>Stephanie Fikiri teaches Fine Art at Pioneer Valley High School, including Intro to Art and Painting.</p>
+              <h3>Stephanie Fikri</h3>
+              <p>Stephanie Fikri teaches Fine Art at Pioneer Valley High School, including Intro to Art and Painting.</p>
               <p class="note">Full bio coming soon.</p>
             </div>
           </article>
@@ -1206,7 +1206,7 @@ PAGES = [
      "Intro to Art and Painting at Pioneer Valley High School: drawing, color, watercolor, acrylic, and a portfolio of finished artwork.",
      None, FINE),
     ("teachers.html", "Our Teachers | PVHS Visual Arts",
-     "Meet the Visual Arts teachers at Pioneer Valley High School: Chris Silva, Laura Garcia, Rileigh Mankin, and Stephanie Fikiri.",
+     "Meet the Visual Arts teachers at Pioneer Valley High School: Chris Silva, Laura Garcia, Rileigh Mankin, and Stephanie Fikri.",
      None, TEACH),
     ("signup.html", "Sign Up | PVHS Visual Arts",
      "Interest form for Digital Photography, Digital Arts, and Fine Art at Pioneer Valley High School.",

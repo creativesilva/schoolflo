@@ -11,7 +11,7 @@ KEEP = {
     "PVHS Visual Arts", "PVHS Digital Media", "Pioneer Valley High School", "SkillsUSA", "Light Writerz", "SchoolFlo",
     "EN", "ES", "F", "Language / Idioma", "Santa Maria, CA", "· Santa Maria, CA",
     "UC / CSU A-G", "A-G “F”",
-    "Chris Silva", "Laura Garcia", "Rileigh Mankin", "Stephanie Fikiri",
+    "Chris Silva", "Laura Garcia", "Rileigh Mankin", "Stephanie Fikri",
     "Ella Naoe", "Gregorio Calleja", "Julio Marquez", "Davina Royall Showalter", "Jessica Valdez",
     "www.creativesilva.com", "www.chrisandlaura.com",
 }
@@ -472,7 +472,7 @@ ES = {
     "Every class counts toward the UC and CSU A-G “F” fine art requirement.":
         "Todas las clases cuentan para el requisito “F” de bellas artes de A-G para UC y CSU.",
 
-    # ---------- Visual Arts restructure (Fine Art, Stephanie Fikiri)
+    # ---------- Visual Arts restructure (Fine Art, Stephanie Fikri)
     'PVHS Visual Arts | Pioneer Valley High School': 'PVHS Visual Arts | Pioneer Valley High School',
     'Digital Photography | PVHS Visual Arts': 'Fotografía Digital | PVHS Visual Arts',
     'Digital Arts | PVHS Visual Arts': 'Artes Digitales | PVHS Visual Arts',
@@ -481,7 +481,7 @@ ES = {
     'Sign Up | PVHS Visual Arts': 'Inscríbete | PVHS Visual Arts',
     'Visual Arts at Pioneer Valley High School: Digital Photography, Digital Arts, Intro to Art, and Painting.': 'Artes Visuales en Pioneer Valley High School: Fotografía Digital, Artes Digitales, Introducción al Arte y Pintura.',
     'Intro to Art and Painting at Pioneer Valley High School: drawing, color, watercolor, acrylic, and a portfolio of finished artwork.': 'Introducción al Arte y Pintura en Pioneer Valley High School: dibujo, color, acuarela, acrílico y un portafolio de obras terminadas.',
-    'Meet the Visual Arts teachers at Pioneer Valley High School: Chris Silva, Laura Garcia, Rileigh Mankin, and Stephanie Fikiri.': 'Conoce a los maestros de Artes Visuales de Pioneer Valley High School: Chris Silva, Laura Garcia, Rileigh Mankin y Stephanie Fikiri.',
+    'Meet the Visual Arts teachers at Pioneer Valley High School: Chris Silva, Laura Garcia, Rileigh Mankin, and Stephanie Fikri.': 'Conoce a los maestros de Artes Visuales de Pioneer Valley High School: Chris Silva, Laura Garcia, Rileigh Mankin y Stephanie Fikri.',
     'Interest form for Digital Photography, Digital Arts, and Fine Art at Pioneer Valley High School.': 'Formulario de interés para Fotografía Digital, Artes Digitales y Bellas Artes en Pioneer Valley High School.',
     'PVHS Visual Arts home': 'Inicio de PVHS Visual Arts',
     'Visual Arts': 'Artes Visuales',
@@ -584,10 +584,10 @@ ES = {
     'Student Artwork': 'Obras estudiantiles',
     'Coming soon': 'Muy pronto',
     'A gallery of student drawings and paintings is on the way.': 'Pronto habrá una galería de dibujos y pinturas de los estudiantes.',
-    'Meet Stephanie Fikiri': 'Conoce a Stephanie Fikiri',
+    'Meet Stephanie Fikri': 'Conoce a Stephanie Fikri',
     'Working photographers, designers, and artists. Our Digital Media teachers are CTE teachers who bring 35 combined years of commercial and fine art industry experience into the classroom.': 'Fotógrafos, diseñadores y artistas en activo. Nuestros maestros de Medios Digitales son maestros de CTE que llevan al salón 35 años combinados de experiencia comercial y de bellas artes en la industria.',
     'Photo coming soon': 'Foto muy pronto',
-    'Stephanie Fikiri teaches Fine Art at Pioneer Valley High School, including Intro to Art and Painting.': 'Stephanie Fikiri enseña Bellas Artes en Pioneer Valley High School, incluyendo Introducción al Arte y Pintura.',
+    'Stephanie Fikri teaches Fine Art at Pioneer Valley High School, including Intro to Art and Painting.': 'Stephanie Fikri enseña Bellas Artes en Pioneer Valley High School, incluyendo Introducción al Arte y Pintura.',
     'Full bio coming soon.': 'Biografía completa muy pronto.',
     'Digital Media combined years in industry': 'Años combinados en la industria (Medios Digitales)',
     'Photography 1, Digital Arts 1, and Intro to Art are open to every PVHS student, no experience needed. Fill out the sign up form, then ask your counselor to add one to your schedule.': 'Fotografía 1, Artes Digitales 1 e Introducción al Arte están abiertas para todos los estudiantes de PVHS, sin necesidad de experiencia. Llena el formulario de inscripción y luego pídele a tu consejero que agregue la clase a tu horario.',
