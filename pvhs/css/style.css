@@ -933,3 +933,12 @@ section.band.skills { background: radial-gradient(800px 420px at 100% 0%, rgba(2
 @media (max-width: 760px) {
   .mainnav.open ul { background: radial-gradient(600px 400px at 100% 0%, rgba(0,116,116,0.35), transparent 70%), var(--night-grad); }
 }
+/* Pathway taglines */
+h2.title.taglines { display: grid; gap: 14px; }
+h2.title.taglines .tg { display: block; }
+h2.title.taglines small { display: block; font-size: 14px; letter-spacing: 0.18em; color: var(--teal); font-weight: 500; margin-bottom: 2px; }
+.hero .tagline { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.06em; font-size: clamp(20px, 2.4vw, 30px); line-height: 1.2; color: var(--teal-light-accent); margin-top: 12px; }
+h2.title.taglines { font-size: clamp(24px, 2.55vw, 33px); gap: 16px; margin-top: 8px; }
+h2.title.taglines .tg { white-space: nowrap; }
+@media (max-width: 760px) { h2.title.taglines { font-size: clamp(19px, 6vw, 26px); } h2.title.taglines .tg { white-space: normal; } }
+h2.title.taglines { margin-bottom: 8px; }
