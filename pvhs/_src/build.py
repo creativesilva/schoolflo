@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "21"  # cache bust for css/js
+V = "22"  # cache bust for css/js
 
 # Teal bar: top level only. DM_PAGES highlight "Digital Media" too.
 NAV = [
@@ -76,7 +76,7 @@ def head(title, desc, path, preload=None, lang="en", noindex=False):
   <meta property="og:url" content="{url}">
   <meta property="og:site_name" content="PVHS Visual Arts">
   <meta property="og:image" content="https://www.schoolflo.org/pvhs/images/hero-home.jpg">
-  <meta name="theme-color" content="#374545">
+  <meta name="theme-color" content="#0b0d0d">
   <meta name="format-detection" content="telephone=no">
 {robots}{alts}  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -1032,7 +1032,7 @@ ADMIN = """<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Staff Admin | PVHS Visual Arts</title>
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#374545">
+  <meta name="theme-color" content="#0b0d0d">
   <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
