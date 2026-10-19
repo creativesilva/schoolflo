@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Staff Admin | PVHS Digital Media</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#374545">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=11">
+</head>
+<body class="admin">
+  <header class="masthead">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="PVHS Digital Media home">
+        <img class="mark" src="images/pvhs-logo.png" alt="Pioneer Valley High School Panthers logo" width="74" height="80">
+        <div>
+          <div class="brand-name">PVHS Digital Media</div>
+          <div class="brand-sub">Staff admin &middot; Interest form sign ups</div>
+        </div>
+      </a>
+      <div class="mast-actions"><button class="btn dark" id="signout" type="button" hidden>Sign out</button></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="band" id="v-login">
+      <div class="wrap admin-login">
+        <h1 class="title">Staff login</h1>
+        <p class="lead" style="margin-top:12px">Sign in with the program Google account to see interest form sign ups.</p>
+        <p style="margin-top:24px"><button class="btn" id="signin" type="button">Sign in with Google</button></p>
+        <p class="form-msg" id="login-err" role="alert" hidden></p>
+      </div>
+    </section>
+
+    <section class="band admin-app" id="v-app" hidden>
+      <div class="wrap">
+        <div class="section-head no-print">
+          <h2>Sign ups</h2>
+          <span class="sub">Signed in as <b id="who"></b></span>
+        </div>
+        <div class="print-head print-only">
+          <h1>PVHS Digital Media &middot; Interest form sign ups</h1>
+          <p id="print-meta"></p>
+        </div>
+        <div class="admin-stats" id="stats"></div>
+        <div class="admin-tools no-print">
+          <label>Course <select id="flt-course"><option value="">All courses</option><option>Photography 1</option><option>Photography 2</option><option>Digital Arts 1</option><option>Digital Arts 2</option></select></label>
+          <label>Grade <select id="flt-grade"><option value="">All grades</option><option value="9">9th</option><option value="10">10th</option><option value="11">11th</option><option value="12">12th</option></select></label>
+          <label>School year <select id="flt-year"><option value="">All years</option></select></label>
+          <label class="grow">Search <input id="flt-q" type="search" placeholder="Name or student ID"></label>
+          <div class="admin-btns">
+            <button class="btn" id="btn-print" type="button">Print</button>
+            <button class="btn dark" id="btn-csv" type="button">Download for Google Sheets</button>
+            <button class="btn dark" id="btn-refresh" type="button">Refresh</button>
+          </div>
+        </div>
+        <p class="note no-print" id="admin-note"></p>
+        <div class="table-wrap">
+          <table class="admin-table" id="table">
+            <thead><tr><th>Submitted</th><th>Name</th><th>Student ID</th><th>Grade</th><th>School year</th><th>Classes</th><th>Signed up from</th><th>Lang</th><th>Note</th><th class="no-print"></th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+        <p class="note" id="empty" hidden>No sign ups match these filters yet.</p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/admin.js?v=11"></script>
+</body>
+</html>

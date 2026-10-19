@@ -13,6 +13,8 @@
   <meta property="og:image" content="https://www.schoolflo.org/pvhs/images/hero-home.jpg">
   <meta name="theme-color" content="#374545">
   <meta name="format-detection" content="telephone=no">
+  <link rel="alternate" hreflang="en" href="https://www.schoolflo.org/pvhs/digital-arts.html">
+  <link rel="alternate" hreflang="es" href="https://www.schoolflo.org/pvhs/es/digital-arts.html">
   <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="images/hero-arts-m.jpg" media="(max-width: 760px)" fetchpriority="high">
   <link rel="preload" as="image" href="images/hero-arts.jpg" media="(min-width: 761px)" fetchpriority="high">
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -31,10 +33,13 @@
         <img class="mark" src="images/pvhs-logo.png" alt="Pioneer Valley High School Panthers logo" width="74" height="80">
         <div>
           <div class="brand-name">PVHS Digital Media</div>
-          <div class="brand-sub">Pioneer Valley High School &middot; Santa Maria, CA</div>
+          <div class="brand-sub">Pioneer Valley High School<span class="brand-city"> &middot; Santa Maria, CA</span></div>
         </div>
       </a>
-      <a class="btn dark cta" href="teachers.html">Meet Our Teachers</a>
+      <div class="mast-actions">
+        <div class="langtoggle" role="group" aria-label="Language / Idioma"><a href="digital-arts.html" hreflang="en" lang="en" data-lang="en" data-keep-href aria-current="true">EN</a><a href="es/digital-arts.html" hreflang="es" lang="es" data-lang="es" data-keep-href>ES</a></div>
+        <a class="btn cta" href="signup.html?from=digital-arts">Sign Up</a>
+      </div>
       <button class="navtoggle" aria-expanded="false" aria-controls="navlist" aria-label="Open menu"><span class="bars" aria-hidden="true"></span><span class="navtoggle-label">Menu</span></button>
     </div>
   </header>
@@ -47,6 +52,7 @@
         <li><a href="digital-photography.html">Digital Photography</a></li>
         <li><a href="digital-arts.html" aria-current="page">Digital Arts</a></li>
         <li><a href="teachers.html">Our Teachers</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
         <li><a href="https://www.lightwriterz.org" target="_blank" rel="noopener">Light Writerz</a></li>
       </ul>
     </div>
@@ -85,6 +91,7 @@
               <li><span class="k">Software</span><span class="v">Adobe Illustrator for vector art, logos, and type. Adobe Photoshop for image editing, compositing, and mockups.</span></li>
               <li><span class="k">Lab</span><span class="v">Mac computers, with the school iPad as a scanner for sketches and hand done work.</span></li>
             </ul>
+            <a class="btn signup-btn" href="signup.html?course=digital-arts-1&amp;from=digital-arts">Sign up for Digital Arts 1</a>
           </div>
           <div class="course-main">
             <h3>What students will be able to do</h3>
@@ -128,6 +135,7 @@
               <li><span class="k">Who it is for</span><span class="v">Students who completed Digital Arts 1, or who can show the fundamentals and comfort with Illustrator and Photoshop.</span></li>
               <li><span class="k">Software</span><span class="v">Illustrator and Photoshop together at a higher level, plus print and output tools.</span></li>
             </ul>
+            <a class="btn signup-btn" href="signup.html?course=digital-arts-2&amp;from=digital-arts">Sign up for Digital Arts 2</a>
           </div>
           <div class="course-main">
             <h3>What students will be able to do</h3>
@@ -194,6 +202,7 @@
             <li><a href="digital-photography.html">Digital Photography</a></li>
             <li><a href="digital-arts.html">Digital Arts</a></li>
             <li><a href="teachers.html">Our Teachers</a></li>
+            <li><a href="signup.html?from=footer">Sign Up</a></li>
           </ul>
         </div>
         <div>
@@ -217,11 +226,11 @@
       </div>
       <div class="legal">
         <span>&copy; <span id="yr">2026</span> PVHS Digital Media &middot; Pioneer Valley High School</span>
-        <span>Hosted on <a href="../">SchoolFlo</a></span>
+        <span>Hosted on <a href="../">SchoolFlo</a> &middot; <a href="admin.html" rel="nofollow">Staff login</a></span>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js?v=10" defer></script>
+  <script src="js/main.js?v=11" defer></script>
 </body>
 </html>
