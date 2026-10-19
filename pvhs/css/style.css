@@ -114,7 +114,10 @@ a, button { -webkit-tap-highlight-color: rgba(128,224,224,0.15); }
 .hero.page h1 { font-size: clamp(40px, 6vw, 76px); }
 .eyebrow { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.18em; font-size: 14px; color: var(--teal-light-accent); margin-bottom: 10px; }
 
-.hero-home { background-image: url("../images/hero-home.jpg"); background-position: center 40%; }
+.hero-home { background-image: url("../images/hero-home.jpg"); background-position: right center; }
+.hero-home::before { background:
+  linear-gradient(90deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.38) 42%, rgba(0,0,0,0) 68%),
+  linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 50%, #435151 100%); }
 .hero-photo { background-image: url("../images/hero-photo.jpg"); background-position: center 45%; }
 .hero-arts { background-image: url("../images/hero-arts.jpg"); background-position: center 30%; }
 .hero-teachers { background:
@@ -342,7 +345,11 @@ footer.site .legal { border-top: 1px solid rgba(255,255,255,0.14); margin-top: 5
   .hero .actions .btn { text-align: center; padding: 15px 20px; }
   .btn { min-height: 44px; }
   .band .btn { display: block; width: 100%; text-align: center; padding: 15px 20px; }
-  .hero-home { background-image: url("../images/hero-home-m.jpg"); background-position: 55% 40%; }
+  /* Phones: the photo is a banner on top (all three students in frame), text sits below it */
+  .hero-home { background-image: url("../images/hero-home-m.jpg"); background-size: 100% auto; background-position: center top; background-color: #435151; min-height: 0; }
+  .hero-home::before { background: linear-gradient(180deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) calc(67.5vw * 0.6), #435151 67.5vw); }
+  .hero-home .wrap { padding-top: calc(67.5vw - 34px); }
+  .hero-home h1, .hero-home p, .hero-home .eyebrow { text-shadow: 0 2px 12px rgba(0,0,0,0.35); }
   .hero-photo { background-image: url("../images/hero-photo-m.jpg"); }
   .hero-arts { background-image: url("../images/hero-arts-m.jpg"); }
 
