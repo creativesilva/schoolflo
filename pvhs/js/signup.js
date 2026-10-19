@@ -1,6 +1,6 @@
 // PVHS Digital Media interest form: validates, then saves one sign up to Firestore (pvhs_interest).
 // Works on the English page (signup.html) and the Spanish page (es/signup.html).
-import { firebaseConfig, SDK, COLLECTION, COURSES, nextSchoolYear } from "./firebase-config.js?v=2";
+import { firebaseConfig, SDK, COLLECTION, COURSES, nextSchoolYear } from "./firebase-config.js?v=3";
 
 const es = document.documentElement.lang === "es";
 const T = es ? {
@@ -13,7 +13,7 @@ const T = es ? {
   send: "Enviar mi inscripción",
   failed: "No se pudo enviar. Revisa tu conexión a internet e inténtalo otra vez. Si sigue sin funcionar, avísale a tu maestro.",
   done: (n, c, g, y) => `Gracias, ${n}. Te inscribiste en ${c} para el año escolar ${y} (${g}.º grado).`,
-  courses: { "Photography 1": "Fotografía 1", "Photography 2": "Fotografía 2", "Digital Arts 1": "Artes Digitales 1", "Digital Arts 2": "Artes Digitales 2" },
+  courses: { "Photography 1": "Fotografía 1", "Photography 2": "Fotografía 2", "Digital Arts 1": "Artes Digitales 1", "Digital Arts 2": "Artes Digitales 2", "Intro to Art": "Introducción al Arte", "Painting": "Pintura" },
   and: " y ",
 } : {
   legend: y => `What grade will you be in during the ${y} school year?`,

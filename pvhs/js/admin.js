@@ -1,16 +1,16 @@
 // PVHS Digital Media staff admin: Google sign-in (program owner only), sign up list,
 // filters, print, CSV for Google Sheets, delete. Firestore rules enforce the owner-only access.
-import { firebaseConfig, SDK, OWNER, COLLECTION, COURSES } from "./firebase-config.js?v=2";
+import { firebaseConfig, SDK, OWNER, COLLECTION, COURSES } from "./firebase-config.js?v=3";
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const PT = { timeZone: "America/Los_Angeles" };
 const when = d => d ? d.toLocaleString("en-US", { ...PT, month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" }) : "";
 const SOURCES = { index: "Home page", home: "Home page", "digital-photography": "Digital Photography page", "digital-arts": "Digital Arts page",
-  teachers: "Teachers page", signup: "Sign Up page", footer: "Footer link", direct: "Direct link" };
+  "fine-art": "Fine Art page", teachers: "Teachers page", signup: "Sign Up page", footer: "Footer link", direct: "Direct link" };
 const sourceLabel = s => {
   const [page, course] = String(s || "direct").split("#");
-  const c = { "photography-1": "Photography 1", "photography-2": "Photography 2", "digital-arts-1": "Digital Arts 1", "digital-arts-2": "Digital Arts 2" }[course];
+  const c = { "photography-1": "Photography 1", "photography-2": "Photography 2", "digital-arts-1": "Digital Arts 1", "digital-arts-2": "Digital Arts 2", "intro-to-art": "Intro to Art", painting: "Painting" }[course];
   return (SOURCES[page] || page) + (c ? ` (${c} button)` : "");
 };
 

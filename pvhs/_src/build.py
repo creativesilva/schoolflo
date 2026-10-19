@@ -17,12 +17,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "12"  # cache bust for css/js
+V = "13"  # cache bust for css/js
 
 NAV = [
-    ("index.html", "Digital Media"),
+    ("index.html", "Visual Arts"),
     ("digital-photography.html", "Digital Photography"),
     ("digital-arts.html", "Digital Arts"),
+    ("fine-art.html", "Fine Art"),
     ("teachers.html", "Our Teachers"),
     ("signup.html", "Sign Up"),
 ]
@@ -54,7 +55,7 @@ def head(title, desc, path, preload=None, lang="en", noindex=False):
   <meta property="og:description" content="{desc}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{url}">
-  <meta property="og:site_name" content="PVHS Digital Media">
+  <meta property="og:site_name" content="PVHS Visual Arts">
   <meta property="og:image" content="https://www.schoolflo.org/pvhs/images/hero-home.jpg">
   <meta name="theme-color" content="#374545">
   <meta name="format-detection" content="telephone=no">
@@ -70,10 +71,10 @@ def head(title, desc, path, preload=None, lang="en", noindex=False):
 
   <header class="masthead">
     <div class="wrap">
-      <a class="brand" href="index.html" aria-label="PVHS Digital Media home">
+      <a class="brand" href="index.html" aria-label="PVHS Visual Arts home">
         <img class="mark" src="images/pvhs-logo.png" alt="Pioneer Valley High School Panthers logo" width="74" height="80">
         <div>
-          <div class="brand-name">PVHS Digital Media</div>
+          <div class="brand-name">PVHS Visual Arts</div>
           <div class="brand-sub">Pioneer Valley High School<span class="brand-city"> &middot; Santa Maria, CA</span></div>
         </div>
       </a>
@@ -87,7 +88,7 @@ def head(title, desc, path, preload=None, lang="en", noindex=False):
 
   <nav class="mainnav" aria-label="Main">
     <div class="wrap">
-      <a class="dock-logo" href="index.html" aria-label="PVHS Digital Media home" tabindex="-1"><img src="images/pvhs-logo.png" alt="" width="40" height="43"></a>
+      <a class="dock-logo" href="index.html" aria-label="PVHS Visual Arts home" tabindex="-1"><img src="images/pvhs-logo.png" alt="" width="40" height="43"></a>
       <ul id="navlist">
 {nav_items(path)}
         <li><a href="https://www.lightwriterz.org" target="_blank" rel="noopener">Light Writerz</a></li>
@@ -128,16 +129,17 @@ def foot(extra_scripts=""):
     <div class="wrap">
       <div class="cols">
         <div>
-          <a href="index.html" aria-label="PVHS Digital Media home"><img class="foot-mark" src="images/pvhs-logo.png" alt="Pioneer Valley High School Panthers logo" width="89" height="96"></a>
+          <a href="index.html" aria-label="PVHS Visual Arts home"><img class="foot-mark" src="images/pvhs-logo.png" alt="Pioneer Valley High School Panthers logo" width="89" height="96"></a>
           <p class="motto">Learn it. Make it.<br><span>Present it.</span></p>
-          <p>Career Technical Education in Arts, Media, and Entertainment at Pioneer Valley High School. Design, Visual, and Media Arts pathway.</p>
+          <p>Visual Arts at Pioneer Valley High School: Digital Media, a Career Technical Education pathway in Arts, Media, and Entertainment, and Fine Art.</p>
         </div>
         <div>
-          <h4>Digital Media</h4>
+          <h4>Visual Arts</h4>
           <ul>
             <li><a href="index.html">Program Overview</a></li>
             <li><a href="digital-photography.html">Digital Photography</a></li>
             <li><a href="digital-arts.html">Digital Arts</a></li>
+            <li><a href="fine-art.html">Fine Art</a></li>
             <li><a href="teachers.html">Our Teachers</a></li>
             <li><a href="signup.html?from=footer">Sign Up</a></li>
           </ul>
@@ -149,6 +151,8 @@ def foot(extra_scripts=""):
             <li><a href="digital-photography.html#photography-2">Photography 2</a></li>
             <li><a href="digital-arts.html#digital-arts-1">Digital Arts 1</a></li>
             <li><a href="digital-arts.html#digital-arts-2">Digital Arts 2</a></li>
+            <li><a href="fine-art.html#intro-to-art">Intro to Art</a></li>
+            <li><a href="fine-art.html#painting">Painting</a></li>
           </ul>
         </div>
         <div>
@@ -162,7 +166,7 @@ def foot(extra_scripts=""):
         </div>
       </div>
       <div class="legal">
-        <span>&copy; <span id="yr">2026</span> PVHS Digital Media &middot; Pioneer Valley High School</span>
+        <span>&copy; <span id="yr">2026</span> PVHS Visual Arts &middot; Pioneer Valley High School</span>
         <span>Hosted on <a href="../">SchoolFlo</a> &middot; <a href="admin.html" rel="nofollow">Staff login</a></span>
       </div>
     </div>
@@ -177,12 +181,12 @@ def foot(extra_scripts=""):
 HOME = """
     <section class="hero hero-home">
       <div class="wrap">
-        <p class="eyebrow">Pioneer Valley High School &middot; CTE Pathway</p>
-        <h1>Digital<br><span class="accent">Media</span></h1>
-        <p>Real cameras. Industry software. Professional habits. Taught by CTE teachers with real industry experience, and it counts as your a-g &ldquo;F&rdquo; fine art.</p>
+        <p class="eyebrow">Pioneer Valley High School &middot; Visual Arts</p>
+        <h1>Visual<br><span class="accent">Arts</span></h1>
+        <p>Photography, digital design, drawing, and painting. Learn on real cameras, industry software, and in the art studio, and build a portfolio of finished work.</p>
         <div class="actions">
-          <a class="btn" href="digital-photography.html">Digital Photography</a>
-          <a class="btn ghost" href="digital-arts.html">Digital Arts</a>
+          <a class="btn" href="#programs">Digital Media</a>
+          <a class="btn ghost" href="fine-art.html">Fine Art</a>
         </div>
       </div>
     </section>
@@ -192,8 +196,8 @@ HOME = """
         <ul>
           <li><a href="digital-photography.html"><span class="num">01</span><h2>Digital Photography</h2><span class="more">Photography 1 &amp; 2</span></a></li>
           <li><a href="digital-arts.html"><span class="num">02</span><h2>Digital Arts</h2><span class="more">Digital Arts 1 &amp; 2</span></a></li>
-          <li><a href="teachers.html"><span class="num">03</span><h2>Our Teachers</h2><span class="more">Meet the team</span></a></li>
-          <li><a href="https://www.lightwriterz.org" target="_blank" rel="noopener"><span class="num">04</span><h2>Light Writerz</h2><span class="more">The PVHS photo club</span></a></li>
+          <li><a href="fine-art.html"><span class="num">03</span><h2>Fine Art</h2><span class="more">Intro to Art &amp; Painting</span></a></li>
+          <li><a href="teachers.html"><span class="num">04</span><h2>Our Teachers</h2><span class="more">Meet the team</span></a></li>
         </ul>
       </div>
     </div>
@@ -203,13 +207,13 @@ HOME = """
         <div>
           <p class="eyebrow">About the program</p>
           <h2 class="title">Hands on, not lectures</h2>
-          <p class="lead" style="margin-top:18px">Digital Media at Pioneer Valley is a Career Technical Education program in the Arts, Media, and Entertainment sector, inside the Design, Visual, and Media Arts pathway.</p>
-          <p class="muted">Students learn industry standard tools and professional habits through hands on projects. By the end of the pathway, a student can operate real equipment, run a professional edit and deliver workflow, and present finished creative work.</p>
+          <p class="lead" style="margin-top:18px">PVHS Visual Arts brings together two areas: Digital Media, a Career Technical Education program in the Design, Visual, and Media Arts pathway, and Fine Art, where students build drawing and painting skills by hand.</p>
+          <p class="muted">In every class, students learn by making: real tools, clear steps, and finished work they can present. By the end of a course sequence, students have a body of work that shows what they can do.</p>
           <ul class="checklist one">
-            <li><strong>Bilingual materials.</strong> Project directions and handouts are offered in English and Spanish, and students may submit their work in either language.</li>
-            <li><strong>A Mac lab.</strong> Students work on Macs, with a school iPad that doubles as a scanner for sketches and hand done work.</li>
-            <li><strong>Fine arts credit.</strong> Courses satisfy the UC and CSU a-g &ldquo;F&rdquo; Visual and Performing Arts requirement.</li>
-            <li><strong>Open to everyone.</strong> Photography 1 and Digital Arts 1 need no experience.</li>
+            <li><strong>Two areas, one program.</strong> Digital Media covers Digital Photography and Digital Arts. Fine Art covers Intro to Art and Painting.</li>
+            <li><strong>Bilingual materials.</strong> In Digital Media, project directions and handouts are offered in English and Spanish, and students may submit their work in either language.</li>
+            <li><strong>Fine arts credit.</strong> Photography and Digital Arts courses satisfy the UC and CSU a-g &ldquo;F&rdquo; Visual and Performing Arts requirement.</li>
+            <li><strong>Open to everyone.</strong> Photography 1, Digital Arts 1, and Intro to Art need no experience.</li>
           </ul>
         </div>
         <figure class="photo-fig"><img src="images/work/light-02.jpg" alt="Student work: a student in a blue sweater surrounded by loops of light, a light painting photograph" loading="lazy" width="900" height="600"><figcaption>Student work: writing with light, a long exposure project.</figcaption></figure>
@@ -234,24 +238,24 @@ HOME = """
 
     <section class="band teal tight">
       <div class="wrap stats four">
-        <div><div class="n">4</div><div class="l">Courses</div></div>
-        <div><div class="n">35</div><div class="l">Years of industry experience</div></div>
+        <div><div class="n">6</div><div class="l">Courses</div></div>
+        <div><div class="n">35+</div><div class="l">Years of industry experience</div></div>
         <div><div class="n word">a-g &ldquo;F&rdquo;</div><div class="l">Fine arts credit</div></div>
         <div><div class="n word">SkillsUSA</div><div class="l">Student organization</div></div>
       </div>
     </section>
 
-    <section class="band">
+    <section class="band" id="programs">
       <div class="wrap">
         <div class="section-head">
-          <h2>Two Pathways, Four Courses</h2>
-          <span class="sub">Start with level 1, grow into level 2</span>
+          <h2>Two Areas, Six Courses</h2>
+          <span class="sub">Digital Media and Fine Art &middot; start with level 1, grow into level 2</span>
         </div>
-        <div class="cards two">
+        <div class="cards programs">
           <article class="card program">
             <div class="cover" style="background-image:url('images/hero-photo-m.jpg')" role="img" aria-label="Student light painting photograph"></div>
             <div class="body">
-              <p class="kicker">Program 01</p>
+              <p class="kicker">Digital Media</p>
               <h3>Digital Photography</h3>
               <ul class="courses">
                 <li>Photography 1<span>Foundation &middot; no experience needed</span></li>
@@ -264,7 +268,7 @@ HOME = """
           <article class="card program gold-top">
             <div class="cover" style="background-image:url('images/hero-arts-m.jpg')" role="img" aria-label="Student magazine cover designs"></div>
             <div class="body">
-              <p class="kicker">Program 02</p>
+              <p class="kicker">Digital Media</p>
               <h3>Digital Arts</h3>
               <ul class="courses">
                 <li>Digital Arts 1<span>Foundation &middot; no experience needed</span></li>
@@ -272,6 +276,19 @@ HOME = """
               </ul>
               <p>Learn the elements and principles of design, then use Adobe Illustrator and Photoshop to make clean, intentional graphics, brands, and portfolio work.</p>
               <div class="card-actions"><a class="btn dark" href="digital-arts.html">Explore Digital Arts</a><a class="text-link" href="signup.html?course=digital-arts-1&amp;from=home">Sign up</a></div>
+            </div>
+          </article>
+          <article class="card program">
+            <div class="cover cover-fineart" role="img" aria-label="Fine Art: drawing and painting"></div>
+            <div class="body">
+              <p class="kicker">Fine Art</p>
+              <h3>Fine Art</h3>
+              <ul class="courses">
+                <li>Intro to Art<span>Foundation &middot; no experience needed</span></li>
+                <li>Painting<span>Studio &middot; builds on Intro to Art</span></li>
+              </ul>
+              <p>Build skills by hand: drawing, color, and painting, from first sketches to finished paintings ready to exhibit.</p>
+              <div class="card-actions"><a class="btn dark" href="fine-art.html">Explore Fine Art</a><a class="text-link" href="signup.html?course=intro-to-art&amp;from=home">Sign up</a></div>
             </div>
           </article>
         </div>
@@ -283,7 +300,7 @@ HOME = """
         <div>
           <p class="eyebrow" style="color:var(--gold)">Career Technical Student Organization</p>
           <h2 class="title">SkillsUSA</h2>
-          <p class="lead" style="margin-top:18px">PVHS Digital Media is associated with SkillsUSA for both the Digital Photography and Digital Arts pathways.</p>
+          <p class="lead" style="margin-top:18px">The PVHS Digital Media program is associated with SkillsUSA for both the Digital Photography and Digital Arts pathways.</p>
           <p class="muted">SkillsUSA is a national organization for career and technical students. It helps students build leadership, teamwork, and workplace skills, and gives them a place to show their technical work beyond the classroom.</p>
           <p style="margin-top:26px"><a class="btn dark" href="https://www.skillsusa.org" target="_blank" rel="noopener">Visit SkillsUSA</a></p>
         </div>
@@ -306,7 +323,7 @@ HOME = """
       <div class="wrap">
         <div class="section-head">
           <h2>How Every Project Runs</h2>
-          <span class="sub">The same five steps in every course</span>
+          <span class="sub">The same five steps in every Digital Media course</span>
         </div>
         <ol class="principles">
           <li><strong>Learn the concept</strong><span>A short, plain language overview introduces the idea and its key vocabulary.</span></li>
@@ -323,20 +340,21 @@ HOME = """
       <div class="wrap">
         <div class="section-head">
           <h2>Our Teachers</h2>
-          <span class="sub">35 years of combined industry experience &middot; <a href="teachers.html">Meet the team</a></span>
+          <span class="sub">Working photographers, designers, and artists &middot; <a href="teachers.html">Meet the team</a></span>
         </div>
         <div class="team-mini">
           <a class="card" href="teachers.html#chris-silva" style="text-decoration:none;color:inherit"><img class="head" src="images/teachers/chris-silva.jpg" alt="Chris Silva" loading="lazy" width="84" height="84"><div><p class="kicker">Photography &amp; Digital Arts</p><h3>Chris Silva</h3><p>Photography 1 &amp; 2 &middot; Digital Arts 1<br><span class="exp-mini">14 years industry experience</span></p></div></a>
           <a class="card" href="teachers.html#laura-garcia" style="text-decoration:none;color:inherit"><img class="head" src="images/teachers/laura-garcia.jpg" alt="Laura Garcia" loading="lazy" width="84" height="84"><div><p class="kicker">Photography</p><h3>Laura Garcia</h3><p>Photography 1<br><span class="exp-mini">14 years industry experience</span></p></div></a>
           <a class="card" href="teachers.html#rileigh-mankin" style="text-decoration:none;color:inherit"><img class="head" src="images/teachers/rileigh-mankin.jpg" alt="Rileigh Mankin" loading="lazy" width="84" height="84"><div><p class="kicker">Digital Arts</p><h3>Rileigh Mankin</h3><p>Digital Arts 1 &amp; 2<br><span class="exp-mini">7 years industry experience</span></p></div></a>
+          <a class="card" href="teachers.html#stephanie-fikiri" style="text-decoration:none;color:inherit"><span class="head logo-head"><img src="images/pvhs-logo.png" alt="" width="60" height="65"></span><div><p class="kicker">Fine Art</p><h3>Stephanie Fikiri</h3><p>Intro to Art &middot; Painting</p></div></a>
         </div>
       </div>
     </section>
 
     <section class="band dark">
       <div class="wrap">
-        <blockquote class="pull">Learn the concept. Make the work.<br><span class="accent">Present it like a professional.</span><cite>The PVHS Digital Media standard</cite></blockquote>
-        <p class="cta-row" style="margin-top:36px"><a class="btn" href="signup.html?course=photography-1&amp;from=home">Sign up for Photography 1</a> <a class="btn dark" href="signup.html?course=digital-arts-1&amp;from=home">Sign up for Digital Arts 1</a></p>
+        <blockquote class="pull">Learn the concept. Make the work.<br><span class="accent">Present it like a professional.</span><cite>The PVHS Visual Arts standard</cite></blockquote>
+        <p class="cta-row" style="margin-top:36px"><a class="btn" href="signup.html?course=photography-1&amp;from=home">Sign up for Photography 1</a> <a class="btn dark" href="signup.html?course=digital-arts-1&amp;from=home">Sign up for Digital Arts 1</a> <a class="btn dark" href="signup.html?course=intro-to-art&amp;from=home">Sign up for Intro to Art</a></p>
         <p class="note" style="margin-top:18px">Interested? Fill out the sign up form so our teachers can follow up, and ask your counselor about adding the class to your schedule.</p>
       </div>
     </section>
@@ -346,7 +364,7 @@ HOME = """
 PHOTO = """
     <section class="hero page hero-photo">
       <div class="wrap">
-        <p class="eyebrow">Digital Media &middot; Program 01</p>
+        <p class="eyebrow">Visual Arts &middot; Digital Media</p>
         <h1>Digital<br>Photography</h1>
         <p>From Manual mode to studio lighting. Two courses that teach students to see, capture, and finish photographs on purpose.</p>
       </div>
@@ -486,7 +504,7 @@ PHOTO = """
 ARTS = """
     <section class="hero page hero-arts">
       <div class="wrap">
-        <p class="eyebrow">Digital Media &middot; Program 02</p>
+        <p class="eyebrow">Visual Arts &middot; Digital Media</p>
         <h1>Digital<br>Arts</h1>
         <p>Design with intention. Two courses that build from the elements of art to brand systems and portfolio quality work in Adobe Illustrator and Photoshop.</p>
       </div>
@@ -617,7 +635,7 @@ SIGNUP = """
       <div class="wrap">
         <p class="eyebrow">Interest Form</p>
         <h1>Sign Up</h1>
-        <p>Want to take Digital Photography or Digital Arts next school year? Fill out this short form and our teachers will follow up with you.</p>
+        <p>Want to take Digital Photography, Digital Arts, or Fine Art next school year? Fill out this short form and our teachers will follow up with you.</p>
       </div>
     </section>
 
@@ -650,6 +668,8 @@ SIGNUP = """
               <label class="option"><input type="checkbox" name="course" value="Photography 2" data-slug="photography-2"><span><b>Photography 2</b><small>Advanced &middot; after Photography 1</small></span></label>
               <label class="option"><input type="checkbox" name="course" value="Digital Arts 1" data-slug="digital-arts-1"><span><b>Digital Arts 1</b><small>Foundation &middot; no experience needed</small></span></label>
               <label class="option"><input type="checkbox" name="course" value="Digital Arts 2" data-slug="digital-arts-2"><span><b>Digital Arts 2</b><small>Advanced &middot; after Digital Arts 1</small></span></label>
+              <label class="option"><input type="checkbox" name="course" value="Intro to Art" data-slug="intro-to-art"><span><b>Intro to Art</b><small>Foundation &middot; no experience needed</small></span></label>
+              <label class="option"><input type="checkbox" name="course" value="Painting" data-slug="painting"><span><b>Painting</b><small>Studio &middot; builds on Intro to Art</small></span></label>
             </div>
           </fieldset>
           <div class="field">
@@ -667,18 +687,144 @@ SIGNUP = """
           <h2 class="title">You are on the list!</h2>
           <p class="lead" id="doneSummary"></p>
           <p class="muted">Our teachers will follow up with you. Remember to also ask your counselor about adding the class to your schedule.</p>
-          <p class="cta-row" style="margin-top:24px"><a class="btn" href="index.html">Back to Digital Media</a> <a class="btn dark" href="signup.html" id="againLink">Sign up another student</a></p>
+          <p class="cta-row" style="margin-top:24px"><a class="btn" href="index.html">Back to Visual Arts</a> <a class="btn dark" href="signup.html" id="againLink">Sign up another student</a></p>
         </div>
 
         <aside class="signup-side">
           <div class="card">
             <p class="kicker">Good to know</p>
             <ul class="checklist one">
-              <li>Photography 1 and Digital Arts 1 are open to everyone. No experience needed.</li>
-              <li>Every class counts toward the UC and CSU a-g &ldquo;F&rdquo; fine art requirement.</li>
+              <li>Photography 1, Digital Arts 1, and Intro to Art are open to everyone. No experience needed.</li>
+              <li>Photography and Digital Arts classes count toward the UC and CSU a-g &ldquo;F&rdquo; fine art requirement.</li>
             </ul>
           </div>
         </aside>
+      </div>
+    </section>
+"""
+
+FINE = """
+    <section class="hero page hero-fineart">
+      <div class="wrap">
+        <p class="eyebrow">Visual Arts &middot; Fine Art</p>
+        <h1>Fine<br>Art</h1>
+        <p>Drawing, color, and painting by hand. Two courses that build observation skills, creative voice, and a body of finished artwork.</p>
+      </div>
+    </section>
+
+    <section class="band tight">
+      <div class="wrap">
+        <div class="cards two">
+          <a class="card" href="#intro-to-art" style="text-decoration:none;color:inherit"><p class="kicker">Foundation</p><h3>Intro to Art</h3><p>The elements and principles of art, drawing from observation, color, and mixed media. Open to all students.</p></a>
+          <a class="card gold-top" href="#painting" style="text-decoration:none;color:inherit"><p class="kicker">Studio</p><h3>Painting</h3><p>Watercolor and acrylic, color mixing, composition, and a personal style, building toward finished paintings ready to exhibit.</p></a>
+        </div>
+        <p class="note" style="margin-top:20px">Course details are being finalized with our Fine Art teacher and may change.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+
+        <article class="course" id="intro-to-art">
+          <div class="course-side">
+            <span class="course-level entry">Level 1 &middot; Foundation</span>
+            <h2>Intro to Art</h2>
+            <p class="identity">The foundation art course. Students learn the elements and principles of art and build core skills in drawing, color, and design by hand.</p>
+            <ul class="facts">
+              <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#stephanie-fikiri">Stephanie Fikiri</a></span></li>
+              <li><span class="k">Who it is for</span><span class="v">Open to all students, no experience required. The starting point for fine art.</span></li>
+              <li><span class="k">Materials</span><span class="v">Graphite, charcoal, ink, colored pencil, pastel, and paint, plus a personal sketchbook.</span></li>
+            </ul>
+            <a class="btn signup-btn" href="signup.html?course=intro-to-art&amp;from=fine-art">Sign up for Intro to Art</a>
+          </div>
+          <div class="course-main">
+            <h3>What students will be able to do</h3>
+            <ul class="checklist one">
+              <li>Use the elements and principles of art on purpose: line, shape, value, color, texture, space, balance, and emphasis.</li>
+              <li>Draw from observation using contour, value, proportion, and perspective.</li>
+              <li>Mix and apply color using color theory.</li>
+              <li>Work in a range of media, including collage, printmaking, and simple sculpture.</li>
+              <li>Describe, analyze, and give feedback on artwork using art vocabulary.</li>
+              <li>Keep a sketchbook to plan ideas and track growth.</li>
+            </ul>
+
+            <h3>Core units</h3>
+            <div class="units">
+              <div class="unit"><strong>Drawing fundamentals</strong><span>Line, contour, value, shading, and proportion.</span></div>
+              <div class="unit"><strong>Color theory</strong><span>The color wheel, mixing, color schemes, and value scales.</span></div>
+              <div class="unit"><strong>Perspective &amp; space</strong><span>One and two point perspective, overlapping, and creating depth.</span></div>
+              <div class="unit"><strong>Mixed media &amp; design</strong><span>Collage, printmaking, pattern, and an introduction to 3D work.</span></div>
+              <div class="unit"><strong>Art history &amp; critique</strong><span>Artists across cultures and eras, and how to talk about art.</span></div>
+            </div>
+
+            <h3>Example projects</h3>
+            <ul class="tags">
+              <li>Contour Line Drawing</li><li>Value Scale and Shaded Sphere</li><li>Color Wheel</li><li>One Point Perspective</li><li>Still Life Drawing</li><li>Self-Portrait Drawing</li><li>Collage</li><li>Printmaking</li>
+            </ul>
+
+            <div class="callout">
+              <p class="k">How the year builds</p>
+              <p>Start with observation and drawing basics, add color, then explore mixed media. The year closes with a finished piece ready to exhibit, which sets up Painting.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="course" id="painting">
+          <div class="course-side">
+            <span class="course-level">Level 2 &middot; Studio</span>
+            <h2>Painting</h2>
+            <p class="identity">The studio painting course. Students explore watercolor and acrylic, color mixing, and composition, and develop a personal style.</p>
+            <ul class="facts">
+              <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#stephanie-fikiri">Stephanie Fikiri</a></span></li>
+              <li><span class="k">Who it is for</span><span class="v">Recommended after Intro to Art, or for students who can show drawing and color fundamentals.</span></li>
+              <li><span class="k">Materials</span><span class="v">Watercolor, acrylic, brushes, palette knives, watercolor paper, and canvas.</span></li>
+            </ul>
+            <a class="btn signup-btn" href="signup.html?course=painting&amp;from=fine-art">Sign up for Painting</a>
+          </div>
+          <div class="course-main">
+            <h3>What students will be able to do</h3>
+            <ul class="checklist one">
+              <li>Mix color with control over value, temperature, and intensity.</li>
+              <li>Use painting techniques in watercolor and acrylic: washes, layering, blending, dry brush, and texture.</li>
+              <li>Plan compositions with thumbnail sketches and studies.</li>
+              <li>Paint from observation and imagination: still life, landscape, portrait, and abstraction.</li>
+              <li>Study painters and art movements, and respond to them in their own work.</li>
+              <li>Build a series and present finished paintings for exhibit.</li>
+            </ul>
+
+            <h3>Core units</h3>
+            <div class="units">
+              <div class="unit"><strong>Color &amp; mixing</strong><span>Color charts, value, temperature, and limited palettes.</span></div>
+              <div class="unit"><strong>Watercolor</strong><span>Washes, wet on wet, layering, and lifting.</span></div>
+              <div class="unit"><strong>Acrylic</strong><span>Blending, layering, texture, and painting on canvas.</span></div>
+              <div class="unit"><strong>Composition &amp; subject</strong><span>Still life, landscape, portrait, and abstraction.</span></div>
+              <div class="unit"><strong>Painters &amp; movements</strong><span>Master studies and art history connections.</span></div>
+              <div class="unit"><strong>Series &amp; exhibition</strong><span>A cohesive body of work, artist statements, and display.</span></div>
+            </div>
+
+            <h3>Example projects</h3>
+            <ul class="tags">
+              <li>Color Mixing Chart</li><li>Watercolor Landscape</li><li>Monochromatic Painting</li><li>Still Life in Acrylic</li><li>Master Study</li><li>Self-Portrait Painting</li><li>Abstract Painting</li><li>Series for Exhibit</li>
+            </ul>
+
+            <div class="callout">
+              <p class="k">Studio rhythm</p>
+              <p>Every painting moves through the same steps: thumbnails, a color study, the final painting, and a short critique or reflection.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="band gray">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Student Artwork</h2>
+          <span class="sub">Coming soon</span>
+        </div>
+        <p class="lead" style="max-width:720px">A gallery of student drawings and paintings is on the way.</p>
+        <p class="cta-row" style="margin-top:24px"><a class="btn" href="signup.html?course=intro-to-art&amp;from=fine-art">Sign up for Intro to Art</a> <a class="btn dark" href="teachers.html#stephanie-fikiri">Meet Stephanie Fikiri</a></p>
       </div>
     </section>
 """
@@ -687,9 +833,9 @@ SIGNUP = """
 TEACH = """
     <section class="hero page hero-teachers">
       <div class="wrap">
-        <p class="eyebrow">PVHS Digital Media</p>
+        <p class="eyebrow">PVHS Visual Arts</p>
         <h1>Our<br>Teachers</h1>
-        <p>Every Digital Media teacher is a CTE teacher with real industry experience: 35 combined years of commercial and fine art work, brought into the classroom.</p>
+        <p>Working photographers, designers, and artists. Our Digital Media teachers are CTE teachers who bring 35 combined years of commercial and fine art industry experience into the classroom.</p>
       </div>
     </section>
 
@@ -731,13 +877,22 @@ TEACH = """
               <p class="person-link"><a href="https://rileighmankin.myportfolio.com/" target="_blank" rel="noopener">See Portfolio</a></p>
             </div>
           </article>
+          <article class="person" id="stephanie-fikiri">
+            <div class="ph ph-logo"><img src="images/pvhs-logo.png" alt="Photo coming soon" loading="lazy" width="222" height="240"></div>
+            <div class="body">
+              <p class="role">Intro to Art &middot; Painting</p>
+              <h3>Stephanie Fikiri</h3>
+              <p>Stephanie Fikiri teaches Fine Art at Pioneer Valley High School, including Intro to Art and Painting.</p>
+              <p class="note">Full bio coming soon.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="band teal tight">
       <div class="wrap stats four">
-        <div><div class="n">35</div><div class="l">Combined years in industry</div></div>
+        <div><div class="n">35</div><div class="l">Digital Media combined years in industry</div></div>
         <div><div class="n">14</div><div class="l">Chris Silva</div></div>
         <div><div class="n">14</div><div class="l">Laura Garcia</div></div>
         <div><div class="n">7</div><div class="l">Rileigh Mankin</div></div>
@@ -747,7 +902,7 @@ TEACH = """
     <section class="band">
       <div class="wrap">
         <h2 class="title">Want to join a class?</h2>
-        <p class="lead" style="margin-top:12px;max-width:720px">Photography 1 and Digital Arts 1 are open to every PVHS student, no experience needed, and they count toward the a-g &ldquo;F&rdquo; fine art requirement. Fill out the sign up form, then ask your counselor to add one to your schedule.</p>
+        <p class="lead" style="margin-top:12px;max-width:720px">Photography 1, Digital Arts 1, and Intro to Art are open to every PVHS student, no experience needed. Fill out the sign up form, then ask your counselor to add one to your schedule.</p>
         <p class="cta-row" style="margin-top:24px"><a class="btn" href="signup.html?from=teachers">Sign up</a> <a class="btn dark" href="index.html">Explore the program</a></p>
       </div>
     </section>
@@ -758,7 +913,7 @@ ADMIN = """<!DOCTYPE html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Staff Admin | PVHS Digital Media</title>
+  <title>Staff Admin | PVHS Visual Arts</title>
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#374545">
   <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
@@ -770,10 +925,10 @@ ADMIN = """<!DOCTYPE html>
 <body class="admin">
   <header class="masthead">
     <div class="wrap">
-      <a class="brand" href="index.html" aria-label="PVHS Digital Media home">
+      <a class="brand" href="index.html" aria-label="PVHS Visual Arts home">
         <img class="mark" src="images/pvhs-logo.png" alt="Pioneer Valley High School Panthers logo" width="74" height="80">
         <div>
-          <div class="brand-name">PVHS Digital Media</div>
+          <div class="brand-name">PVHS Visual Arts</div>
           <div class="brand-sub">Staff admin &middot; Interest form sign ups</div>
         </div>
       </a>
@@ -798,12 +953,12 @@ ADMIN = """<!DOCTYPE html>
           <span class="sub">Signed in as <b id="who"></b></span>
         </div>
         <div class="print-head print-only">
-          <h1>PVHS Digital Media &middot; Interest form sign ups</h1>
+          <h1>PVHS Visual Arts &middot; Interest form sign ups</h1>
           <p id="print-meta"></p>
         </div>
         <div class="admin-stats" id="stats"></div>
         <div class="admin-tools no-print">
-          <label>Course <select id="flt-course"><option value="">All courses</option><option>Photography 1</option><option>Photography 2</option><option>Digital Arts 1</option><option>Digital Arts 2</option></select></label>
+          <label>Course <select id="flt-course"><option value="">All courses</option><option>Photography 1</option><option>Photography 2</option><option>Digital Arts 1</option><option>Digital Arts 2</option><option>Intro to Art</option><option>Painting</option></select></label>
           <label>Grade <select id="flt-grade"><option value="">All grades</option><option value="9">9th</option><option value="10">10th</option><option value="11">11th</option><option value="12">12th</option></select></label>
           <label>School year <select id="flt-year"><option value="">All years</option></select></label>
           <label class="grow">Search <input id="flt-q" type="search" placeholder="Name or student ID"></label>
@@ -916,20 +1071,23 @@ def to_spanish(html, path, missing):
 
 
 PAGES = [
-    ("index.html", "PVHS Digital Media | Pioneer Valley High School",
-     "Digital Media at Pioneer Valley High School: Digital Photography and Digital Arts. Career Technical Education in Arts, Media, and Entertainment.",
+    ("index.html", "PVHS Visual Arts | Pioneer Valley High School",
+     "Visual Arts at Pioneer Valley High School: Digital Photography, Digital Arts, Intro to Art, and Painting.",
      "hero-home", HOME),
-    ("digital-photography.html", "Digital Photography | PVHS Digital Media",
+    ("digital-photography.html", "Digital Photography | PVHS Visual Arts",
      "Photography 1 and Photography 2 at Pioneer Valley High School: Manual mode, RAW, Lightroom Classic, lighting, and studio work.",
      "hero-photo", PHOTO),
-    ("digital-arts.html", "Digital Arts | PVHS Digital Media",
+    ("digital-arts.html", "Digital Arts | PVHS Visual Arts",
      "Digital Arts 1 and Digital Arts 2 at Pioneer Valley High School: design foundations, Adobe Illustrator and Photoshop, branding, and portfolio work.",
      "hero-arts", ARTS),
-    ("teachers.html", "Our Teachers | PVHS Digital Media",
-     "Meet the Digital Media teachers at Pioneer Valley High School: Chris Silva, Laura Garcia, and Rileigh Mankin.",
+    ("fine-art.html", "Fine Art | PVHS Visual Arts",
+     "Intro to Art and Painting at Pioneer Valley High School: drawing, color, watercolor, acrylic, and a portfolio of finished artwork.",
+     None, FINE),
+    ("teachers.html", "Our Teachers | PVHS Visual Arts",
+     "Meet the Visual Arts teachers at Pioneer Valley High School: Chris Silva, Laura Garcia, Rileigh Mankin, and Stephanie Fikiri.",
      None, TEACH),
-    ("signup.html", "Sign Up | PVHS Digital Media",
-     "Interest form for Digital Photography and Digital Arts at Pioneer Valley High School.",
+    ("signup.html", "Sign Up | PVHS Visual Arts",
+     "Interest form for Digital Photography, Digital Arts, and Fine Art at Pioneer Valley High School.",
      None, SIGNUP),
 ]
 

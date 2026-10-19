@@ -22,8 +22,8 @@ service cloud.firestore {
         && request.resource.data.sid is string && request.resource.data.sid.matches('^[0-9]{6}$')
         && request.resource.data.grade in [9, 10, 11, 12]
         && request.resource.data.schoolYear is string && request.resource.data.schoolYear.matches('^20[0-9]{2}-20[0-9]{2}$')
-        && request.resource.data.courses is list && request.resource.data.courses.size() >= 1 && request.resource.data.courses.size() <= 4
-        && request.resource.data.courses.hasOnly(['Photography 1', 'Photography 2', 'Digital Arts 1', 'Digital Arts 2'])
+        && request.resource.data.courses is list && request.resource.data.courses.size() >= 1 && request.resource.data.courses.size() <= 6
+        && request.resource.data.courses.hasOnly(['Photography 1', 'Photography 2', 'Digital Arts 1', 'Digital Arts 2', 'Intro to Art', 'Painting'])
         && str(request.resource.data.source, 64)
         && request.resource.data.lang in ['en', 'es']
         && (!('note' in request.resource.data) || str(request.resource.data.note, 500))
