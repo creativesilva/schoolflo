@@ -207,6 +207,7 @@ ES = {
     "How the year builds": "Cómo avanza el año",
     "Learn more": "Más información",
     "SkillsUSA · Concentrators & Completers": "SkillsUSA · Concentradores y completadores",
+    "Concentrators & Completers": "Concentradores y completadores",
     "Student Work": "Trabajos estudiantiles",
 
     # ---------- Digital Photography

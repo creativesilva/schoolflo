@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "19"  # cache bust for css/js
+V = "20"  # cache bust for css/js
 
 # Teal bar: top level only. DM_PAGES highlight "Digital Media" too.
 NAV = [
@@ -282,7 +282,7 @@ DM = """
           <li><strong>Fine arts credit.</strong> Every Visual Arts course satisfies the UC and CSU a-g &ldquo;F&rdquo; Visual and Performing Arts requirement.</li>
           <li><strong>Career:</strong> a CTE pathway in Arts, Media, and Entertainment, with SkillsUSA.</li>
         </ul>
-        <p class="cta-row" style="margin-top:24px"><a class="btn dark" href="index.html#skillsusa">SkillsUSA</a> <a class="btn dark" href="teachers.html">Our Teachers</a></p>
+        <p class="cta-row" style="margin-top:24px"><a class="btn dark btn-logo" href="index.html#skillsusa"><img src="images/skillsusa-white.png" alt="SkillsUSA" width="598" height="292"></a> <a class="btn dark" href="teachers.html">Our Teachers</a></p>
       </div>
     </section>
 """
@@ -351,7 +351,7 @@ HOME = """
         <div><div class="n">6</div><div class="l">Courses</div></div>
         <div><div class="n">35+</div><div class="l">Years of industry experience</div></div>
         <div><div class="n word">a-g &ldquo;F&rdquo;</div><div class="l">Fine arts credit</div></div>
-        <div><div class="n word">SkillsUSA</div><div class="l">Student organization</div></div>
+        <div><div class="n logo"><img src="images/skillsusa-white.png" alt="SkillsUSA" width="598" height="292"></div><div class="l">Student organization</div></div>
       </div>
     </section>
 
@@ -414,7 +414,7 @@ HOME = """
       <div class="wrap split">
         <div>
           <p class="eyebrow" style="color:var(--gold)">Career Technical Student Organization</p>
-          <h2 class="title">SkillsUSA</h2>
+          <h2 class="title skills-title"><img src="images/skillsusa-white.png" alt="SkillsUSA" width="598" height="292"></h2>
           <p class="lead" style="margin-top:18px">The PVHS Digital Media program is associated with SkillsUSA for both the Digital Photography and Digital Arts pathways.</p>
           <p class="muted">SkillsUSA is a national organization for career and technical students. It helps students build leadership, teamwork, and workplace skills, and gives them a place to show their technical work beyond the classroom.</p>
           <p style="margin-top:26px"><a class="btn dark" href="https://www.skillsusa.org" target="_blank" rel="noopener">Visit SkillsUSA</a></p>
@@ -585,7 +585,7 @@ PHOTO = """
               <p>Photography 1 teaches one control at a time. Photography 2 adds lighting, often requires natural only or self directed work, and expects students to run the full capture to delivery pipeline on their own.</p>
             </div>
             <div class="callout skills-callout">
-              <p class="k">SkillsUSA &middot; Concentrators &amp; Completers</p>
+              <p class="k k-logo"><img src="images/skillsusa-white.png" alt="SkillsUSA" width="598" height="292"><span>Concentrators &amp; Completers</span></p>
               <p>The Digital Photography pathway is associated with SkillsUSA. Students who continue past level 1 become pathway concentrators, and students who finish the full sequence become pathway completers. <a href="index.html#skillsusa">Learn more</a></p>
             </div>
           </div>
@@ -718,7 +718,7 @@ ARTS = """
               <p>Digital Arts 2 runs as a set of larger, brief driven projects that apply and deepen the Digital Arts 1 foundations. Same rhythm: concept, make, refine, deliver, reflect, with a higher bar on craft, independence, and finish.</p>
             </div>
             <div class="callout skills-callout">
-              <p class="k">SkillsUSA &middot; Concentrators &amp; Completers</p>
+              <p class="k k-logo"><img src="images/skillsusa-white.png" alt="SkillsUSA" width="598" height="292"><span>Concentrators &amp; Completers</span></p>
               <p>The Digital Arts pathway is associated with SkillsUSA. Students who continue past level 1 become pathway concentrators, and students who finish the full sequence become pathway completers. <a href="index.html#skillsusa">Learn more</a></p>
             </div>
           </div>

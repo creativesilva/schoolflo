@@ -642,3 +642,11 @@ legend + .hint { margin: -2px 0 10px; }
   radial-gradient(190px 140px at 28% 45%, rgba(0,150,150,0.85), transparent 70%),
   radial-gradient(200px 140px at 60% 88%, rgba(245,179,1,0.8), transparent 70%),
   radial-gradient(140px 120px at 10% 88%, rgba(128,224,224,0.6), transparent 70%), #2f3b3b; }
+/* SkillsUSA logo (white, transparent) in place of the name */
+.stats.four .n.logo { height: clamp(46px, 5.6vw, 76px); display: flex; align-items: center; justify-content: center; }
+.stats.four .n.logo img { height: 100%; width: auto; }
+h2.title.skills-title img { display: block; height: clamp(64px, 8vw, 96px); width: auto; margin-bottom: 4px; }
+.callout .k.k-logo { display: flex; align-items: center; gap: 12px; }
+.callout .k.k-logo img { height: 36px; width: auto; }
+.btn.btn-logo { display: inline-flex; align-items: center; justify-content: center; }
+.btn.btn-logo img { height: 22px; width: auto; }
