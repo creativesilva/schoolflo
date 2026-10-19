@@ -590,4 +590,10 @@ ES = {
     'Back to Visual Arts': 'Volver a Artes Visuales',
     'Photography 1, Digital Arts 1, and Intro to Art are open to everyone. No experience needed.': 'Fotografía 1, Artes Digitales 1 e Introducción al Arte están abiertas para todos. No necesitas experiencia.',
     'Photography and Digital Arts classes count toward the UC and CSU a-g “F” fine art requirement.': 'Las clases de Fotografía y Artes Digitales cuentan para el requisito “F” de bellas artes de a-g para UC y CSU.',
+    # ---------- a-g for all courses, Painting prerequisite
+    'Every Visual Arts course satisfies the UC and CSU a-g “F” Visual and Performing Arts requirement.': 'Todas las clases de Artes Visuales cumplen con el requisito “F” de Artes Visuales y Escénicas de a-g para UC y CSU.',
+    'Every Visual Arts course, from Photography and Digital Arts to Intro to Art and Painting, satisfies the UC and CSU a-g “F” Visual and Performing Arts requirement.': 'Todas las clases de Artes Visuales, desde Fotografía y Artes Digitales hasta Introducción al Arte y Pintura, cumplen con el requisito “F” de Artes Visuales y Escénicas de a-g para UC y CSU.',
+    'To be eligible for the University of California and California State University, students need a year of Visual and Performing Arts. Any Visual Arts course covers that requirement, and Digital Media also builds real career skills on industry tools, so one elective can work toward college and career at the same time.': 'Para poder entrar a la Universidad de California (UC) y a la Universidad Estatal de California (CSU), los estudiantes necesitan un año de Artes Visuales y Escénicas. Cualquier clase de Artes Visuales cumple ese requisito, y Medios Digitales además desarrolla habilidades reales para una carrera con herramientas profesionales. Así, una sola optativa puede prepararte para la universidad y para una carrera al mismo tiempo.',
+    'Students who completed Intro to Art.': 'Estudiantes que terminaron Introducción al Arte.',
+    'Studio · after Intro to Art': 'Taller · después de Introducción al Arte',
 }
