@@ -212,7 +212,7 @@ HOME = """
           <ul class="checklist one">
             <li><strong>Two areas, one program.</strong> Digital Media covers Digital Photography and Digital Arts. Fine Art covers Intro to Art and Painting.</li>
             <li><strong>Bilingual materials.</strong> In Digital Media, project directions and handouts are offered in English and Spanish, and students may submit their work in either language.</li>
-            <li><strong>Fine arts credit.</strong> Photography and Digital Arts courses satisfy the UC and CSU a-g &ldquo;F&rdquo; Visual and Performing Arts requirement.</li>
+            <li><strong>Fine arts credit.</strong> Every Visual Arts course satisfies the UC and CSU a-g &ldquo;F&rdquo; Visual and Performing Arts requirement.</li>
             <li><strong>Open to everyone.</strong> Photography 1, Digital Arts 1, and Intro to Art need no experience.</li>
           </ul>
         </div>
@@ -226,8 +226,8 @@ HOME = """
         <div>
           <p class="eyebrow" style="color:var(--gold)">College ready elective</p>
           <h2 class="title">The &ldquo;F&rdquo; in a-g</h2>
-          <p class="lead" style="margin-top:18px">Our Photography and Digital Arts courses satisfy the UC and CSU a-g &ldquo;F&rdquo; Visual and Performing Arts requirement.</p>
-          <p class="muted">To be eligible for the University of California and California State University, students need a year of Visual and Performing Arts. Digital Media covers that fine art requirement while building real career skills on industry tools, so one elective works toward college and career at the same time.</p>
+          <p class="lead" style="margin-top:18px">Every Visual Arts course, from Photography and Digital Arts to Intro to Art and Painting, satisfies the UC and CSU a-g &ldquo;F&rdquo; Visual and Performing Arts requirement.</p>
+          <p class="muted">To be eligible for the University of California and California State University, students need a year of Visual and Performing Arts. Any Visual Arts course covers that requirement, and Digital Media also builds real career skills on industry tools, so one elective can work toward college and career at the same time.</p>
           <ul class="checklist one">
             <li><strong>College:</strong> counts as fine art (&ldquo;F&rdquo;) for UC and CSU admission.</li>
             <li><strong>Career:</strong> a CTE pathway in Arts, Media, and Entertainment, with SkillsUSA.</li>
@@ -285,7 +285,7 @@ HOME = """
               <h3>Fine Art</h3>
               <ul class="courses">
                 <li>Intro to Art<span>Foundation &middot; no experience needed</span></li>
-                <li>Painting<span>Studio &middot; builds on Intro to Art</span></li>
+                <li>Painting<span>Studio &middot; after Intro to Art</span></li>
               </ul>
               <p>Build skills by hand: drawing, color, and painting, from first sketches to finished paintings ready to exhibit.</p>
               <div class="card-actions"><a class="btn dark" href="fine-art.html">Explore Fine Art</a><a class="text-link" href="signup.html?course=intro-to-art&amp;from=home">Sign up</a></div>
@@ -669,7 +669,7 @@ SIGNUP = """
               <label class="option"><input type="checkbox" name="course" value="Digital Arts 1" data-slug="digital-arts-1"><span><b>Digital Arts 1</b><small>Foundation &middot; no experience needed</small></span></label>
               <label class="option"><input type="checkbox" name="course" value="Digital Arts 2" data-slug="digital-arts-2"><span><b>Digital Arts 2</b><small>Advanced &middot; after Digital Arts 1</small></span></label>
               <label class="option"><input type="checkbox" name="course" value="Intro to Art" data-slug="intro-to-art"><span><b>Intro to Art</b><small>Foundation &middot; no experience needed</small></span></label>
-              <label class="option"><input type="checkbox" name="course" value="Painting" data-slug="painting"><span><b>Painting</b><small>Studio &middot; builds on Intro to Art</small></span></label>
+              <label class="option"><input type="checkbox" name="course" value="Painting" data-slug="painting"><span><b>Painting</b><small>Studio &middot; after Intro to Art</small></span></label>
             </div>
           </fieldset>
           <div class="field">
@@ -695,7 +695,7 @@ SIGNUP = """
             <p class="kicker">Good to know</p>
             <ul class="checklist one">
               <li>Photography 1, Digital Arts 1, and Intro to Art are open to everyone. No experience needed.</li>
-              <li>Photography and Digital Arts classes count toward the UC and CSU a-g &ldquo;F&rdquo; fine art requirement.</li>
+              <li>Every class counts toward the UC and CSU a-g &ldquo;F&rdquo; fine art requirement.</li>
             </ul>
           </div>
         </aside>
@@ -731,6 +731,7 @@ FINE = """
             <h2>Intro to Art</h2>
             <p class="identity">The foundation art course. Students learn the elements and principles of art and build core skills in drawing, color, and design by hand.</p>
             <ul class="facts">
+              <li><span class="k">a-g credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
               <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#stephanie-fikiri">Stephanie Fikiri</a></span></li>
               <li><span class="k">Who it is for</span><span class="v">Open to all students, no experience required. The starting point for fine art.</span></li>
               <li><span class="k">Materials</span><span class="v">Graphite, charcoal, ink, colored pencil, pastel, and paint, plus a personal sketchbook.</span></li>
@@ -775,8 +776,9 @@ FINE = """
             <h2>Painting</h2>
             <p class="identity">The studio painting course. Students explore watercolor and acrylic, color mixing, and composition, and develop a personal style.</p>
             <ul class="facts">
+              <li><span class="k">a-g credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
               <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#stephanie-fikiri">Stephanie Fikiri</a></span></li>
-              <li><span class="k">Who it is for</span><span class="v">Recommended after Intro to Art, or for students who can show drawing and color fundamentals.</span></li>
+              <li><span class="k">Who it is for</span><span class="v">Students who completed Intro to Art.</span></li>
               <li><span class="k">Materials</span><span class="v">Watercolor, acrylic, brushes, palette knives, watercolor paper, and canvas.</span></li>
             </ul>
             <a class="btn signup-btn" href="signup.html?course=painting&amp;from=fine-art">Sign up for Painting</a>
