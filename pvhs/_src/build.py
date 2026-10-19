@@ -728,6 +728,7 @@ TEACH = """
               <p>Hi there, nice to meet you! I&rsquo;m Rileigh. I&rsquo;m a tenacious designer who specializes in brand identity, apparel design, and pattern design. I thrive under pressure and strive to create meaningful designs through authentic storytelling.</p>
               <p>Outside of design, I love exploring and competing. You can find me traveling, camping, hiking, or challenging friends and family to a new board game.</p>
               <p>I studied at Corvin University and Laguna College of Art and Design, where I earned my bachelor&rsquo;s degree, and I now teach Digital Arts at Pioneer Valley High School.</p>
+              <p class="person-link"><a href="https://rileighmankin.myportfolio.com/" target="_blank" rel="noopener">See Portfolio</a></p>
             </div>
           </article>
         </div>
