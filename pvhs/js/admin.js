@@ -1,6 +1,6 @@
-// PVHS Digital Media staff admin: Google sign-in (program owner only), sign up list,
-// filters, print, CSV for Google Sheets, delete. Firestore rules enforce the owner-only access.
-import { firebaseConfig, SDK, OWNER, COLLECTION, COURSES } from "./firebase-config.js?v=4";
+// PVHS Visual Arts staff admin: Google sign-in (approved teachers only), sign up list,
+// filters, print, CSV for Google Sheets, delete. Firestore rules enforce the same teacher list.
+import { firebaseConfig, SDK, STAFF, COLLECTION, COURSES } from "./firebase-config.js?v=5";
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -36,7 +36,7 @@ try {
 $("signin").addEventListener("click", async () => {
   $("login-err").hidden = true;
   try {
-    await A.signInWithPopup(auth, new A.GoogleAuthProvider().setCustomParameters({ prompt: "select_account", login_hint: OWNER }));
+    await A.signInWithPopup(auth, new A.GoogleAuthProvider().setCustomParameters({ prompt: "select_account" }));
   } catch (e) {
     $("login-err").textContent =
       e.code === "auth/popup-closed-by-user" ? "Sign-in was closed before it finished. Please try again."
@@ -51,9 +51,9 @@ $("signout").addEventListener("click", () => A.signOut(auth));
 A.onAuthStateChanged(auth, async user => {
   if (!user) { $("v-app").hidden = true; $("v-login").hidden = false; $("signout").hidden = true; return; }
   const email = (user.email || "").toLowerCase();
-  if (email !== OWNER) {
+  if (!STAFF.includes(email)) {
     await A.signOut(auth);
-    $("login-err").textContent = `${email} does not have access. Sign in with ${OWNER}.`;
+    $("login-err").textContent = `${email} does not have access. Sign in with your teacher Google account.`;
     $("login-err").hidden = false;
     return;
   }

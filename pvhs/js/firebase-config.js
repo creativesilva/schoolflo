@@ -12,7 +12,8 @@ export const firebaseConfig = {
   appId: "1:217775245577:web:09f82aa124f5cc1880abd8"
 };
 export const SDK = "https://www.gstatic.com/firebasejs/10.12.2/";
-export const OWNER = "creativesilva1@gmail.com";
+// Teachers who can sign in to the staff admin (must match isStaff() in pvhs/_src/firestore.rules).
+export const STAFF = ["creativesilva1@gmail.com", "stephaniefikri@gmail.com", "rileighmankin@gmail.com"];
 export const COLLECTION = "pvhs_interest";
 export const COURSES = ["Photography 1", "Photography 2", "Digital Arts 1", "Digital Arts 2", "Intro to Art", "Painting"];
 

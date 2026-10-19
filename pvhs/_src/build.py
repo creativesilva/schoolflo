@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "25"  # cache bust for css/js
+V = "26"  # cache bust for css/js
 
 # Teal bar: top level only. DM_PAGES highlight "Digital Media" too.
 NAV = [
