@@ -13,7 +13,7 @@ const T = es ? {
   send: "Enviar mi inscripción",
   failed: "No se pudo enviar. Revisa tu conexión a internet e inténtalo otra vez. Si sigue sin funcionar, avísale a tu maestro.",
   done: (n, c, g, y) => `Gracias, ${n}. Te inscribiste en ${c} para el año escolar ${y} (${g}.º grado).`,
-  courses: { "Photography 1": "Fotografía 1", "Photography 2": "Fotografía 2", "Digital Arts 1": "Artes Digitales 1", "Digital Arts 2": "Artes Digitales 2", "Intro to Art": "Introducción al Arte", "Painting": "Pintura" },
+  courses: { "Photography 1": "Fotografía 1", "Photography 2": "Fotografía 2", "Digital Arts 1": "Artes Digitales 1", "Digital Arts 2": "Artes Digitales 2", "Intro to Art": "Introducción al Arte", "Painting": "Pintura 1" },
   and: " y ",
 } : {
   legend: y => `What grade will you be in during the ${y} school year?`,
@@ -25,7 +25,7 @@ const T = es ? {
   send: "Send my sign up",
   failed: "Your sign up did not send. Check your internet connection and try again. If it still does not work, let your teacher know.",
   done: (n, c, g, y) => `Thanks, ${n}. You signed up for ${c} for the ${y} school year (grade ${g}).`,
-  courses: {},
+  courses: { "Painting": "Painting 1" },
   and: " and ",
 };
 
