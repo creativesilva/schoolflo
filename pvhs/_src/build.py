@@ -17,15 +17,33 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "16"  # cache bust for css/js
+V = "17"  # cache bust for css/js
 
+# Teal bar: top level only. DM_PAGES highlight "Digital Media" too.
 NAV = [
     ("index.html", "Visual Arts"),
-    ("digital-photography.html", "Digital Photography"),
-    ("digital-arts.html", "Digital Arts"),
     ("fine-art.html", "Fine Art"),
+    ("digital-media.html", "Digital Media"),
     ("teachers.html", "Our Teachers"),
     ("signup.html", "Sign Up"),
+]
+DM_PAGES = ("digital-media.html", "digital-photography.html", "digital-arts.html")
+
+# Hamburger menu: every page and course. (level, href, label)
+MENU = [
+    (1, "index.html", "Visual Arts"),
+    (1, "fine-art.html", "Fine Art"),
+    (2, "fine-art.html#intro-to-art", "Intro to Art"),
+    (2, "fine-art.html#painting", "Painting"),
+    (1, "digital-media.html", "Digital Media"),
+    (2, "digital-photography.html", "Digital Photography"),
+    (3, "digital-photography.html#photography-1", "Photography 1"),
+    (3, "digital-photography.html#photography-2", "Photography 2"),
+    (2, "digital-arts.html", "Digital Arts"),
+    (3, "digital-arts.html#digital-arts-1", "Digital Arts 1"),
+    (3, "digital-arts.html#digital-arts-2", "Digital Arts 2"),
+    (1, "teachers.html", "Our Teachers"),
+    (1, "signup.html", "Sign Up"),
 ]
 
 
@@ -84,7 +102,7 @@ def head(title, desc, path, preload=None, lang="en", noindex=False):
         <div class="staffmenu">
           <button class="staffmenu-btn" type="button" aria-expanded="false" aria-controls="staffmenu-list" aria-label="More options"><span class="bars" aria-hidden="true"></span></button>
           <ul class="staffmenu-list" id="staffmenu-list" hidden>
-            <li><a href="{admin_href}" data-keep-href>Teacher Login</a></li>
+{menu_items(path, admin_href, "staffmenu-list")}
           </ul>
         </div>
       </div>
@@ -97,8 +115,7 @@ def head(title, desc, path, preload=None, lang="en", noindex=False):
       <a class="dock-logo" href="index.html" aria-label="PVHS Visual Arts home" tabindex="-1"><img src="images/pvhs-logo.png" alt="" width="40" height="43"></a>
       <ul id="navlist">
 {nav_items(path)}
-        <li><a href="https://www.lightwriterz.org" target="_blank" rel="noopener">Light Writerz</a></li>
-        <li class="nav-staff"><a href="{admin_href}" data-keep-href>Teacher Login</a></li>
+{menu_items(path, admin_href, "navlist")}
       </ul>
     </div>
   </nav>
@@ -122,10 +139,27 @@ def lang_toggle(path, lang):
 
 
 def nav_items(path):
+    """Teal bar links (desktop). Hidden on phones, where the full menu below shows instead."""
     rows = []
     for href, label in NAV:
+        on = href == path or (href == "digital-media.html" and path in DM_PAGES)
+        cur = ' aria-current="page"' if on else ""
+        rows.append(f'        <li class="nav-top"><a href="{href}"{cur}>{label}</a></li>')
+    return "\n".join(rows)
+
+
+def menu_items(path, admin_href, where):
+    """Full menu with every page and course, used by the top right menu (desktop) and the
+    phone menu. Light Writerz only shows on the Digital Photography page."""
+    pad = "            " if where == "staffmenu-list" else "        "
+    cls = "menu" if where == "staffmenu-list" else "nav-full"
+    rows = []
+    for level, href, label in MENU:
         cur = ' aria-current="page"' if href == path else ""
-        rows.append(f'        <li><a href="{href}"{cur}>{label}</a></li>')
+        rows.append(f'{pad}<li class="{cls} lvl{level}"><a href="{href}"{cur}>{label}</a></li>')
+        if href == "digital-photography.html#photography-2" and path == "digital-photography.html":
+            rows.append(f'{pad}<li class="{cls} lvl3"><a href="https://www.lightwriterz.org" target="_blank" rel="noopener">Light Writerz</a></li>')
+    rows.append(f'{pad}<li class="{cls} lvl1 staff"><a href="{admin_href}" data-keep-href>Teacher Login</a></li>')
     return "\n".join(rows)
 
 
@@ -144,6 +178,7 @@ def foot(extra_scripts=""):
           <h4>Visual Arts</h4>
           <ul>
             <li><a href="index.html">Program Overview</a></li>
+            <li><a href="digital-media.html">Digital Media</a></li>
             <li><a href="digital-photography.html">Digital Photography</a></li>
             <li><a href="digital-arts.html">Digital Arts</a></li>
             <li><a href="fine-art.html">Fine Art</a></li>
@@ -182,6 +217,65 @@ def foot(extra_scripts=""):
   <script src="js/main.js?v={V}" defer></script>
 {extra_scripts}</body>
 </html>
+"""
+
+# ---------------------------------------------------------------- Digital Media hub
+DM = """
+    <section class="hero page hero-photo">
+      <div class="wrap">
+        <p class="eyebrow">Visual Arts &middot; Digital Media</p>
+        <h1>Digital<br><span class="accent">Media</span></h1>
+        <p>A Career Technical Education program in the Design, Visual, and Media Arts pathway. Two pathways, Digital Photography and Digital Arts, built on real cameras and industry software.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Two Pathways</h2>
+          <span class="sub">Start with level 1, grow into level 2</span>
+        </div>
+        <div class="cards two programs">
+          <article class="card program">
+            <div class="cover" style="background-image:url('images/hero-photo-m.jpg')" role="img" aria-label="Student light painting photograph"></div>
+            <div class="body">
+              <p class="kicker">Digital Media</p>
+              <h3>Digital Photography</h3>
+              <ul class="courses">
+                <li>Photography 1<span>Foundation &middot; no experience needed</span></li>
+                <li>Photography 2<span>Advanced &middot; lighting and studio</span></li>
+              </ul>
+              <p>Operate a real camera on Manual, see like a photographer, shape light on purpose, and finish images in Adobe Lightroom Classic and Photoshop.</p>
+              <div class="card-actions"><a class="btn dark" href="digital-photography.html">Explore Photography</a><a class="text-link" href="signup.html?course=photography-1&amp;from=digital-media">Sign up</a></div>
+            </div>
+          </article>
+          <article class="card program gold-top">
+            <div class="cover" style="background-image:url('images/hero-arts-m.jpg')" role="img" aria-label="Student magazine cover designs"></div>
+            <div class="body">
+              <p class="kicker">Digital Media</p>
+              <h3>Digital Arts</h3>
+              <ul class="courses">
+                <li>Digital Arts 1<span>Foundation &middot; no experience needed</span></li>
+                <li>Digital Arts 2<span>Advanced &middot; brand and portfolio</span></li>
+              </ul>
+              <p>Learn the elements and principles of design, then use Adobe Illustrator and Photoshop to make clean, intentional graphics, brands, and portfolio work.</p>
+              <div class="card-actions"><a class="btn dark" href="digital-arts.html">Explore Digital Arts</a><a class="text-link" href="signup.html?course=digital-arts-1&amp;from=digital-media">Sign up</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band teal tight">
+      <div class="wrap">
+        <ul class="checklist one">
+          <li><strong>Bilingual materials.</strong> In Digital Media, project directions and handouts are offered in English and Spanish, and students may submit their work in either language.</li>
+          <li><strong>Fine arts credit.</strong> Every Visual Arts course satisfies the UC and CSU a-g &ldquo;F&rdquo; Visual and Performing Arts requirement.</li>
+          <li><strong>Career:</strong> a CTE pathway in Arts, Media, and Entertainment, with SkillsUSA.</li>
+        </ul>
+        <p class="cta-row" style="margin-top:24px"><a class="btn dark" href="index.html#skillsusa">SkillsUSA</a> <a class="btn dark" href="teachers.html">Our Teachers</a></p>
+      </div>
+    </section>
 """
 
 # ---------------------------------------------------------------- Home
@@ -1083,6 +1177,9 @@ PAGES = [
     ("index.html", "PVHS Visual Arts | Pioneer Valley High School",
      "Visual Arts at Pioneer Valley High School: Digital Photography, Digital Arts, Intro to Art, and Painting.",
      "hero-home", HOME),
+    ("digital-media.html", "Digital Media | PVHS Visual Arts",
+     "Digital Media at Pioneer Valley High School: a CTE program with two pathways, Digital Photography and Digital Arts.",
+     "hero-photo", DM),
     ("digital-photography.html", "Digital Photography | PVHS Visual Arts",
      "Photography 1 and Photography 2 at Pioneer Valley High School: Manual mode, RAW, Lightroom Classic, lighting, and studio work.",
      "hero-photo", PHOTO),
