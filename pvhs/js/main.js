@@ -51,6 +51,16 @@
     window.addEventListener("resize", function () { if (window.innerWidth > 760) setMenu(false); });
   }
 
+  // Top right menu (Teacher Login).
+  var sBtn = document.querySelector(".staffmenu-btn");
+  var sList = document.getElementById("staffmenu-list");
+  function setStaff(open) { sList.hidden = !open; sBtn.setAttribute("aria-expanded", open ? "true" : "false"); }
+  if (sBtn && sList) {
+    sBtn.addEventListener("click", function (e) { e.stopPropagation(); setStaff(sList.hidden); });
+    document.addEventListener("click", function (e) { if (!sList.hidden && !sList.contains(e.target)) setStaff(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !sList.hidden) { setStaff(false); sBtn.focus(); } });
+  }
+
   var yr = document.getElementById("yr");
   if (yr) yr.textContent = new Date().getFullYear();
 })();

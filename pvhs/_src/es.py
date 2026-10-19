@@ -53,6 +53,8 @@ ES = {
     "Main": "Principal",
     "Open menu": "Abrir menú",
     "Menu": "Menú",
+    "More options": "Más opciones",
+    "Teacher Login": "Acceso docente",
     "Digital Media": "Medios Digitales",
     "Digital Photography": "Fotografía Digital",
     "Digital Arts": "Artes Digitales",

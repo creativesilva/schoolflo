@@ -432,6 +432,24 @@ section.band.ag { background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%,
 .langtoggle a:hover { color: #fff; background: rgba(255,255,255,0.1); }
 .langtoggle a[aria-current="true"] { background: var(--teal); color: #fff; }
 .masthead .cta { padding: 11px 22px; }
+/* Top right menu: Teacher Login (staff admin). On phones the item lives in the main menu instead. */
+.staffmenu { position: relative; }
+.staffmenu-btn { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; padding: 0; cursor: pointer;
+  background: rgba(0,0,0,0.18); border: 1px solid rgba(255,255,255,0.28); border-radius: 6px; color: #fff; }
+.staffmenu-btn:hover { background: rgba(255,255,255,0.1); }
+.staffmenu-btn .bars, .staffmenu-btn .bars::before, .staffmenu-btn .bars::after { display: block; width: 20px; height: 2px; background: #fff; border-radius: 2px; position: relative; transition: transform 0.2s ease, background 0.2s ease; }
+.staffmenu-btn .bars::before, .staffmenu-btn .bars::after { content: ""; position: absolute; left: 0; }
+.staffmenu-btn .bars::before { top: -6px; }
+.staffmenu-btn .bars::after { top: 6px; }
+.staffmenu-btn[aria-expanded="true"] .bars { background: transparent; }
+.staffmenu-btn[aria-expanded="true"] .bars::before { transform: translateY(6px) rotate(45deg); }
+.staffmenu-btn[aria-expanded="true"] .bars::after { transform: translateY(-6px) rotate(-45deg); }
+.staffmenu-list { position: absolute; right: 0; top: calc(100% + 8px); z-index: 80; list-style: none; margin: 0; padding: 6px; min-width: 190px;
+  background: #2f3c3c; border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; box-shadow: 0 12px 28px rgba(0,0,0,0.45); }
+.staffmenu-list a { display: block; padding: 11px 14px; border-radius: 5px; color: #fff; text-decoration: none;
+  font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.08em; font-size: 15px; white-space: nowrap; }
+.staffmenu-list a:hover, .staffmenu-list a:focus-visible { background: var(--teal); }
+.mainnav li.nav-staff { display: none; }
 
 /* Sign up entry points */
 .signup-btn { margin-top: 22px; display: block; text-align: center; }
@@ -547,6 +565,8 @@ legend + .hint { margin: -2px 0 10px; }
   .brand-city { display: none; }
   .mast-actions { position: absolute; top: 50%; right: max(54px, calc(env(safe-area-inset-right) + 42px)); transform: translateY(-50%); }
   .masthead .cta { display: none; }
+  .staffmenu { display: none; }
+  .mainnav li.nav-staff { display: block; }
   .langtoggle a { font-size: 13px; padding: 7px 9px; }
   .options { grid-template-columns: 1fr; }
   .pills { gap: 8px; }
