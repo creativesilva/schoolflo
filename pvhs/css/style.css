@@ -896,3 +896,18 @@ section.band.dark:has(blockquote.pull) .btn.dark:hover { background: #ff7f38; bo
 .card.gold-top { border-top-color: var(--gold); }
 .btn[href^="signup.html"], .btn.dark[href^="signup.html"] { background: var(--orange); border-color: var(--orange); color: #111; }
 .btn[href^="signup.html"]:hover, .btn.dark[href^="signup.html"]:hover { background: #ff7f38; border-color: #ff7f38; color: #111; }
+/* Quick tiles: teal, light teal, gold, white */
+.tiles li:nth-child(1) a { background: var(--teal); color: #fff; }
+.tiles li:nth-child(2) a { background: var(--teal-light-accent); color: #111; }
+.tiles li:nth-child(3) a { background: var(--gold); color: #111; }
+.tiles li:nth-child(4) a { background: #fff; color: #111; }
+.tiles li:nth-child(1) a:hover { background: #005f5f; color: #fff; }
+.tiles li:nth-child(2) a:hover { background: #a3eaea; color: #111; }
+.tiles li:nth-child(3) a:hover { background: #ffc21f; color: #111; }
+.tiles li:nth-child(4) a:hover { background: #f2f8f8; color: #111; }
+.tiles li:nth-child(1) .num { color: rgba(255,255,255,0.8); }
+.tiles li:nth-child(1) span.more { color: rgba(255,255,255,0.88); }
+.tiles li:nth-child(n+2) .num { color: rgba(0,0,0,0.6); }
+.tiles li:nth-child(n+2) span.more { color: rgba(0,0,0,0.78); }
+.tiles li:nth-child(4) .num { color: var(--teal); }
+.tiles li a { border-right-color: rgba(0,0,0,0.08); }
