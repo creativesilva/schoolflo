@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "17"  # cache bust for css/js
+V = "18"  # cache bust for css/js
 
 # Teal bar: top level only. DM_PAGES highlight "Digital Media" too.
 NAV = [
@@ -349,19 +349,17 @@ HOME = """
     <section class="band" id="programs">
       <div class="wrap">
         <div class="section-head">
-          <h2>Two Areas, Six Courses</h2>
+          <h2>Two Categories, Six Courses</h2>
           <span class="sub">Digital Media and Fine Art &middot; start with level 1, grow into level 2</span>
         </div>
-        <div class="cards programs">
+        <div class="prog-group">
+          <h3 class="group-label"><a href="digital-media.html">Digital Media</a></h3>
+          <div class="cards two programs">
           <article class="card program">
             <div class="cover" style="background-image:url('images/hero-photo-m.jpg')" role="img" aria-label="Student light painting photograph"></div>
             <div class="body">
-              <p class="kicker">Digital Media</p>
               <h3>Digital Photography</h3>
-              <ul class="courses">
-                <li>Photography 1<span>Foundation &middot; no experience needed</span></li>
-                <li>Photography 2<span>Advanced &middot; lighting and studio</span></li>
-              </ul>
+              <p class="kicker">Photography 1 &amp; 2</p>
               <p>Operate a real camera on Manual, see like a photographer, shape light on purpose, and finish images in Adobe Lightroom Classic and Photoshop.</p>
               <div class="card-actions"><a class="btn dark" href="digital-photography.html">Explore Photography</a><a class="text-link" href="signup.html?course=photography-1&amp;from=home">Sign up</a></div>
             </div>
@@ -369,29 +367,36 @@ HOME = """
           <article class="card program gold-top">
             <div class="cover" style="background-image:url('images/hero-arts-m.jpg')" role="img" aria-label="Student magazine cover designs"></div>
             <div class="body">
-              <p class="kicker">Digital Media</p>
               <h3>Digital Arts</h3>
-              <ul class="courses">
-                <li>Digital Arts 1<span>Foundation &middot; no experience needed</span></li>
-                <li>Digital Arts 2<span>Advanced &middot; brand and portfolio</span></li>
-              </ul>
+              <p class="kicker">Digital Arts 1 &amp; 2</p>
               <p>Learn the elements and principles of design, then use Adobe Illustrator and Photoshop to make clean, intentional graphics, brands, and portfolio work.</p>
               <div class="card-actions"><a class="btn dark" href="digital-arts.html">Explore Digital Arts</a><a class="text-link" href="signup.html?course=digital-arts-1&amp;from=home">Sign up</a></div>
             </div>
           </article>
+          </div>
+        </div>
+        <div class="prog-group">
+          <h3 class="group-label"><a href="fine-art.html">Fine Art</a></h3>
+          <div class="cards two programs">
           <article class="card program">
             <div class="cover cover-fineart" role="img" aria-label="Fine Art: drawing and painting"></div>
             <div class="body">
-              <p class="kicker">Fine Art</p>
-              <h3>Fine Art</h3>
-              <ul class="courses">
-                <li>Intro to Art<span>Foundation &middot; no experience needed</span></li>
-                <li>Painting<span>Studio &middot; after Intro to Art</span></li>
-              </ul>
-              <p>Build skills by hand: drawing, color, and painting, from first sketches to finished paintings ready to exhibit.</p>
-              <div class="card-actions"><a class="btn dark" href="fine-art.html">Explore Fine Art</a><a class="text-link" href="signup.html?course=intro-to-art&amp;from=home">Sign up</a></div>
+              <h3>Intro to Art</h3>
+              <p class="kicker">Foundation &middot; no experience needed</p>
+              <p>The elements and principles of art, drawing from observation, color, and mixed media. Open to all students.</p>
+              <div class="card-actions"><a class="btn dark" href="fine-art.html#intro-to-art">Explore Intro to Art</a><a class="text-link" href="signup.html?course=intro-to-art&amp;from=home">Sign up</a></div>
             </div>
           </article>
+          <article class="card program gold-top">
+            <div class="cover cover-fineart alt" role="img" aria-label="Fine Art: drawing and painting"></div>
+            <div class="body">
+              <h3>Painting</h3>
+              <p class="kicker">Studio &middot; after Intro to Art</p>
+              <p>Watercolor and acrylic, color mixing, composition, and a personal style, building toward finished paintings ready to exhibit.</p>
+              <div class="card-actions"><a class="btn dark" href="fine-art.html#painting">Explore Painting</a><a class="text-link" href="signup.html?course=painting&amp;from=home">Sign up</a></div>
+            </div>
+          </article>
+          </div>
         </div>
       </div>
     </section>

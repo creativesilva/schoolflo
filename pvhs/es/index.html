@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="../images/hero-home-m.jpg" media="(max-width: 760px)" fetchpriority="high">
   <link rel="preload" as="image" href="../images/hero-home.jpg" media="(min-width: 761px)" fetchpriority="high">
-  <link rel="stylesheet" href="../css/style.css?v=17">
+  <link rel="stylesheet" href="../css/style.css?v=18">
 </head>
 <body>
   <a class="skip" href="#main">Saltar al contenido</a>
@@ -159,19 +159,17 @@
     <section class="band" id="programs">
       <div class="wrap">
         <div class="section-head">
-          <h2>Dos áreas, seis clases</h2>
+          <h2>Dos categorías, seis clases</h2>
           <span class="sub">Medios Digitales y Bellas Artes · empieza con el nivel 1 y avanza al nivel 2</span>
         </div>
-        <div class="cards programs">
+        <div class="prog-group">
+          <h3 class="group-label"><a href="digital-media.html">Medios Digitales</a></h3>
+          <div class="cards two programs">
           <article class="card program">
             <div class="cover" style="background-image:url(&#x27;../images/hero-photo-m.jpg&#x27;)" role="img" aria-label="Fotografía estudiantil de pintura con luz"></div>
             <div class="body">
-              <p class="kicker">Medios Digitales</p>
               <h3>Fotografía Digital</h3>
-              <ul class="courses">
-                <li>Fotografía 1<span>Básico · no necesitas experiencia</span></li>
-                <li>Fotografía 2<span>Avanzado · iluminación y estudio</span></li>
-              </ul>
+              <p class="kicker">Fotografía 1 y 2</p>
               <p>Usa una cámara real en modo manual, aprende a ver como fotógrafo, controla la luz con intención y termina tus imágenes en Adobe Lightroom Classic y Photoshop.</p>
               <div class="card-actions"><a class="btn dark" href="digital-photography.html">Explora Fotografía</a><a class="text-link" href="signup.html?course=photography-1&amp;from=home">Inscríbete</a></div>
             </div>
@@ -179,29 +177,36 @@
           <article class="card program gold-top">
             <div class="cover" style="background-image:url(&#x27;../images/hero-arts-m.jpg&#x27;)" role="img" aria-label="Diseños estudiantiles de portadas de revista"></div>
             <div class="body">
-              <p class="kicker">Medios Digitales</p>
               <h3>Artes Digitales</h3>
-              <ul class="courses">
-                <li>Artes Digitales 1<span>Básico · no necesitas experiencia</span></li>
-                <li>Artes Digitales 2<span>Avanzado · marca y portafolio</span></li>
-              </ul>
+              <p class="kicker">Artes Digitales 1 y 2</p>
               <p>Aprende los elementos y principios del diseño, y luego usa Adobe Illustrator y Photoshop para crear gráficos limpios y con intención, marcas y trabajos para tu portafolio.</p>
               <div class="card-actions"><a class="btn dark" href="digital-arts.html">Explora Artes Digitales</a><a class="text-link" href="signup.html?course=digital-arts-1&amp;from=home">Inscríbete</a></div>
             </div>
           </article>
+          </div>
+        </div>
+        <div class="prog-group">
+          <h3 class="group-label"><a href="fine-art.html">Bellas Artes</a></h3>
+          <div class="cards two programs">
           <article class="card program">
             <div class="cover cover-fineart" role="img" aria-label="Bellas Artes: dibujo y pintura"></div>
             <div class="body">
-              <p class="kicker">Bellas Artes</p>
-              <h3>Bellas Artes</h3>
-              <ul class="courses">
-                <li>Introducción al Arte<span>Básico · no necesitas experiencia</span></li>
-                <li>Pintura<span>Taller · después de Introducción al Arte</span></li>
-              </ul>
-              <p>Desarrolla habilidades a mano: dibujo, color y pintura, desde los primeros bocetos hasta pinturas terminadas listas para exhibir.</p>
-              <div class="card-actions"><a class="btn dark" href="fine-art.html">Explora Bellas Artes</a><a class="text-link" href="signup.html?course=intro-to-art&amp;from=home">Inscríbete</a></div>
+              <h3>Introducción al Arte</h3>
+              <p class="kicker">Básico · no necesitas experiencia</p>
+              <p>Los elementos y principios del arte, dibujo de observación, color y técnicas mixtas. Abierta para todos los estudiantes.</p>
+              <div class="card-actions"><a class="btn dark" href="fine-art.html#intro-to-art">Explora Introducción al Arte</a><a class="text-link" href="signup.html?course=intro-to-art&amp;from=home">Inscríbete</a></div>
             </div>
           </article>
+          <article class="card program gold-top">
+            <div class="cover cover-fineart alt" role="img" aria-label="Bellas Artes: dibujo y pintura"></div>
+            <div class="body">
+              <h3>Pintura</h3>
+              <p class="kicker">Taller · después de Introducción al Arte</p>
+              <p>Acuarela y acrílico, mezcla de colores, composición y un estilo personal, hasta llegar a pinturas terminadas listas para exhibir.</p>
+              <div class="card-actions"><a class="btn dark" href="fine-art.html#painting">Explora Pintura</a><a class="text-link" href="signup.html?course=painting&amp;from=home">Inscríbete</a></div>
+            </div>
+          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -320,6 +325,6 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=17" defer></script>
+  <script src="../js/main.js?v=18" defer></script>
 </body>
 </html>
