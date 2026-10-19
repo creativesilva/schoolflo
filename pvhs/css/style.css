@@ -207,7 +207,7 @@ p + p { margin-top: 1em; }
 .course-side { position: sticky; top: 90px; }
 .course-level { display: inline-block; font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.14em; font-size: 13px; color: #111; background: var(--gold); padding: 5px 12px; margin-bottom: 14px; }
 .course-level.entry { background: var(--teal-light-accent); }
-.course-side h2 { font-family: var(--font-head); text-transform: uppercase; font-size: clamp(36px, 4.4vw, 54px); line-height: 1; letter-spacing: 0.02em; }
+.course-side h2 { font-family: var(--font-head); text-transform: uppercase; font-size: clamp(32px, 3.4vw, 46px); line-height: 1; letter-spacing: 0.02em; white-space: nowrap; }
 .course-side .identity { margin-top: 18px; font-size: 18px; color: #dfe8e8; }
 .facts { list-style: none; margin-top: 24px; border-top: 1px solid var(--line); }
 .facts li { padding: 14px 0; border-bottom: 1px solid var(--line); }
