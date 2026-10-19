@@ -1,6 +1,6 @@
 // PVHS Digital Media staff admin: Google sign-in (program owner only), sign up list,
 // filters, print, CSV for Google Sheets, delete. Firestore rules enforce the owner-only access.
-import { firebaseConfig, SDK, OWNER, COLLECTION, COURSES } from "./firebase-config.js?v=1";
+import { firebaseConfig, SDK, OWNER, COLLECTION, COURSES } from "./firebase-config.js?v=2";
 
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -15,6 +15,12 @@ const sourceLabel = s => {
 };
 
 let app, auth, db, A, F, rows = [];
+if (String(firebaseConfig.projectId).startsWith("PASTE")) {
+  $("signin").disabled = true;
+  $("login-err").textContent = "Sign-in is not set up yet: the SchoolFlo Firebase project keys still need to be added to js/firebase-config.js.";
+  $("login-err").hidden = false;
+  throw new Error("Firebase not configured");
+}
 try {
   const [m1, m2, m3] = await Promise.all([import(SDK + "firebase-app.js"), import(SDK + "firebase-auth.js"), import(SDK + "firebase-firestore.js")]);
   A = m2; F = m3;
