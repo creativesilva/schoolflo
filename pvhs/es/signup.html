@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Inscríbete | PVHS Digital Media</title>
+  <meta name="description" content="Formulario de interés para Fotografía Digital y Artes Digitales en Pioneer Valley High School.">
+  <meta property="og:title" content="Inscríbete | PVHS Digital Media">
+  <meta property="og:description" content="Formulario de interés para Fotografía Digital y Artes Digitales en Pioneer Valley High School.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.schoolflo.org/pvhs/es/signup.html">
+  <meta property="og:site_name" content="PVHS Digital Media">
+  <meta property="og:image" content="https://www.schoolflo.org/pvhs/images/hero-home.jpg">
+  <meta name="theme-color" content="#374545">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="alternate" hreflang="en" href="https://www.schoolflo.org/pvhs/signup.html">
+  <link rel="alternate" hreflang="es" href="https://www.schoolflo.org/pvhs/es/signup.html">
+  <link rel="icon" type="image/png" sizes="64x64" href="../images/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=11">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <header class="masthead">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Inicio de PVHS Digital Media">
+        <img class="mark" src="../images/pvhs-logo.png" alt="Logotipo de los Panthers de Pioneer Valley High School" width="74" height="80">
+        <div>
+          <div class="brand-name">PVHS Digital Media</div>
+          <div class="brand-sub">Pioneer Valley High School<span class="brand-city"> · Santa Maria, CA</span></div>
+        </div>
+      </a>
+      <div class="mast-actions">
+        <div class="langtoggle" role="group" aria-label="Language / Idioma"><a href="../signup.html" hreflang="en" lang="en" data-lang="en" data-keep-href>EN</a><a href="signup.html" hreflang="es" lang="es" data-lang="es" data-keep-href aria-current="true">ES</a></div>
+        <a class="btn cta" href="signup.html?from=signup">Inscríbete</a>
+      </div>
+      <button class="navtoggle" aria-expanded="false" aria-controls="navlist" aria-label="Abrir menú"><span class="bars" aria-hidden="true"></span><span class="navtoggle-label">Menú</span></button>
+    </div>
+  </header>
+
+  <nav class="mainnav" aria-label="Principal">
+    <div class="wrap">
+      <a class="dock-logo" href="index.html" aria-label="Inicio de PVHS Digital Media" tabindex="-1"><img src="../images/pvhs-logo.png" alt="" width="40" height="43"></a>
+      <ul id="navlist">
+        <li><a href="index.html">Medios Digitales</a></li>
+        <li><a href="digital-photography.html">Fotografía Digital</a></li>
+        <li><a href="digital-arts.html">Artes Digitales</a></li>
+        <li><a href="teachers.html">Nuestros Maestros</a></li>
+        <li><a href="signup.html" aria-current="page">Inscríbete</a></li>
+        <li><a href="https://www.lightwriterz.org" target="_blank" rel="noopener">Light Writerz</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="hero page hero-signup">
+      <div class="wrap">
+        <p class="eyebrow">Formulario de interés</p>
+        <h1>Inscríbete</h1>
+        <p>¿Quieres tomar Fotografía Digital o Artes Digitales el próximo año escolar? Llena este formulario corto y nuestros maestros se comunicarán contigo.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap signup-wrap">
+        <form class="form signup-form" id="signupForm" novalidate>
+          <div class="field">
+            <label for="f-name">Nombre completo</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" maxlength="80" required placeholder="Nombre y apellido">
+          </div>
+          <div class="field">
+            <label for="f-sid">Número de identificación estudiantil</label>
+            <input id="f-sid" name="sid" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="off" required placeholder="6 dígitos">
+            <p class="hint">Tu número de estudiante de PVHS de 6 dígitos.</p>
+          </div>
+          <fieldset class="field">
+            <legend id="grade-legend">¿En qué grado estarás el próximo año escolar?</legend>
+            <div class="pills" role="radiogroup" aria-labelledby="grade-legend">
+              <label class="pill"><input type="radio" name="grade" value="9" required><span>9.º grado</span></label>
+              <label class="pill"><input type="radio" name="grade" value="10"><span>10.º grado</span></label>
+              <label class="pill"><input type="radio" name="grade" value="11"><span>11.º grado</span></label>
+              <label class="pill"><input type="radio" name="grade" value="12"><span>12.º grado</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>¿Qué clases te interesan?</legend>
+            <p class="hint">Elige una o más.</p>
+            <div class="options">
+              <label class="option"><input type="checkbox" name="course" value="Photography 1" data-slug="photography-1"><span><b>Fotografía 1</b><small>Básico · no necesitas experiencia</small></span></label>
+              <label class="option"><input type="checkbox" name="course" value="Photography 2" data-slug="photography-2"><span><b>Fotografía 2</b><small>Avanzado · después de Fotografía 1</small></span></label>
+              <label class="option"><input type="checkbox" name="course" value="Digital Arts 1" data-slug="digital-arts-1"><span><b>Artes Digitales 1</b><small>Básico · no necesitas experiencia</small></span></label>
+              <label class="option"><input type="checkbox" name="course" value="Digital Arts 2" data-slug="digital-arts-2"><span><b>Artes Digitales 2</b><small>Avanzado · después de Artes Digitales 1</small></span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="f-note">Preguntas o comentarios <span class="opt">(opcional)</span></label>
+            <textarea id="f-note" name="note" maxlength="500" rows="4"></textarea>
+          </div>
+          <div class="hp" aria-hidden="true"><label for="f-website">Sitio web</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <p class="form-msg" id="formMsg" role="alert" hidden></p>
+          <button class="btn" type="submit" id="submitBtn">Enviar mi inscripción</button>
+          <p class="note">Este es un formulario de interés, no tu horario oficial. Tu consejero hace el horario final.</p>
+        </form>
+
+        <div class="signup-done" id="signupDone" hidden tabindex="-1">
+          <p class="eyebrow">Enviado</p>
+          <h2 class="title">¡Ya estás en la lista!</h2>
+          <p class="lead" id="doneSummary"></p>
+          <p class="muted">Nuestros maestros se comunicarán contigo. Recuerda también pedirle a tu consejero que agregue la clase a tu horario.</p>
+          <p class="cta-row" style="margin-top:24px"><a class="btn" href="index.html">Volver a Medios Digitales</a> <a class="btn dark" href="signup.html" id="againLink">Inscribir a otro estudiante</a></p>
+        </div>
+
+        <aside class="signup-side">
+          <div class="card">
+            <p class="kicker">Es bueno saber</p>
+            <ul class="checklist one">
+              <li>Fotografía 1 y Artes Digitales 1 están abiertas para todos. No necesitas experiencia.</li>
+              <li>Todas las clases cuentan para el requisito “F” de bellas artes de a-g para UC y CSU.</li>
+              <li>Las clases se dan en un salón bilingüe, en inglés y en español.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <a href="index.html" aria-label="Inicio de PVHS Digital Media"><img class="foot-mark" src="../images/pvhs-logo.png" alt="Logotipo de los Panthers de Pioneer Valley High School" width="89" height="96"></a>
+          <p class="motto">Apréndelo. Créalo.<br><span>Preséntalo.</span></p>
+          <p>Educación Técnica Profesional en Artes, Medios y Entretenimiento en Pioneer Valley High School. Trayectoria de Diseño, Artes Visuales y Medios.</p>
+        </div>
+        <div>
+          <h4>Medios Digitales</h4>
+          <ul>
+            <li><a href="index.html">Resumen del programa</a></li>
+            <li><a href="digital-photography.html">Fotografía Digital</a></li>
+            <li><a href="digital-arts.html">Artes Digitales</a></li>
+            <li><a href="teachers.html">Nuestros Maestros</a></li>
+            <li><a href="signup.html?from=footer">Inscríbete</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Clases</h4>
+          <ul>
+            <li><a href="digital-photography.html#photography-1">Fotografía 1</a></li>
+            <li><a href="digital-photography.html#photography-2">Fotografía 2</a></li>
+            <li><a href="digital-arts.html#digital-arts-1">Artes Digitales 1</a></li>
+            <li><a href="digital-arts.html#digital-arts-2">Artes Digitales 2</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Conecta</h4>
+          <ul>
+            <li><a href="index.html#skillsusa">SkillsUSA</a></li>
+            <li><a href="https://www.lightwriterz.org" target="_blank" rel="noopener">Club de fotografía Light Writerz</a></li>
+            <li><a href="../../">SchoolFlo</a></li>
+            <li>Pioneer Valley High School<br>Santa Maria, CA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span id="yr">2026</span> PVHS Digital Media · Pioneer Valley High School</span>
+        <span>Alojado en <a href="../../">SchoolFlo</a> · <a href="../admin.html" rel="nofollow">Acceso para el personal</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=11" defer></script>
+  <script type="module" src="../js/signup.js?v=11"></script>
+</body>
+</html>
