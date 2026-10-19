@@ -10,7 +10,7 @@ Never use em or en dashes in either language."""
 KEEP = {
     "PVHS Visual Arts", "PVHS Digital Media", "Pioneer Valley High School", "SkillsUSA", "Light Writerz", "SchoolFlo",
     "EN", "ES", "F", "Language / Idioma", "Santa Maria, CA", "· Santa Maria, CA",
-    "UC / CSU a-g", "a-g “F”",
+    "UC / CSU A-G", "A-G “F”",
     "Chris Silva", "Laura Garcia", "Rileigh Mankin", "Stephanie Fikiri",
     "Ella Naoe", "Gregorio Calleja", "Julio Marquez", "Davina Royall Showalter", "Jessica Valdez",
     "www.creativesilva.com", "www.chrisandlaura.com",
@@ -92,8 +92,8 @@ ES = {
 
     # ---------- Home
     "Pioneer Valley High School · CTE Pathway": "Pioneer Valley High School · Trayectoria CTE",
-    "Real cameras. Industry software. Professional habits. Taught by CTE teachers with real industry experience, and it counts as your a-g “F” fine art.":
-        "Cámaras reales. Programas profesionales. Hábitos de trabajo profesionales. Con maestros de CTE con experiencia real en la industria, y cuenta como tu arte “F” de a-g.",
+    "Real cameras. Industry software. Professional habits. Taught by CTE teachers with real industry experience, and it counts as your A-G “F” fine art.":
+        "Cámaras reales. Programas profesionales. Hábitos de trabajo profesionales. Con maestros de CTE con experiencia real en la industria, y cuenta como tu arte “F” de A-G.",
     "Meet the team": "Conoce al equipo",
     "The PVHS photo club": "El club de fotografía de PVHS",
     "About the program": "Sobre el programa",
@@ -109,8 +109,8 @@ ES = {
     "Students work on Macs, with a school iPad that doubles as a scanner for sketches and hand done work.":
         "Los estudiantes trabajan en computadoras Mac, con un iPad de la escuela que también sirve como escáner para bocetos y trabajos hechos a mano.",
     "Fine arts credit.": "Crédito de bellas artes.",
-    "Courses satisfy the UC and CSU a-g “F” Visual and Performing Arts requirement.":
-        "Las clases cumplen con el requisito “F” de Artes Visuales y Escénicas de a-g para UC y CSU.",
+    "Courses satisfy the UC and CSU A-G “F” Visual and Performing Arts requirement.":
+        "Las clases cumplen con el requisito “F” de Artes Visuales y Escénicas de A-G para UC y CSU.",
     "Open to everyone.": "Abierto para todos.",
     "Photography 1 and Digital Arts 1 need no experience.": "Fotografía 1 y Artes Digitales 1 no requieren experiencia.",
     "Student work: a student in a blue sweater surrounded by loops of light, a light painting photograph":
@@ -118,9 +118,9 @@ ES = {
     "Student work: writing with light, a long exposure project.": "Trabajo estudiantil: escribir con luz, un proyecto de exposición larga.",
     "Visual & Performing Arts": "Artes Visuales y Escénicas",
     "College ready elective": "Optativa que te prepara para la universidad",
-    "The “F” in a-g": "La “F” de a-g",
-    "Our Photography and Digital Arts courses satisfy the UC and CSU a-g “F” Visual and Performing Arts requirement.":
-        "Nuestras clases de Fotografía y Artes Digitales cumplen con el requisito “F” de Artes Visuales y Escénicas de a-g para UC y CSU.",
+    "The “F” in A-G": "La “F” de A-G",
+    "Our Photography and Digital Arts courses satisfy the UC and CSU A-G “F” Visual and Performing Arts requirement.":
+        "Nuestras clases de Fotografía y Artes Digitales cumplen con el requisito “F” de Artes Visuales y Escénicas de A-G para UC y CSU.",
     "To be eligible for the University of California and California State University, students need a year of Visual and Performing Arts. Digital Media covers that fine art requirement while building real career skills on industry tools, so one elective works toward college and career at the same time.":
         "Para poder entrar a la Universidad de California (UC) y a la Universidad Estatal de California (CSU), los estudiantes necesitan un año de Artes Visuales y Escénicas. Medios Digitales cumple ese requisito de bellas artes mientras desarrollas habilidades reales para una carrera con herramientas profesionales. Así, una sola optativa te prepara para la universidad y para una carrera al mismo tiempo.",
     "College:": "Universidad:",
@@ -193,7 +193,7 @@ ES = {
     "Advanced": "Avanzado",
     "Level 1 · Foundation": "Nivel 1 · Básico",
     "Level 2 · Advanced": "Nivel 2 · Avanzado",
-    "a-g credit": "Crédito a-g",
+    "A-G credit": "Crédito A-G",
     "UC / CSU “F” Visual and Performing Arts": "UC / CSU “F” Artes Visuales y Escénicas",
     "Taught by": "Maestros",
     "Who it is for": "Para quién es",
@@ -432,8 +432,8 @@ ES = {
     "See Portfolio": "Ver portafolio",
     "Combined years in industry": "Años combinados en la industria",
     "Want to join a class?": "¿Quieres tomar una clase?",
-    "Photography 1 and Digital Arts 1 are open to every PVHS student, no experience needed, and they count toward the a-g “F” fine art requirement. Fill out the sign up form, then ask your counselor to add one to your schedule.":
-        "Fotografía 1 y Artes Digitales 1 están abiertas para todos los estudiantes de PVHS, sin necesidad de experiencia, y cuentan para el requisito “F” de bellas artes de a-g. Llena el formulario de inscripción y luego pídele a tu consejero que agregue la clase a tu horario.",
+    "Photography 1 and Digital Arts 1 are open to every PVHS student, no experience needed, and they count toward the A-G “F” fine art requirement. Fill out the sign up form, then ask your counselor to add one to your schedule.":
+        "Fotografía 1 y Artes Digitales 1 están abiertas para todos los estudiantes de PVHS, sin necesidad de experiencia, y cuentan para el requisito “F” de bellas artes de A-G. Llena el formulario de inscripción y luego pídele a tu consejero que agregue la clase a tu horario.",
     "Explore the program": "Explora el programa",
 
     # ---------- Sign up page
@@ -469,8 +469,8 @@ ES = {
     "Good to know": "Es bueno saber",
     "Photography 1 and Digital Arts 1 are open to everyone. No experience needed.":
         "Fotografía 1 y Artes Digitales 1 están abiertas para todos. No necesitas experiencia.",
-    "Every class counts toward the UC and CSU a-g “F” fine art requirement.":
-        "Todas las clases cuentan para el requisito “F” de bellas artes de a-g para UC y CSU.",
+    "Every class counts toward the UC and CSU A-G “F” fine art requirement.":
+        "Todas las clases cuentan para el requisito “F” de bellas artes de A-G para UC y CSU.",
 
     # ---------- Visual Arts restructure (Fine Art, Stephanie Fikiri)
     'PVHS Visual Arts | Pioneer Valley High School': 'PVHS Visual Arts | Pioneer Valley High School',
@@ -498,7 +498,7 @@ ES = {
     'Two areas, one program.': 'Dos áreas, un programa.',
     'Digital Media covers Digital Photography and Digital Arts. Fine Art covers Intro to Art and Painting.': 'Medios Digitales incluye Fotografía Digital y Artes Digitales. Bellas Artes incluye Introducción al Arte y Pintura.',
     'In Digital Media, project directions and handouts are offered in English and Spanish, and students may submit their work in either language.': 'En Medios Digitales, las instrucciones de los proyectos y las hojas de trabajo están en inglés y en español, y los estudiantes pueden entregar su trabajo en cualquiera de los dos idiomas.',
-    'Photography and Digital Arts courses satisfy the UC and CSU a-g “F” Visual and Performing Arts requirement.': 'Las clases de Fotografía y Artes Digitales cumplen con el requisito “F” de Artes Visuales y Escénicas de a-g para UC y CSU.',
+    'Photography and Digital Arts courses satisfy the UC and CSU A-G “F” Visual and Performing Arts requirement.': 'Las clases de Fotografía y Artes Digitales cumplen con el requisito “F” de Artes Visuales y Escénicas de A-G para UC y CSU.',
     'Photography 1, Digital Arts 1, and Intro to Art need no experience.': 'Fotografía 1, Artes Digitales 1 e Introducción al Arte no requieren experiencia.',
     'Two Areas, Six Courses': 'Dos áreas, seis clases',
     'Digital Media and Fine Art · start with level 1, grow into level 2': 'Medios Digitales y Bellas Artes · empieza con el nivel 1 y avanza al nivel 2',
@@ -594,10 +594,10 @@ ES = {
     'Want to take Digital Photography, Digital Arts, or Fine Art next school year? Fill out this short form and our teachers will follow up with you.': '¿Quieres tomar Fotografía Digital, Artes Digitales o Bellas Artes el próximo año escolar? Llena este formulario corto y nuestros maestros se comunicarán contigo.',
     'Back to Visual Arts': 'Volver a Artes Visuales',
     'Photography 1, Digital Arts 1, and Intro to Art are open to everyone. No experience needed.': 'Fotografía 1, Artes Digitales 1 e Introducción al Arte están abiertas para todos. No necesitas experiencia.',
-    'Photography and Digital Arts classes count toward the UC and CSU a-g “F” fine art requirement.': 'Las clases de Fotografía y Artes Digitales cuentan para el requisito “F” de bellas artes de a-g para UC y CSU.',
-    # ---------- a-g for all courses, Painting prerequisite
-    'Every Visual Arts course satisfies the UC and CSU a-g “F” Visual and Performing Arts requirement.': 'Todas las clases de Artes Visuales cumplen con el requisito “F” de Artes Visuales y Escénicas de a-g para UC y CSU.',
-    'Every Visual Arts course, from Photography and Digital Arts to Intro to Art and Painting, satisfies the UC and CSU a-g “F” Visual and Performing Arts requirement.': 'Todas las clases de Artes Visuales, desde Fotografía y Artes Digitales hasta Introducción al Arte y Pintura, cumplen con el requisito “F” de Artes Visuales y Escénicas de a-g para UC y CSU.',
+    'Photography and Digital Arts classes count toward the UC and CSU A-G “F” fine art requirement.': 'Las clases de Fotografía y Artes Digitales cuentan para el requisito “F” de bellas artes de A-G para UC y CSU.',
+    # ---------- A-G for all courses, Painting prerequisite
+    'Every Visual Arts course satisfies the UC and CSU A-G “F” Visual and Performing Arts requirement.': 'Todas las clases de Artes Visuales cumplen con el requisito “F” de Artes Visuales y Escénicas de A-G para UC y CSU.',
+    'Every Visual Arts course, from Photography and Digital Arts to Intro to Art and Painting, satisfies the UC and CSU A-G “F” Visual and Performing Arts requirement.': 'Todas las clases de Artes Visuales, desde Fotografía y Artes Digitales hasta Introducción al Arte y Pintura, cumplen con el requisito “F” de Artes Visuales y Escénicas de A-G para UC y CSU.',
     'To be eligible for the University of California and California State University, students need a year of Visual and Performing Arts. Any Visual Arts course covers that requirement, and Digital Media also builds real career skills on industry tools, so one elective can work toward college and career at the same time.': 'Para poder entrar a la Universidad de California (UC) y a la Universidad Estatal de California (CSU), los estudiantes necesitan un año de Artes Visuales y Escénicas. Cualquier clase de Artes Visuales cumple ese requisito, y Medios Digitales además desarrolla habilidades reales para una carrera con herramientas profesionales. Así, una sola optativa puede prepararte para la universidad y para una carrera al mismo tiempo.',
     'Students who completed Intro to Art.': 'Estudiantes que terminaron Introducción al Arte.',
     'Studio · after Intro to Art': 'Taller · después de Introducción al Arte',
