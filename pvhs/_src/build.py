@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "22"  # cache bust for css/js
+V = "23"  # cache bust for css/js
 
 # Teal bar: top level only. DM_PAGES highlight "Digital Media" too.
 NAV = [
@@ -279,10 +279,10 @@ DM = """
       <div class="wrap">
         <ul class="checklist one">
           <li><strong>Bilingual materials.</strong> In Digital Media, project directions and handouts are offered in English and Spanish, and students may submit their work in either language.</li>
-          <li><strong>Fine arts credit.</strong> Every Visual Arts course satisfies the UC and CSU a-g &ldquo;F&rdquo; Visual and Performing Arts requirement.</li>
+          <li><strong>Fine arts credit.</strong> Every Visual Arts course satisfies the UC and CSU A-G &ldquo;F&rdquo; Visual and Performing Arts requirement.</li>
           <li><strong>Career:</strong> a CTE pathway in Arts, Media, and Entertainment, with SkillsUSA.</li>
         </ul>
-        <p class="cta-row" style="margin-top:24px"><a class="btn dark btn-logo" href="index.html#skillsusa"><img src="images/skillsusa-white.png" alt="SkillsUSA" width="598" height="292"></a> <a class="btn dark" href="teachers.html">Our Teachers</a></p>
+        <p class="cta-row" style="margin-top:24px"><a class="btn dark btn-logo" href="index.html#skillsusa"><img src="images/skillsusa-gold.png" alt="SkillsUSA" width="598" height="292"></a> <a class="btn dark" href="teachers.html">Our Teachers</a></p>
       </div>
     </section>
 """
@@ -322,7 +322,7 @@ HOME = """
           <ul class="checklist one">
             <li><strong>Two areas, one program.</strong> Digital Media covers Digital Photography and Digital Arts. Fine Art covers Intro to Art and Painting.</li>
             <li><strong>Bilingual materials.</strong> In Digital Media, project directions and handouts are offered in English and Spanish, and students may submit their work in either language.</li>
-            <li><strong>Fine arts credit.</strong> Every Visual Arts course satisfies the UC and CSU a-g &ldquo;F&rdquo; Visual and Performing Arts requirement.</li>
+            <li><strong>Fine arts credit.</strong> Every Visual Arts course satisfies the UC and CSU A-G &ldquo;F&rdquo; Visual and Performing Arts requirement.</li>
             <li><strong>Open to everyone.</strong> Photography 1, Digital Arts 1, and Intro to Art need no experience.</li>
           </ul>
         </div>
@@ -332,11 +332,11 @@ HOME = """
 
     <section class="band ag" id="a-g">
       <div class="wrap split">
-        <div class="ag-badge" aria-hidden="true"><span class="ag-top">UC / CSU a-g</span><span class="ag-letter">F</span><span class="ag-bot">Visual &amp; Performing Arts</span></div>
+        <div class="ag-badge" aria-hidden="true"><span class="ag-top">UC / CSU A-G</span><span class="ag-letter">F</span><span class="ag-bot">Visual &amp; Performing Arts</span></div>
         <div>
           <p class="eyebrow" style="color:var(--gold)">College ready elective</p>
-          <h2 class="title">The &ldquo;F&rdquo; in a-g</h2>
-          <p class="lead" style="margin-top:18px">Every Visual Arts course, from Photography and Digital Arts to Intro to Art and Painting, satisfies the UC and CSU a-g &ldquo;F&rdquo; Visual and Performing Arts requirement.</p>
+          <h2 class="title">The &ldquo;F&rdquo; in A-G</h2>
+          <p class="lead" style="margin-top:18px">Every Visual Arts course, from Photography and Digital Arts to Intro to Art and Painting, satisfies the UC and CSU A-G &ldquo;F&rdquo; Visual and Performing Arts requirement.</p>
           <p class="muted">To be eligible for the University of California and California State University, students need a year of Visual and Performing Arts. Any Visual Arts course covers that requirement, and Digital Media also builds real career skills on industry tools, so one elective can work toward college and career at the same time.</p>
           <ul class="checklist one">
             <li><strong>College:</strong> counts as fine art (&ldquo;F&rdquo;) for UC and CSU admission.</li>
@@ -350,8 +350,8 @@ HOME = """
       <div class="wrap stats four">
         <div><div class="n">6</div><div class="l">Courses</div></div>
         <div><div class="n">35+</div><div class="l">Years of industry experience</div></div>
-        <div><div class="n word">a-g &ldquo;F&rdquo;</div><div class="l">Fine arts credit</div></div>
-        <div><div class="n logo"><img src="images/skillsusa-white.png" alt="SkillsUSA" width="598" height="292"></div><div class="l">Student organization</div></div>
+        <div><div class="n word">A-G &ldquo;F&rdquo;</div><div class="l">Fine arts credit</div></div>
+        <div><div class="n logo"><img src="images/skillsusa-gold.png" alt="SkillsUSA" width="598" height="292"></div><div class="l">Student organization</div></div>
       </div>
     </section>
 
@@ -414,7 +414,7 @@ HOME = """
       <div class="wrap split">
         <div>
           <p class="eyebrow" style="color:var(--gold)">Career Technical Student Organization</p>
-          <h2 class="title skills-title"><img src="images/skillsusa-white.png" alt="SkillsUSA" width="598" height="292"></h2>
+          <h2 class="title skills-title"><img src="images/skillsusa-gold.png" alt="SkillsUSA" width="598" height="292"></h2>
           <p class="lead" style="margin-top:18px">The PVHS Digital Media program is associated with SkillsUSA for both the Digital Photography and Digital Arts pathways.</p>
           <p class="muted">SkillsUSA is a national organization for career and technical students. It helps students build leadership, teamwork, and workplace skills, and gives them a place to show their technical work beyond the classroom.</p>
           <p style="margin-top:26px"><a class="btn dark" href="https://www.skillsusa.org" target="_blank" rel="noopener">Visit SkillsUSA</a></p>
@@ -503,7 +503,7 @@ PHOTO = """
             <h2>Photography 1</h2>
             <p class="identity">The foundation photography course. Students learn to operate a real camera on Manual, see like a photographer, and finish their images with professional editing software.</p>
             <ul class="facts">
-              <li><span class="k">a-g credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
+              <li><span class="k">A-G credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
               <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#chris-silva">Chris Silva</a> &middot; <a href="teachers.html#laura-garcia">Laura Garcia</a></span></li>
               <li><span class="k">Who it is for</span><span class="v">Open to all students, no experience required. The entry point to the photography pathway.</span></li>
               <li><span class="k">Cameras</span><span class="v">Canon mirrorless camera kits: body, lenses, battery, charger, memory card.</span></li>
@@ -549,7 +549,7 @@ PHOTO = """
             <h2>Photography 2</h2>
             <p class="identity">The advanced photography course. Students move from &ldquo;getting a good exposure&rdquo; to controlling light and telling a story on purpose.</p>
             <ul class="facts">
-              <li><span class="k">a-g credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
+              <li><span class="k">A-G credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
               <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#chris-silva">Chris Silva</a></span></li>
               <li><span class="k">Who it is for</span><span class="v">Students who completed Photography 1, or who can show the fundamentals: Manual mode, RAW, and the Lightroom workflow.</span></li>
               <li><span class="k">Lighting gear</span><span class="v">Speedlites and off camera flash, modifiers, backdrops, tripods, reflectors, and a studio setup.</span></li>
@@ -585,7 +585,7 @@ PHOTO = """
               <p>Photography 1 teaches one control at a time. Photography 2 adds lighting, often requires natural only or self directed work, and expects students to run the full capture to delivery pipeline on their own.</p>
             </div>
             <div class="callout skills-callout">
-              <p class="k k-logo"><img src="images/skillsusa-white.png" alt="SkillsUSA" width="598" height="292"><span>Concentrators &amp; Completers</span></p>
+              <p class="k k-logo"><img src="images/skillsusa-gold.png" alt="SkillsUSA" width="598" height="292"><span>Concentrators &amp; Completers</span></p>
               <p>The Digital Photography pathway is associated with SkillsUSA. Students who continue past level 1 become pathway concentrators, and students who finish the full sequence become pathway completers. <a href="index.html#skillsusa">Learn more</a></p>
             </div>
           </div>
@@ -643,7 +643,7 @@ ARTS = """
             <h2>Digital Arts 1</h2>
             <p class="identity">The foundation design course. Students learn the elements and principles of design and the industry standard Adobe tools to make clean, intentional graphics.</p>
             <ul class="facts">
-              <li><span class="k">a-g credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
+              <li><span class="k">A-G credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
               <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#chris-silva">Chris Silva</a> &middot; <a href="teachers.html#rileigh-mankin">Rileigh Mankin</a></span></li>
               <li><span class="k">Who it is for</span><span class="v">Open to all students, no experience required. The entry point to the design and graphic arts pathway.</span></li>
               <li><span class="k">Software</span><span class="v">Adobe Illustrator for vector art, logos, and type. Adobe Photoshop for image editing, compositing, and mockups.</span></li>
@@ -688,7 +688,7 @@ ARTS = """
             <h2>Digital Arts 2</h2>
             <p class="identity">The advanced design course. Students move from exercises to real, portfolio quality design work and brand projects.</p>
             <ul class="facts">
-              <li><span class="k">a-g credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
+              <li><span class="k">A-G credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
               <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#rileigh-mankin">Rileigh Mankin</a></span></li>
               <li><span class="k">Who it is for</span><span class="v">Students who completed Digital Arts 1, or who can show the fundamentals and comfort with Illustrator and Photoshop.</span></li>
               <li><span class="k">Software</span><span class="v">Illustrator and Photoshop together at a higher level, plus print and output tools.</span></li>
@@ -718,7 +718,7 @@ ARTS = """
               <p>Digital Arts 2 runs as a set of larger, brief driven projects that apply and deepen the Digital Arts 1 foundations. Same rhythm: concept, make, refine, deliver, reflect, with a higher bar on craft, independence, and finish.</p>
             </div>
             <div class="callout skills-callout">
-              <p class="k k-logo"><img src="images/skillsusa-white.png" alt="SkillsUSA" width="598" height="292"><span>Concentrators &amp; Completers</span></p>
+              <p class="k k-logo"><img src="images/skillsusa-gold.png" alt="SkillsUSA" width="598" height="292"><span>Concentrators &amp; Completers</span></p>
               <p>The Digital Arts pathway is associated with SkillsUSA. Students who continue past level 1 become pathway concentrators, and students who finish the full sequence become pathway completers. <a href="index.html#skillsusa">Learn more</a></p>
             </div>
           </div>
@@ -810,7 +810,7 @@ SIGNUP = """
             <p class="kicker">Good to know</p>
             <ul class="checklist one">
               <li>Photography 1, Digital Arts 1, and Intro to Art are open to everyone. No experience needed.</li>
-              <li>Every class counts toward the UC and CSU a-g &ldquo;F&rdquo; fine art requirement.</li>
+              <li>Every class counts toward the UC and CSU A-G &ldquo;F&rdquo; fine art requirement.</li>
             </ul>
           </div>
         </aside>
@@ -846,7 +846,7 @@ FINE = """
             <h2>Intro to Art</h2>
             <p class="identity">The foundation art course. Students learn the elements and principles of art and build core skills in drawing, color, and design by hand.</p>
             <ul class="facts">
-              <li><span class="k">a-g credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
+              <li><span class="k">A-G credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
               <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#stephanie-fikiri">Stephanie Fikiri</a></span></li>
               <li><span class="k">Who it is for</span><span class="v">Open to all students, no experience required. The starting point for fine art.</span></li>
               <li><span class="k">Materials</span><span class="v">Graphite, charcoal, ink, colored pencil, pastel, and paint, plus a personal sketchbook.</span></li>
@@ -891,7 +891,7 @@ FINE = """
             <h2>Painting</h2>
             <p class="identity">The studio painting course. Students explore watercolor and acrylic, color mixing, and composition, and develop a personal style.</p>
             <ul class="facts">
-              <li><span class="k">a-g credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
+              <li><span class="k">A-G credit</span><span class="v">UC / CSU &ldquo;F&rdquo; Visual and Performing Arts</span></li>
               <li><span class="k">Taught by</span><span class="v"><a href="teachers.html#stephanie-fikiri">Stephanie Fikiri</a></span></li>
               <li><span class="k">Who it is for</span><span class="v">Students who completed Intro to Art.</span></li>
               <li><span class="k">Materials</span><span class="v">Watercolor, acrylic, brushes, palette knives, watercolor paper, and canvas.</span></li>
