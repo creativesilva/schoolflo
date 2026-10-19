@@ -7,10 +7,12 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "
 const PT = { timeZone: "America/Los_Angeles" };
 const when = d => d ? d.toLocaleString("en-US", { ...PT, month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" }) : "";
 const SOURCES = { index: "Home page", home: "Home page", "digital-photography": "Digital Photography page", "digital-arts": "Digital Arts page",
-  "fine-art": "Fine Art page", teachers: "Teachers page", signup: "Sign Up page", footer: "Footer link", direct: "Direct link" };
+  "fine-art": "Art page", "digital-media": "Digital Media page", teachers: "Teachers page", signup: "Sign Up page", footer: "Footer link", direct: "Direct link" };
+// Display names for stored course values (the stored value "Painting" is shown as "Painting 1").
+const courseLabel = c => c === "Painting" ? "Painting 1" : c;
 const sourceLabel = s => {
   const [page, course] = String(s || "direct").split("#");
-  const c = { "photography-1": "Photography 1", "photography-2": "Photography 2", "digital-arts-1": "Digital Arts 1", "digital-arts-2": "Digital Arts 2", "intro-to-art": "Intro to Art", painting: "Painting" }[course];
+  const c = { "photography-1": "Photography 1", "photography-2": "Photography 2", "digital-arts-1": "Digital Arts 1", "digital-arts-2": "Digital Arts 2", "intro-to-art": "Intro to Art", painting: "Painting 1" }[course];
   return (SOURCES[page] || page) + (c ? ` (${c} button)` : "");
 };
 
@@ -94,7 +96,7 @@ function render() {
   $("stats").innerHTML = [
     ["Total sign ups", list.length, "total"],
     ...[9, 10, 11, 12].map(g => [`Grade ${g}`, count(r => r.grade === g)]),
-    ...COURSES.map(c => [c.replace("Photography", "Photo"), count(r => (r.courses || []).includes(c))]),
+    ...COURSES.map(c => [courseLabel(c).replace("Photography", "Photo"), count(r => (r.courses || []).includes(c))]),
   ].map(([l, n, cls]) => `<div${cls ? ` class="${cls}"` : ""}><b>${n}</b><span>${esc(l)}</span></div>`).join("");
   $("rows").innerHTML = list.map(r => `<tr>
     <td>${esc(when(r.at))}</td>
@@ -102,7 +104,7 @@ function render() {
     <td>${esc(r.sid)}</td>
     <td>${esc(r.grade)}</td>
     <td>${esc(r.schoolYear)}</td>
-    <td>${esc((r.courses || []).join(", "))}</td>
+    <td>${esc((r.courses || []).map(courseLabel).join(", "))}</td>
     <td>${esc(sourceLabel(r.source))}</td>
     <td>${esc((r.lang || "").toUpperCase())}</td>
     <td class="note-cell">${esc(r.note || "")}</td>
@@ -149,7 +151,7 @@ $("btn-csv").addEventListener("click", () => {
     return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
   };
   const head = ["Submitted", "Name", "Student ID", "Grade next year", "School year", "Classes", "Signed up from", "Language", "Note"];
-  const body = filtered().map(r => [when(r.at), r.name, r.sid, r.grade, r.schoolYear, (r.courses || []).join("; "), sourceLabel(r.source), (r.lang || "").toUpperCase(), r.note || ""]);
+  const body = filtered().map(r => [when(r.at), r.name, r.sid, r.grade, r.schoolYear, (r.courses || []).map(courseLabel).join("; "), sourceLabel(r.source), (r.lang || "").toUpperCase(), r.note || ""]);
   const csv = "﻿" + [head, ...body].map(row => row.map(cell).join(",")).join("\r\n");
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
