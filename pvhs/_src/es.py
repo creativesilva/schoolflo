@@ -422,6 +422,7 @@ ES = {
         "Fuera del diseño, me encanta explorar y competir. Me puedes encontrar viajando, acampando, haciendo senderismo o retando a mis amigos y familia a un nuevo juego de mesa.",
     "I studied at Corvin University and Laguna College of Art and Design, where I earned my bachelor’s degree, and I now teach Digital Arts at Pioneer Valley High School.":
         "Estudié en Corvin University y en Laguna College of Art and Design, donde obtuve mi licenciatura, y ahora enseño Artes Digitales en Pioneer Valley High School.",
+    "See Portfolio": "Ver portafolio",
     "Combined years in industry": "Años combinados en la industria",
     "Want to join a class?": "¿Quieres tomar una clase?",
     "Photography 1 and Digital Arts 1 are open to every PVHS student, no experience needed, and they count toward the a-g “F” fine art requirement. Fill out the sign up form, then ask your counselor to add one to your schedule.":
