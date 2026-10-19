@@ -1,5 +1,6 @@
-/* PVHS Digital Media shared stylesheet
-   Midtone "dusk slate" hybrid: between dark and light mode, same framework.
+/* PVHS Visual Arts shared stylesheet
+   Light theme (see "Light theme" layer at the end): white sections, black header and footer,
+   PVHS teal #007474, accents light teal #80e0e0, orange #FF6B1A, purple #8b5cf6, gold #f5b301.
    Built on the Light Writerz (lightwriterz.org) framework:
    dark base, PVHS teal #007474 glow, Oswald headings, Inter body,
    logo row, sticky teal nav that docks, full-bleed hero, quick tiles, feature bands. */
@@ -650,3 +651,263 @@ h2.title.skills-title img { display: block; height: clamp(64px, 8vw, 96px); widt
 .callout .k.k-logo img { height: 36px; width: auto; }
 .btn.btn-logo { display: inline-flex; align-items: center; justify-content: center; }
 .btn.btn-logo img { height: 22px; width: auto; }
+
+/* =====================================================================
+   Light theme layer
+   White and light teal-white sections, near-black text, black header,
+   footer, and feature bands. Teal = Digital Media and links, purple = Fine Art,
+   orange = sign up actions, gold = highlights. Light teal only on dark or teal.
+   ===================================================================== */
+:root {
+  --orange: #ff6b1a;
+  --purple: #8b5cf6;
+  --night: #0b0d0d;
+  --night-2: #161a1a;
+  --tint: #f2f8f8;
+  --black: #0b0d0d;
+  --ink: #161a1a;
+  --text-2: #3d4848;
+  --gray: #5f6b6b;
+  --line: rgba(0,0,0,0.10);
+  --paper: #ffffff;
+  --surface: #ffffff;
+  --surface-border: #e1e8e8;
+  --glow: 0 10px 30px rgba(0,0,0,0.08);
+}
+body { background: #fff; color: var(--ink); background-image: none; }
+a { color: var(--teal); }
+a:hover { color: var(--teal-dark); }
+
+/* Header, nav, footer */
+.masthead { background: var(--night); border-bottom: 0; }
+.brand-sub { color: #aab6b6; }
+.mainnav { background: var(--teal); box-shadow: 0 4px 18px rgba(0,0,0,0.18); }
+.mainnav a:hover { background: var(--teal-dark); }
+@media (min-width: 761px) {
+  .mainnav::before { background: var(--night); box-shadow: inset 0 -3px 0 var(--teal); }
+  .mainnav.docked a:hover { background: rgba(0,116,116,0.45); }
+}
+.staffmenu-list { background: #fff; border-color: var(--surface-border); box-shadow: 0 16px 36px rgba(0,0,0,0.22); }
+.staffmenu-list a, .mainnav .staffmenu-list a { color: var(--ink); }
+.staffmenu-list li.lvl2 a, .mainnav .staffmenu-list li.lvl2 a { color: var(--text-2); }
+.staffmenu-list li.lvl3 a, .mainnav .staffmenu-list li.lvl3 a { color: var(--gray); }
+.staffmenu-list a:hover, .staffmenu-list a:focus-visible, .mainnav.docked .staffmenu-list a:hover,
+.staffmenu-list li.lvl2 a:hover, .staffmenu-list li.lvl3 a:hover { background: var(--teal); color: #fff; }
+.staffmenu-list a[aria-current="page"], .mainnav .staffmenu-list a[aria-current="page"] { color: var(--teal); font-weight: 600; }
+.staffmenu-list a[aria-current="page"]:hover { color: #fff; }
+.staffmenu-list li.staff { border-top-color: var(--surface-border); }
+footer.site { background: var(--night); border-top: 4px solid var(--teal); color: #c3cdcd; }
+footer.site a { color: #c3cdcd; }
+footer.site .legal { color: #8f9c9c; }
+
+/* Heroes: photo heroes end on a clean edge, solid heroes are black with color glows */
+.hero { background-color: var(--night); }
+.hero::before { background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.72) 100%); }
+.hero-home::before { background:
+  linear-gradient(90deg, rgba(0,0,0,0.66) 0%, rgba(0,0,0,0.38) 42%, rgba(0,0,0,0) 68%),
+  linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.12) 55%, rgba(0,0,0,0.6) 100%); }
+.hero-teachers, .hero-signup { background:
+  radial-gradient(900px 420px at 85% 0%, rgba(0,116,116,0.55), transparent 65%),
+  radial-gradient(700px 400px at 0% 100%, rgba(128,224,224,0.12), transparent 65%), var(--night); }
+.hero-fineart { background:
+  radial-gradient(900px 420px at 80% 10%, rgba(139,92,246,0.45), transparent 65%),
+  radial-gradient(700px 420px at 10% 100%, rgba(245,179,1,0.18), transparent 65%), var(--night); }
+.hero-fineart h1 .accent { color: #c4b1fb; }
+
+/* Quick tiles: one color per destination */
+.tiles ul { box-shadow: 0 24px 50px rgba(0,0,0,0.28); }
+.tiles a { background: var(--teal); border-right-color: rgba(255,255,255,0.12); }
+.tiles li:nth-child(2) a { background: var(--purple); }
+.tiles li:nth-child(3) a { background: var(--night-2); }
+.tiles li:nth-child(4) a { background: var(--orange); color: #111; }
+.tiles a:hover, .tiles li:nth-child(n) a:hover { background: #005f5f; color: #fff; }
+.tiles li:nth-child(2) a:hover { background: #7445e6; }
+.tiles li:nth-child(3) a:hover { background: #000; }
+.tiles li:nth-child(4) a:hover { background: #ff7f38; color: #111; }
+.tiles .num, .tiles li:nth-child(4) .num { color: rgba(255,255,255,0.8); }
+.tiles li:nth-child(4) .num { color: rgba(0,0,0,0.65); }
+.tiles span.more { color: rgba(255,255,255,0.88); }
+.tiles li:nth-child(4) span.more { color: rgba(0,0,0,0.8); }
+
+/* Sections */
+section.band.gray { background: var(--tint); border-top: 1px solid #e3eded; border-bottom: 1px solid #e3eded; }
+/* "dark" bands now read as clean white; the quote band becomes the teal feature band */
+section.band.dark { background: #fff; color: var(--ink); border-top: 1px solid #e3eded; }
+section.band.dark:has(blockquote.pull) { background: radial-gradient(800px 300px at 50% 0%, rgba(128,224,224,0.25), transparent 70%), linear-gradient(180deg, #007a7a 0%, #005c5c 100%); color: #fff; border-top: 0; }
+section.band.dark:has(blockquote.pull) blockquote.pull { border-left-color: var(--gold); }
+section.band.dark:has(blockquote.pull) .btn { background: var(--orange); border-color: var(--orange); color: #111; }
+section.band.dark:has(blockquote.pull) .btn:hover { background: #ff7f38; border-color: #ff7f38; }
+section.band.dark:has(blockquote.pull) .btn.dark { background: var(--night); border-color: var(--night); color: #fff; }
+section.band.dark:has(blockquote.pull) .btn.dark:hover { background: #000; border-color: #000; }
+section.band.dark:has(blockquote.pull) .note, section.band.dark:has(blockquote.pull) cite { color: #d4eeee; }
+section.band.teal { background: linear-gradient(180deg, #007a7a 0%, #005c5c 100%); color: #fff; }
+.section-head { border-bottom-color: var(--line); }
+.section-head::after { background: var(--teal); }
+.dark:has(.pull) .section-head::after, .teal .section-head::after { background: var(--teal-light-accent); }
+.dark:has(.pull) .section-head, .teal .section-head { border-bottom-color: rgba(255,255,255,0.5); }
+.section-head .sub { color: var(--gray); }
+.muted { color: var(--text-2); }
+
+.eyebrow { color: var(--teal); }
+.hero .eyebrow, .teal .eyebrow, .skills .eyebrow { color: var(--teal-light-accent); }
+.photo-fig img { box-shadow: 0 24px 50px rgba(0,0,0,0.18); }
+.stats .l { color: #e6f6f6; }
+
+/* Buttons: teal primary, outline secondary, orange for sign up */
+.btn.dark { background: transparent; border-color: var(--teal); color: var(--teal); }
+.btn.dark:hover { background: var(--teal); border-color: var(--teal); color: #fff; }
+.teal .btn.dark, .skills .btn.dark { background: var(--night); border-color: var(--night); color: #fff; }
+.skills .btn.dark:hover { background: var(--teal); border-color: var(--teal); }
+.teal .btn.dark:hover { background: #000; border-color: #000; }
+.signup-btn, .signup-form .btn[type="submit"] { background: var(--orange); border-color: var(--orange); color: #111; }
+.signup-btn:hover, .signup-form .btn[type="submit"]:hover { background: #ff7f38; border-color: #ff7f38; color: #111; }
+.text-link { color: var(--ink); border-bottom: 2px solid var(--orange); }
+.text-link:hover { color: var(--teal); border-bottom-color: var(--teal); }
+
+/* Cards and program cards */
+.card { background: #fff; border-color: var(--surface-border); box-shadow: var(--glow); }
+.card .kicker, .card.gold-top .kicker { color: var(--teal); }
+.card p { color: var(--text-2); }
+.program .cover { background-color: #e8f0f0; }
+.program .courses li { color: var(--ink); }
+.program .cover.cover-fineart { background:
+  radial-gradient(160px 120px at 22% 30%, rgba(245,179,1,0.85), transparent 70%),
+  radial-gradient(180px 140px at 70% 40%, rgba(139,92,246,0.75), transparent 70%),
+  radial-gradient(200px 140px at 45% 85%, rgba(255,107,26,0.7), transparent 70%),
+  radial-gradient(140px 120px at 88% 85%, rgba(0,116,116,0.6), transparent 70%), #f4f1fd; }
+.program .cover.cover-fineart.alt { background:
+  radial-gradient(170px 130px at 75% 30%, rgba(255,107,26,0.7), transparent 70%),
+  radial-gradient(190px 140px at 28% 45%, rgba(139,92,246,0.75), transparent 70%),
+  radial-gradient(200px 140px at 60% 88%, rgba(245,179,1,0.8), transparent 70%),
+  radial-gradient(140px 120px at 10% 88%, rgba(0,116,116,0.55), transparent 70%), #f4f1fd; }
+.group-label { color: var(--ink); border-bottom: 1px solid var(--line); position: relative; }
+.group-label::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 64px; height: 3px; background: var(--teal); }
+.group-label a, .group-label a:hover { color: var(--ink); }
+.group-label a:hover { color: var(--teal); }
+.prog-group:has(a[href$="fine-art.html"]) .group-label::after,
+.prog-group:has(a[href$="fine-art.html"]) .card { border-top-color: var(--purple); }
+.prog-group:has(a[href$="fine-art.html"]) .group-label::after { background: var(--purple); }
+
+/* Steps, checklists, course blocks */
+.principles li::before { color: var(--teal); }
+.principles strong { color: var(--ink); }
+.principles span { color: var(--text-2); }
+.checklist li::before { color: var(--teal); }
+.teal .checklist li::before { color: var(--teal-light-accent); }
+.course-side .identity { color: var(--text-2); }
+.facts .k { color: var(--teal); }
+.facts .v { color: var(--text-2); }
+.unit { background: #fff; border-color: var(--surface-border); border-left-color: var(--teal); box-shadow: 0 4px 14px rgba(0,0,0,0.05); }
+.unit strong { color: var(--ink); }
+.unit span { color: var(--text-2); }
+.tags li { border-color: #d3dddd; background: var(--tint); color: #2a3434; }
+.callout { background: var(--tint); border-color: #dbe6e6; }
+.callout p { color: var(--text-2); }
+.callout .k { color: var(--teal); }
+main:has(.hero-fineart) .card, main:has(.hero-fineart) .card.gold-top { border-top-color: var(--purple); }
+main:has(.hero-fineart) .unit { border-left-color: var(--purple); }
+main:has(.hero-fineart) .checklist li::before { color: var(--purple); }
+
+/* SkillsUSA: black band and callouts so the white logo reads */
+section.band.skills { background: radial-gradient(800px 420px at 100% 0%, rgba(245,179,1,0.16), transparent 65%), var(--night); color: #f2f6f6; }
+.skills .muted { color: #c9d3d3; }
+.skills .card { background: var(--night-2); border-color: #283030; box-shadow: none; }
+.skills .card h3 { color: #fff; }
+.skills .card p { color: #c9d3d3; }
+.skills .card .kicker { color: var(--teal-light-accent); }
+.skills .card.gold-top .kicker { color: var(--gold); }
+.callout.skills-callout { background: var(--night); border-color: var(--night); border-left: 4px solid var(--gold); }
+.callout.skills-callout p { color: #dfe8e8; }
+.callout.skills-callout .k { color: var(--gold); }
+.callout.skills-callout a { color: var(--gold); }
+
+/* a-g "F" band */
+section.band.ag { background: linear-gradient(180deg, #fff 0%, #fff8e0 100%); border-top: 1px solid #f1e6bf; }
+.ag .eyebrow { color: var(--teal) !important; }
+.ag-badge { background: radial-gradient(circle at 50% 35%, rgba(245,179,1,0.22), transparent 60%), var(--night);
+  box-shadow: 0 0 0 3px var(--gold), 0 0 0 14px rgba(245,179,1,0.16), 0 20px 40px rgba(0,0,0,0.2); }
+
+/* Student work and teachers */
+.work figure { background: #fff; border: 1px solid var(--surface-border); }
+.work figcaption { color: var(--text-2); }
+.work figcaption b { color: var(--ink); }
+.person { background: #fff; border-color: var(--surface-border); }
+.person .ph { background: radial-gradient(circle at 50% 40%, #d9eeee 0%, #eef5f5 75%); }
+.person .ph .initials { color: rgba(0,116,116,0.45); }
+.person .role { color: var(--teal); }
+.person p { color: var(--text-2); }
+.person .exp, .exp-mini { color: var(--teal-dark); }
+.person .person-link a { color: var(--ink); border-bottom: 2px solid var(--teal); }
+.person .person-link a:hover { color: var(--teal); border-bottom-color: var(--teal); }
+.person .ph.ph-logo, .team-mini .head.logo-head { background: radial-gradient(circle at 50% 40%, #2a3333 0%, var(--night) 75%); }
+.team-mini .head { box-shadow: 0 0 0 2px var(--teal), 0 0 0 6px rgba(0,116,116,0.12), 0 8px 20px rgba(0,0,0,0.18); }
+.team-mini .head.empty { background: radial-gradient(circle at 50% 35%, #d9eeee, #eef5f5); color: var(--teal); }
+blockquote.pull cite { color: #9fb0b0; }
+
+/* Forms */
+.field > label, .field > legend { color: var(--ink); }
+.form input[type="text"], .form textarea { color: var(--ink); background: #fff; border-color: #c6d2d2; }
+.form input[type="text"]::placeholder, .form textarea::placeholder { color: #8a9696; }
+.form input[type="text"]:focus, .form textarea:focus { border-color: var(--teal); background: #f5fbfb; box-shadow: 0 0 0 3px rgba(0,116,116,0.15); }
+.pill span { border-color: #c6d2d2; background: #fff; color: var(--ink); }
+.pill:hover span { border-color: var(--teal); }
+.pill input:checked + span { background: var(--teal); border-color: var(--teal); color: #fff; }
+.pill input:focus-visible + span, .option input:focus-visible + span { outline-color: var(--teal); }
+.option span { background: #fff; border-color: #c6d2d2; }
+.option span::before { border-color: #8fa0a0; }
+.option b { color: var(--ink); }
+.option:hover span { border-color: var(--teal); }
+.option input:checked + span { border-color: var(--teal); background: #e9f6f6; }
+.option input:checked + span::before { background: var(--teal); border-color: var(--teal); }
+.option input:checked + span::after { border-color: #fff; }
+.form-msg { background: #fff1e8; border-color: var(--orange); color: #7a2e00; }
+.signup-done { background: #fff; border-color: var(--surface-border); border-top-color: var(--gold); }
+
+/* Staff admin */
+.admin-stats div { background: #fff; border-color: var(--surface-border); }
+.admin-stats div.total { background: #fff8e0; border-color: #f1d98a; }
+.admin-stats b { color: var(--teal); }
+.admin-stats span, .admin-tools label { color: var(--text-2); }
+.admin-tools select, .admin-tools input { color: var(--ink); background: #fff; border-color: #c6d2d2; }
+.admin-tools select option { background: #fff; }
+.admin-table th { color: var(--teal); background: var(--tint); }
+.admin-table tbody tr:hover { background: #f7fafa; }
+.admin-table .note-cell { color: var(--text-2); }
+.del { color: #b42318; border-color: rgba(180,35,24,0.45); }
+.del:hover { background: #fdecea; }
+
+/* Phones */
+@media (max-width: 760px) {
+  .mainnav { background: var(--teal); }
+  .mainnav.open ul { background: radial-gradient(600px 400px at 100% 0%, rgba(0,116,116,0.35), transparent 70%), var(--night); }
+  .hero::before { background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.75) 100%); }
+  .hero-home { background-color: var(--night); }
+  .hero-home::before { background: linear-gradient(180deg, rgba(11,13,13,0) 0, rgba(11,13,13,0) calc(67.5vw * 0.6), var(--night) 67.5vw); }
+  .tiles li:nth-child(odd) a { border-right-color: rgba(255,255,255,0.12); }
+  .tiles li:nth-child(-n+2) a { border-bottom-color: rgba(255,255,255,0.12); }
+}
+section.band.dark .section-head { border-bottom-color: var(--line); }
+section.band.dark .section-head .sub { color: var(--gray); }
+.skills .btn.dark { background: transparent; border-color: rgba(255,255,255,0.7); color: #fff; }
+.skills .btn.dark:hover { background: var(--teal); border-color: var(--teal); color: #fff; }
+section.band.dark:has(blockquote.pull) .btn.dark { background: var(--orange); border-color: var(--orange); color: #111; }
+section.band.dark:has(blockquote.pull) .btn.dark:hover { background: #ff7f38; border-color: #ff7f38; }
+.card { border-top-color: var(--teal); }
+.card.gold-top { border-top-color: var(--gold); }
+.btn[href^="signup.html"], .btn.dark[href^="signup.html"] { background: var(--orange); border-color: var(--orange); color: #111; }
+.btn[href^="signup.html"]:hover, .btn.dark[href^="signup.html"]:hover { background: #ff7f38; border-color: #ff7f38; color: #111; }
+/* Quick tiles: teal, light teal, gold, white */
+.tiles li:nth-child(1) a { background: var(--teal); color: #fff; }
+.tiles li:nth-child(2) a { background: var(--teal-light-accent); color: #111; }
+.tiles li:nth-child(3) a { background: var(--gold); color: #111; }
+.tiles li:nth-child(4) a { background: #fff; color: #111; }
+.tiles li:nth-child(1) a:hover { background: #005f5f; color: #fff; }
+.tiles li:nth-child(2) a:hover { background: #a3eaea; color: #111; }
+.tiles li:nth-child(3) a:hover { background: #ffc21f; color: #111; }
+.tiles li:nth-child(4) a:hover { background: #f2f8f8; color: #111; }
+.tiles li:nth-child(1) .num { color: rgba(255,255,255,0.8); }
+.tiles li:nth-child(1) span.more { color: rgba(255,255,255,0.88); }
+.tiles li:nth-child(n+2) .num { color: rgba(0,0,0,0.6); }
+.tiles li:nth-child(n+2) span.more { color: rgba(0,0,0,0.78); }
+.tiles li:nth-child(4) .num { color: var(--teal); }
+.tiles li a { border-right-color: rgba(0,0,0,0.08); }
