@@ -559,3 +559,24 @@ legend + .hint { margin: -2px 0 10px; }
 @media (max-width: 760px) { .brand-name { font-size: 19px; letter-spacing: 0.03em; } }
 @media (max-width: 360px) { .brand-name { font-size: 16px; } .brand-sub { font-size: 10px; } }
 @media (min-width: 1001px) { .admin-stats { grid-template-columns: repeat(9, minmax(0, 1fr)); } }
+
+/* ---------- Visual Arts: Fine Art additions ---------- */
+.hero-fineart { background:
+  radial-gradient(900px 420px at 80% 10%, rgba(245,179,1,0.22), transparent 65%),
+  radial-gradient(700px 420px at 10% 100%, rgba(0,116,116,0.4), transparent 65%), #364343; }
+.cards.programs { grid-template-columns: repeat(3, 1fr); }
+.program .cover.cover-fineart { background:
+  radial-gradient(160px 120px at 22% 30%, rgba(245,179,1,0.85), transparent 70%),
+  radial-gradient(180px 140px at 70% 40%, rgba(0,150,150,0.85), transparent 70%),
+  radial-gradient(200px 140px at 45% 85%, rgba(200,70,60,0.75), transparent 70%),
+  radial-gradient(140px 120px at 88% 85%, rgba(128,224,224,0.7), transparent 70%), #2f3b3b; }
+.team-mini { grid-template-columns: repeat(2, 1fr); }
+.team-mini .head.logo-head { display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 35%, #3f5252, #2f3b3b); }
+.team-mini .head.logo-head img { width: 60%; height: auto; }
+.people { grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.person .ph.ph-logo { background: radial-gradient(circle at 50% 40%, #415454 0%, #2f3b3b 75%); }
+.person .ph.ph-logo img { width: 46%; height: auto; object-fit: contain; opacity: 0.9; }
+.person h3 { font-size: 25px; }
+@media (max-width: 1100px) { .people { grid-template-columns: repeat(2, 1fr); } .cards.programs { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 760px) { .people, .team-mini, .cards.programs { grid-template-columns: 1fr; } }
+.cards.programs .courses li span { display: block; margin: 2px 0 0; }

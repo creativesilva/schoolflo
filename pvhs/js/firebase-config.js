@@ -14,7 +14,7 @@ export const firebaseConfig = {
 export const SDK = "https://www.gstatic.com/firebasejs/10.12.2/";
 export const OWNER = "creativesilva1@gmail.com";
 export const COLLECTION = "pvhs_interest";
-export const COURSES = ["Photography 1", "Photography 2", "Digital Arts 1", "Digital Arts 2"];
+export const COURSES = ["Photography 1", "Photography 2", "Digital Arts 1", "Digital Arts 2", "Intro to Art", "Painting"];
 
 // The school year a student is signing up for. School starts in August, so from August on
 // the "next" year is the one after the current one (Oct 2026 -> 2027-2028); from January
