@@ -604,4 +604,7 @@ ES = {
     'Digital Media at Pioneer Valley High School: a CTE program with two pathways, Digital Photography and Digital Arts.': 'Medios Digitales en Pioneer Valley High School: un programa CTE con dos trayectorias, Fotografía Digital y Artes Digitales.',
     'Digital Media | PVHS Visual Arts': 'Medios Digitales | PVHS Visual Arts',
     'Two Pathways': 'Dos trayectorias',
+    'Two Categories, Six Courses': 'Dos categorías, seis clases',
+    'Explore Intro to Art': 'Explora Introducción al Arte',
+    'Explore Painting': 'Explora Pintura',
 }
