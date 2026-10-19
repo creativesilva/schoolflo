@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "15"  # cache bust for css/js
+V = "16"  # cache bust for css/js
 
 NAV = [
     ("index.html", "Visual Arts"),
@@ -41,6 +41,7 @@ def head(title, desc, path, preload=None, lang="en", noindex=False):
     url_es = "https://www.schoolflo.org/pvhs/es/" + page
     url = url_es if lang == "es" else url_en
     robots = '  <meta name="robots" content="noindex">\n' if noindex else ""
+    admin_href = "../admin.html" if lang == "es" else "admin.html"
     alts = "" if noindex else (
         f'  <link rel="alternate" hreflang="en" href="{url_en}">\n'
         f'  <link rel="alternate" hreflang="es" href="{url_es}">\n')
@@ -80,7 +81,12 @@ def head(title, desc, path, preload=None, lang="en", noindex=False):
       </a>
       <div class="mast-actions">
 {lang_toggle(path, lang)}
-        <a class="btn cta" href="signup.html?from={path.replace(".html", "")}">Sign Up</a>
+        <div class="staffmenu">
+          <button class="staffmenu-btn" type="button" aria-expanded="false" aria-controls="staffmenu-list" aria-label="More options"><span class="bars" aria-hidden="true"></span></button>
+          <ul class="staffmenu-list" id="staffmenu-list" hidden>
+            <li><a href="{admin_href}" data-keep-href>Teacher Login</a></li>
+          </ul>
+        </div>
       </div>
       <button class="navtoggle" aria-expanded="false" aria-controls="navlist" aria-label="Open menu"><span class="bars" aria-hidden="true"></span><span class="navtoggle-label">Menu</span></button>
     </div>
@@ -92,6 +98,7 @@ def head(title, desc, path, preload=None, lang="en", noindex=False):
       <ul id="navlist">
 {nav_items(path)}
         <li><a href="https://www.lightwriterz.org" target="_blank" rel="noopener">Light Writerz</a></li>
+        <li class="nav-staff"><a href="{admin_href}" data-keep-href>Teacher Login</a></li>
       </ul>
     </div>
   </nav>
