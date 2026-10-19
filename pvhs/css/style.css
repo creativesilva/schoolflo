@@ -911,3 +911,25 @@ section.band.dark:has(blockquote.pull) .btn.dark:hover { background: #ff7f38; bo
 .tiles li:nth-child(n+2) span.more { color: rgba(0,0,0,0.78); }
 .tiles li:nth-child(4) .num { color: var(--teal); }
 .tiles li a { border-right-color: rgba(0,0,0,0.08); }
+/* Softer black: dark gray fading to rich black instead of flat black */
+:root {
+  --night-grad: linear-gradient(180deg, #2a3030 0%, #161a1a 55%, #0b0d0d 100%);
+  --night-grad-short: linear-gradient(180deg, #2a3030 0%, #121515 100%);
+}
+.masthead { background: var(--night-grad-short); }
+@media (min-width: 761px) { .mainnav::before { background: var(--night-grad-short); } }
+footer.site { background: var(--night-grad); }
+section.band.skills { background: radial-gradient(800px 420px at 100% 0%, rgba(245,179,1,0.14), transparent 65%), var(--night-grad); }
+.skills .card { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.10); }
+.callout.skills-callout { background: linear-gradient(160deg, #2a3030 0%, #0f1212 100%); border-color: #1d2222; }
+.hero-teachers, .hero-signup { background:
+  radial-gradient(900px 420px at 85% 0%, rgba(0,116,116,0.55), transparent 65%),
+  radial-gradient(700px 400px at 0% 100%, rgba(128,224,224,0.12), transparent 65%), var(--night-grad); }
+.hero-fineart { background:
+  radial-gradient(900px 420px at 80% 10%, rgba(139,92,246,0.45), transparent 65%),
+  radial-gradient(700px 420px at 10% 100%, rgba(245,179,1,0.18), transparent 65%), var(--night-grad); }
+.ag-badge { background: radial-gradient(circle at 50% 35%, rgba(245,179,1,0.22), transparent 60%), radial-gradient(circle at 50% 40%, #2e3434 0%, #0f1212 100%); }
+.person .ph.ph-logo, .team-mini .head.logo-head { background: radial-gradient(circle at 50% 40%, #343b3b 0%, #121515 80%); }
+@media (max-width: 760px) {
+  .mainnav.open ul { background: radial-gradient(600px 400px at 100% 0%, rgba(0,116,116,0.35), transparent 70%), var(--night-grad); }
+}
