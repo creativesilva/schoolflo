@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "20"  # cache bust for css/js
+V = "21"  # cache bust for css/js
 
 # Teal bar: top level only. DM_PAGES highlight "Digital Media" too.
 NAV = [
@@ -304,10 +304,10 @@ HOME = """
     <div class="tiles">
       <div class="wrap">
         <ul>
-          <li><a href="digital-photography.html"><span class="num">01</span><h2>Digital Photography</h2><span class="more">Photography 1 &amp; 2</span></a></li>
-          <li><a href="digital-arts.html"><span class="num">02</span><h2>Digital Arts</h2><span class="more">Digital Arts 1 &amp; 2</span></a></li>
-          <li><a href="fine-art.html"><span class="num">03</span><h2>Fine Art</h2><span class="more">Intro to Art &amp; Painting</span></a></li>
-          <li><a href="teachers.html"><span class="num">04</span><h2>Our Teachers</h2><span class="more">Meet the team</span></a></li>
+          <li><a href="digital-media.html"><span class="num">01</span><h2>Digital Media</h2><span class="more">Photography &amp; Digital Arts</span></a></li>
+          <li><a href="fine-art.html"><span class="num">02</span><h2>Fine Art</h2><span class="more">Intro to Art &amp; Painting</span></a></li>
+          <li><a href="teachers.html"><span class="num">03</span><h2>Our Teachers</h2><span class="more">Meet the team</span></a></li>
+          <li><a href="signup.html?from=home"><span class="num">04</span><h2>Sign Up</h2><span class="more">Interest form</span></a></li>
         </ul>
       </div>
     </div>
