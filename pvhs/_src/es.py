@@ -608,4 +608,5 @@ ES = {
     'Two Categories, Six Courses': 'Dos categorías, seis clases',
     'Explore Intro to Art': 'Explora Introducción al Arte',
     'Explore Painting': 'Explora Pintura',
+    'Interest form': 'Formulario de interés',
 }
