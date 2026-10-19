@@ -1,14 +1,15 @@
 // Firebase for the PVHS Digital Media interest form and staff admin.
-// Uses the Light Writerz Firebase project (lightwriterz-lwz), collection "pvhs_interest".
-// These web keys are public by design; the Firestore security rules protect the data:
-// anyone can submit a validated sign up, and only the program owner can read or delete them.
+// Project: the SchoolFlo Firebase project (schoolflo.org only), collection "pvhs_interest".
+// These web keys are public by design; the Firestore security rules (pvhs/_src/firestore.rules)
+// protect the data: anyone can submit a validated sign up, and only the program owner can read or delete them.
+// Values come from Firebase console > Project settings > Your apps > Web app > SDK setup and configuration.
 export const firebaseConfig = {
-  apiKey: "AIzaSyCry9ylESz30A2VF0oP41D9EdHReAb2FSs",
-  authDomain: "lightwriterz-lwz.firebaseapp.com",
-  projectId: "lightwriterz-lwz",
-  storageBucket: "lightwriterz-lwz.firebasestorage.app",
-  messagingSenderId: "1072039375978",
-  appId: "1:1072039375978:web:6de8af70bc4e1237218613"
+  apiKey: "PASTE_FROM_FIREBASE",
+  authDomain: "PASTE_FROM_FIREBASE",
+  projectId: "PASTE_FROM_FIREBASE",
+  storageBucket: "PASTE_FROM_FIREBASE",
+  messagingSenderId: "PASTE_FROM_FIREBASE",
+  appId: "PASTE_FROM_FIREBASE"
 };
 export const SDK = "https://www.gstatic.com/firebasejs/10.12.2/";
 export const OWNER = "creativesilva1@gmail.com";

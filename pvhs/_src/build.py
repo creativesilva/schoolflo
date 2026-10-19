@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "11"  # cache bust for css/js
+V = "12"  # cache bust for css/js
 
 NAV = [
     ("index.html", "Digital Media"),
