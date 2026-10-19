@@ -609,4 +609,6 @@ ES = {
     'Explore Intro to Art': 'Explora Introducción al Arte',
     'Explore Painting': 'Explora Pintura',
     'Interest form': 'Formulario de interés',
+    'Focus it. Capture it. Create it.': 'Enfócalo. Captúralo. Créalo.',
+    'Imagine it. Design it. Create it.': 'Imagínalo. Diséñalo. Créalo.',
 }

@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "24"  # cache bust for css/js
+V = "25"  # cache bust for css/js
 
 # Teal bar: top level only. DM_PAGES highlight "Digital Media" too.
 NAV = [
@@ -316,7 +316,7 @@ HOME = """
       <div class="wrap split">
         <div>
           <p class="eyebrow">About the program</p>
-          <h2 class="title">Hands on, not lectures</h2>
+          <h2 class="title taglines"><span class="tg"><small>Photography</small>Focus it. Capture it. Create it.</span><span class="tg"><small>Digital Arts</small>Imagine it. Design it. Create it.</span></h2>
           <p class="lead" style="margin-top:18px">PVHS Visual Arts brings together two areas: Digital Media, a Career Technical Education program in the Design, Visual, and Media Arts pathway, and Fine Art, where students build drawing and painting skills by hand.</p>
           <p class="muted">In every class, students learn by making: real tools, clear steps, and finished work they can present. By the end of a course sequence, students have a body of work that shows what they can do.</p>
           <ul class="checklist one">
@@ -481,6 +481,7 @@ PHOTO = """
       <div class="wrap">
         <p class="eyebrow">Visual Arts &middot; Digital Media</p>
         <h1>Digital<br>Photography</h1>
+        <p class="tagline">Focus it. Capture it. Create it.</p>
         <p>From Manual mode to studio lighting. Two courses that teach students to see, capture, and finish photographs on purpose.</p>
       </div>
     </section>
@@ -621,6 +622,7 @@ ARTS = """
       <div class="wrap">
         <p class="eyebrow">Visual Arts &middot; Digital Media</p>
         <h1>Digital<br>Arts</h1>
+        <p class="tagline">Imagine it. Design it. Create it.</p>
         <p>Design with intention. Two courses that build from the elements of art to brand systems and portfolio quality work in Adobe Illustrator and Photoshop.</p>
       </div>
     </section>
