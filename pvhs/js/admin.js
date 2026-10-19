@@ -90,11 +90,12 @@ function render() {
   const list = filtered();
   const bySid = rows.reduce((m, r) => (m[r.sid] = (m[r.sid] || 0) + 1, m), {});
   const count = (fn) => list.filter(fn).length;
+  // Row 1: total (wide tile) + the four grades. Row 2: the six classes.
   $("stats").innerHTML = [
-    ["Sign ups", list.length],
-    ...COURSES.map(c => [c, count(r => (r.courses || []).includes(c))]),
+    ["Total sign ups", list.length, "total"],
     ...[9, 10, 11, 12].map(g => [`Grade ${g}`, count(r => r.grade === g)]),
-  ].map(([l, n]) => `<div><b>${n}</b><span>${esc(l)}</span></div>`).join("");
+    ...COURSES.map(c => [c.replace("Photography", "Photo"), count(r => (r.courses || []).includes(c))]),
+  ].map(([l, n, cls]) => `<div${cls ? ` class="${cls}"` : ""}><b>${n}</b><span>${esc(l)}</span></div>`).join("");
   $("rows").innerHTML = list.map(r => `<tr>
     <td>${esc(when(r.at))}</td>
     <td>${esc(r.name)}${bySid[r.sid] > 1 ? ` <span class="dup" title="This student ID signed up ${bySid[r.sid]} times">${bySid[r.sid]}x</span>` : ""}</td>

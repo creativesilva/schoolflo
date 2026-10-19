@@ -491,10 +491,11 @@ legend + .hint { margin: -2px 0 10px; }
 /* ---------- Staff admin ---------- */
 .print-only { display: none; }
 .admin-login { max-width: 640px; }
-.admin-stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 12px; margin-bottom: 26px; }
-.admin-stats div { background: var(--surface); border: 1px solid var(--surface-border); border-radius: 6px; padding: 12px 14px; }
-.admin-stats b { display: block; font-family: var(--font-head); font-size: 30px; line-height: 1; color: var(--gold); }
-.admin-stats span { font-size: 13px; color: #d6e0e0; text-transform: uppercase; letter-spacing: 0.06em; }
+.admin-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 26px; }
+.admin-stats div { min-width: 0; background: var(--surface); border: 1px solid var(--surface-border); border-radius: 6px; padding: 14px 16px; }
+.admin-stats div.total { grid-column: span 2; background: rgba(245,179,1,0.10); border-color: rgba(245,179,1,0.45); }
+.admin-stats b { display: block; font-family: var(--font-head); font-size: 32px; line-height: 1; color: var(--gold); margin-bottom: 8px; }
+.admin-stats span { display: block; font-family: var(--font-head); font-size: 15px; line-height: 1.25; color: #d6e0e0; text-transform: uppercase; letter-spacing: 0.05em; }
 .admin-tools { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; margin-bottom: 14px; }
 .admin-tools label { display: grid; gap: 4px; font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.08em; font-size: 13px; color: #d6e0e0; }
 .admin-tools label.grow { flex: 1; min-width: 200px; }
@@ -521,8 +522,9 @@ legend + .hint { margin: -2px 0 10px; }
   .print-head p { font-size: 10pt; margin-bottom: 12px; }
   section.band { padding: 0 !important; }
   .wrap { max-width: none; padding: 0; }
-  .admin-stats { grid-template-columns: repeat(9, 1fr); gap: 6px; margin-bottom: 12px; }
-  .admin-stats div { background: none; border: 1px solid #999; padding: 4px 6px; }
+  .admin-stats { grid-template-columns: repeat(6, 1fr); gap: 6px; margin-bottom: 12px; }
+  .admin-stats div, .admin-stats div.total { background: none; border: 1px solid #999; padding: 4px 6px; }
+  .admin-stats b { margin-bottom: 2px; }
   .admin-stats b { color: #000; font-size: 14pt; }
   .admin-stats span { color: #000; font-size: 7.5pt; }
   .table-wrap { overflow: visible; border: 0; }
@@ -558,7 +560,7 @@ legend + .hint { margin: -2px 0 10px; }
 }
 @media (max-width: 760px) { .brand-name { font-size: 19px; letter-spacing: 0.03em; } }
 @media (max-width: 360px) { .brand-name { font-size: 16px; } .brand-sub { font-size: 10px; } }
-@media (min-width: 1001px) { .admin-stats { grid-template-columns: repeat(9, minmax(0, 1fr)); } }
+@media (min-width: 900px) { .admin-stats { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
 
 /* ---------- Visual Arts: Fine Art additions ---------- */
 .hero-fineart { background:
