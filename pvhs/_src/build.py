@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from es import ES, KEEP  # noqa: E402
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-V = "28"  # cache bust for css/js
+V = "29"  # cache bust for css/js
 
 # Teal bar: top level only. DM_PAGES highlight "Digital Media" too.
 NAV = [
@@ -437,17 +437,17 @@ HOME = """
     <section class="band dark">
       <div class="wrap">
         <div class="section-head">
-          <h2>How Every Project Runs</h2>
-          <span class="sub">The same five steps in every Digital Media course</span>
+          <h2>How Most Projects Run</h2>
+          <span class="sub">A typical project flow in Digital Media</span>
         </div>
         <ol class="principles">
           <li><strong>Learn the concept</strong><span>A short, plain language overview introduces the idea and its key vocabulary.</span></li>
           <li><strong>Make or capture</strong><span>Photograph with a camera kit, or build a design in Adobe software.</span></li>
           <li><strong>Edit and finish</strong><span>Cull, edit, and export the work to a professional standard.</span></li>
-          <li><strong>Turn it in</strong><span>Each step submits a clear deliverable to Canvas: a photo, a contact sheet, a design file, a high resolution export.</span></li>
+          <li><strong>Turn it in</strong><span>Most projects end with a clear deliverable, like a photo, a contact sheet, a design file, or a high resolution export.</span></li>
           <li><strong>Reflect</strong><span>A short written reflection: what I did, what I learned, what I would change.</span></li>
         </ol>
-        <p class="note" style="margin-top:26px">Students are graded on following the process and meeting the standard for each deliverable, not on being a &ldquo;natural.&rdquo; Clear, repeatable expectations are the point.</p>
+        <p class="note" style="margin-top:26px">Each teacher shapes the details for their class, but the goal is the same: students are graded on effort, process, and meeting the standard for each deliverable, not on being a &ldquo;natural.&rdquo;</p>
       </div>
     </section>
 
@@ -928,7 +928,7 @@ FINE = """
 
             <div class="callout">
               <p class="k">Studio rhythm</p>
-              <p>Every painting moves through the same steps: thumbnails, a color study, the final painting, and a short critique or reflection.</p>
+              <p>Most paintings move through similar steps: thumbnails, a color study, the final painting, and a short critique or reflection.</p>
             </div>
           </div>
         </article>

@@ -628,4 +628,9 @@ ES = {
     'Stephanie Fikri teaches Art at Pioneer Valley High School, including Intro to Art and Painting 1.': 'Stephanie Fikri enseña Arte en Pioneer Valley High School, incluyendo Introducción al Arte y Pintura 1.',
     'Studio · no experience needed': 'Taller · no necesitas experiencia',
     'Visual Arts at Pioneer Valley High School: Digital Photography, Digital Arts, Intro to Art, and Painting 1.': 'Artes Visuales en Pioneer Valley High School: Fotografía Digital, Artes Digitales, Introducción al Arte y Pintura 1.',
+    'How Most Projects Run': 'Cómo funcionan la mayoría de los proyectos',
+    'A typical project flow in Digital Media': 'El proceso típico de un proyecto en Medios Digitales',
+    'Most projects end with a clear deliverable, like a photo, a contact sheet, a design file, or a high resolution export.': 'La mayoría de los proyectos terminan con una entrega clara, como una foto, una hoja de contactos, un archivo de diseño o una exportación en alta resolución.',
+    'Each teacher shapes the details for their class, but the goal is the same: students are graded on effort, process, and meeting the standard for each deliverable, not on being a “natural.”': 'Cada maestro adapta los detalles para su clase, pero la meta es la misma: los estudiantes se califican por su esfuerzo, su proceso y por cumplir con el estándar de cada entrega, no por tener un “talento natural.”',
+    'Most paintings move through similar steps: thumbnails, a color study, the final painting, and a short critique or reflection.': 'La mayoría de las pinturas siguen pasos similares: bocetos pequeños, un estudio de color, la pintura final y una breve crítica o reflexión.',
 }
