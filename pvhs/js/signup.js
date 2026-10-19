@@ -1,6 +1,6 @@
 // PVHS Digital Media interest form: validates, then saves one sign up to Firestore (pvhs_interest).
 // Works on the English page (signup.html) and the Spanish page (es/signup.html).
-import { firebaseConfig, SDK, COLLECTION, COURSES, nextSchoolYear } from "./firebase-config.js?v=3";
+import { firebaseConfig, SDK, COLLECTION, COURSES, nextSchoolYear } from "./firebase-config.js?v=4";
 
 const es = document.documentElement.lang === "es";
 const T = es ? {
