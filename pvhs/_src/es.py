@@ -96,9 +96,9 @@ ES = {
         "Medios Digitales en Pioneer Valley es un programa de Educación Técnica Profesional (CTE) del sector de Artes, Medios y Entretenimiento, dentro de la trayectoria de Diseño, Artes Visuales y Medios.",
     "Students learn industry standard tools and professional habits through hands on projects. By the end of the pathway, a student can operate real equipment, run a professional edit and deliver workflow, and present finished creative work.":
         "Los estudiantes aprenden herramientas profesionales y buenos hábitos de trabajo con proyectos prácticos. Al terminar la trayectoria, un estudiante sabe usar equipo real, editar y entregar su trabajo como un profesional, y presentar obras creativas terminadas.",
-    "A bilingual classroom.": "Un salón bilingüe.",
-    "Every project and handout is offered in English and Spanish. Students may work and submit in either language.":
-        "Cada proyecto y cada hoja de trabajo están en inglés y en español. Los estudiantes pueden trabajar y entregar en cualquiera de los dos idiomas.",
+    "Bilingual materials.": "Materiales bilingües.",
+    "Project directions and handouts are offered in English and Spanish, and students may submit their work in either language.":
+        "Las instrucciones de los proyectos y las hojas de trabajo están en inglés y en español, y los estudiantes pueden entregar su trabajo en cualquiera de los dos idiomas.",
     "A Mac lab.": "Un laboratorio de Mac.",
     "Students work on Macs, with a school iPad that doubles as a scanner for sketches and hand done work.":
         "Los estudiantes trabajan en computadoras Mac, con un iPad de la escuela que también sirve como escáner para bocetos y trabajos hechos a mano.",
@@ -463,6 +463,4 @@ ES = {
         "Fotografía 1 y Artes Digitales 1 están abiertas para todos. No necesitas experiencia.",
     "Every class counts toward the UC and CSU a-g “F” fine art requirement.":
         "Todas las clases cuentan para el requisito “F” de bellas artes de a-g para UC y CSU.",
-    "Classes are taught in a bilingual classroom, in English and Spanish.":
-        "Las clases se dan en un salón bilingüe, en inglés y en español.",
 }
