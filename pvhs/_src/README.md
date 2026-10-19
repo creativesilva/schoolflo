@@ -11,7 +11,7 @@ Not published (GitHub Pages skips folders that start with `_`).
 
 ## Interest form backend: the SchoolFlo Firebase project (schoolflo.org only)
 - Sign ups are saved to the Firestore collection `pvhs_interest`.
-- Staff admin: https://www.schoolflo.org/pvhs/admin.html (Google sign in, creativesilva1@gmail.com only).
+- Staff admin: https://www.schoolflo.org/pvhs/admin.html (Google sign in for approved teachers: creativesilva1@gmail.com, stephaniefikri@gmail.com, rileighmankin@gmail.com).
 - `firestore.rules` here is the complete rules file for the project.
 - The web app keys live in `pvhs/js/firebase-config.js`.
 

@@ -3,19 +3,19 @@ rules_version = '2';
 // Firebase console > Firestore Database > Rules, then Publish.
 //
 // PVHS Digital Media interest form (schoolflo.org/pvhs/signup.html and /pvhs/es/signup.html).
-// Anyone can submit one validated sign up (create only, no reading back). Only the program
-// owner can read, print, or delete them (schoolflo.org/pvhs/admin.html). Everything else is closed.
+// Anyone can submit one validated sign up (create only, no reading back). Only approved
+// teachers can read, print, or delete them (schoolflo.org/pvhs/admin.html). Everything else is closed.
 service cloud.firestore {
   match /databases/{db}/documents {
 
-    function isOwner() {
+    function isStaff() {
       return request.auth != null && request.auth.token.email_verified == true
-        && request.auth.token.email.lower() == 'creativesilva1@gmail.com';
+        && request.auth.token.email.lower() in ['creativesilva1@gmail.com', 'stephaniefikri@gmail.com', 'rileighmankin@gmail.com'];
     }
     function str(v, max) { return v is string && v.size() <= max; }
 
     match /pvhs_interest/{id} {
-      allow read, delete: if isOwner();
+      allow read, delete: if isStaff();
       allow create: if request.resource.data.keys().hasOnly(['name', 'sid', 'grade', 'schoolYear', 'courses', 'source', 'lang', 'note', 'at'])
         && request.resource.data.keys().hasAll(['name', 'sid', 'grade', 'schoolYear', 'courses', 'source', 'lang', 'at'])
         && str(request.resource.data.name, 80) && request.resource.data.name.size() >= 2
