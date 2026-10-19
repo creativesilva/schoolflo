@@ -206,7 +206,7 @@ HOME = """
           <p class="lead" style="margin-top:18px">Digital Media at Pioneer Valley is a Career Technical Education program in the Arts, Media, and Entertainment sector, inside the Design, Visual, and Media Arts pathway.</p>
           <p class="muted">Students learn industry standard tools and professional habits through hands on projects. By the end of the pathway, a student can operate real equipment, run a professional edit and deliver workflow, and present finished creative work.</p>
           <ul class="checklist one">
-            <li><strong>A bilingual classroom.</strong> Every project and handout is offered in English and Spanish. Students may work and submit in either language.</li>
+            <li><strong>Bilingual materials.</strong> Project directions and handouts are offered in English and Spanish, and students may submit their work in either language.</li>
             <li><strong>A Mac lab.</strong> Students work on Macs, with a school iPad that doubles as a scanner for sketches and hand done work.</li>
             <li><strong>Fine arts credit.</strong> Courses satisfy the UC and CSU a-g &ldquo;F&rdquo; Visual and Performing Arts requirement.</li>
             <li><strong>Open to everyone.</strong> Photography 1 and Digital Arts 1 need no experience.</li>
@@ -676,7 +676,6 @@ SIGNUP = """
             <ul class="checklist one">
               <li>Photography 1 and Digital Arts 1 are open to everyone. No experience needed.</li>
               <li>Every class counts toward the UC and CSU a-g &ldquo;F&rdquo; fine art requirement.</li>
-              <li>Classes are taught in a bilingual classroom, in English and Spanish.</li>
             </ul>
           </div>
         </aside>
