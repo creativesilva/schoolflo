@@ -942,3 +942,13 @@ h2.title.taglines { font-size: clamp(24px, 2.55vw, 33px); gap: 16px; margin-top:
 h2.title.taglines .tg { white-space: nowrap; }
 @media (max-width: 760px) { h2.title.taglines { font-size: clamp(19px, 6vw, 26px); } h2.title.taglines .tg { white-space: normal; } }
 h2.title.taglines { margin-bottom: 8px; }
+/* Home header photo darkened 25% (uniform layer on top of the existing fades) */
+.hero-home::before { background:
+  linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+  linear-gradient(90deg, rgba(0,0,0,0.66) 0%, rgba(0,0,0,0.38) 42%, rgba(0,0,0,0) 68%),
+  linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.12) 55%, rgba(0,0,0,0.6) 100%); }
+@media (max-width: 760px) {
+  .hero-home::before { background:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    linear-gradient(180deg, rgba(11,13,13,0) 0, rgba(11,13,13,0) calc(67.5vw * 0.6), var(--night) 67.5vw); }
+}
